@@ -1,7 +1,7 @@
 // Сравнение: официальная WebMap (ArcGIS JS) против нашего приложения в одних и тех же местах
 const { chromium } = require('playwright');
 const fs = require('fs'), path = require('path');
-const PLACES = [['wilhelmsburg', 10.005, 53.495, 13], ['hafen', 9.97, 53.54, 14]];
+const PLACES = [['wilhelmsburg', 10.005, 53.495, 13], ['hafen', 9.97, 53.54, 14], ['alster', 10.01, 53.57, 14], ['bergedorf', 10.2, 53.45, 13]];
 (async () => {
   const out = 'qa/cmp'; fs.mkdirSync(out, { recursive: true });
   for (let i = 0; i < 40; i++) { // ждём, пока GitHub Pages отдаст новые данные
@@ -14,7 +14,7 @@ const PLACES = [['wilhelmsburg', 10.005, 53.495, 13], ['hafen', 9.97, 53.54, 14]
   for (const [name, lon, lat, z] of PLACES) {
     const p1 = await b.newPage(vp);
     await p1.goto('file://' + path.resolve('qa/arcgis.html') + `?id=a1ff38ae31254838a4048a091bb03884&lon=${lon}&lat=${lat}&scale=${591657527.59 / Math.pow(2, z)}`);
-    await p1.waitForFunction(() => window.READY, null, { timeout: 120000 }).catch(() => {});
+    await p1.waitForFunction(() => window.READY, null, { timeout: 180000 }).catch(() => {});
     await p1.screenshot({ path: `${out}/${name}-original.png` });
     fs.writeFileSync(`${out}/${name}-layers.json`, JSON.stringify(await p1.evaluate(() => window.INFO), null, 1)); await p1.close();
     const ctx = await b.newContext(vp); const p2 = await ctx.newPage();

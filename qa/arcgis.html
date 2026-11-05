@@ -16,11 +16,12 @@ require(["esri/WebMap", "esri/views/MapView", "esri/core/reactiveUtils"], (WebMa
     for (const l of map.allLayers.toArray()) {
       if (l.type === "group" || !l.url) continue;
       const lv = view.allLayerViews.find(v => v.layer === l);
-      info.push({ title: l.title, url: l.url + "/" + l.layerId, visible: l.visible, effVisible: l.visible && (!l.parent || l.parent.visible !== false),
+      let cnt = null; try { if (lv && !lv.suspended) cnt = await lv.queryFeatureCount(); } catch (e) { cnt = "err " + e.message; }
+      info.push({ count: cnt, title: l.title, url: l.url + "/" + l.layerId, visible: l.visible, effVisible: l.visible && (!l.parent || l.parent.visible !== false),
         minScale: l.minScale, maxScale: l.maxScale, opacity: l.opacity, suspended: lv ? lv.suspended : null, renderer: l.renderer && l.renderer.type,
         def: l.definitionExpression || null });
     }
-    window.INFO = { scale: view.scale, zoom: view.zoom, layers: info };
+    window.INFO = { scale: view.scale, zoom: view.zoom, extent: [view.extent.xmin, view.extent.ymin, view.extent.xmax, view.extent.ymax], layers: info };
     window.READY = true;
   });
 });
