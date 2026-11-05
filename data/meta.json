@@ -2640,22 +2640,6 @@
 },
 {
 "id": 110,
-"title": "S_OhneAnglNutz_WilhG",
-"url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_OhneAnglNutz_WilhG/FeatureServer/0",
-"group": "gewaesser",
-"geom": "esriGeometryPolygon",
-"minz": 9.91,
-"maxz": 19.61,
-"visible": true,
-"att": false,
-"label": null,
-"popup": true,
-"popupFields": [],
-"popupTitle": "Keine anglerische Nutzung",
-"n": 31
-},
-{
-"id": 111,
 "title": "S_P2_Vereinspacht",
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_P2_Vereinspacht/FeatureServer/0",
 "group": "gewaesser",
@@ -2680,7 +2664,7 @@
 "n": 55
 },
 {
-"id": 112,
+"id": 111,
 "title": "S_P1_PG",
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_P1_PG/FeatureServer/0",
 "group": "gewaesser",
@@ -2705,7 +2689,7 @@
 "n": 71
 },
 {
-"id": 113,
+"id": 112,
 "title": "S__Fl_Verein_EWG",
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S__Fl_Verein_EWG/FeatureServer/0",
 "group": "gewaesser",
@@ -2730,7 +2714,7 @@
 "n": 11
 },
 {
-"id": 114,
+"id": 113,
 "title": "S_Pachtgewaesser",
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_Pachtgewaesse/FeatureServer/0",
 "group": "gewaesser",
@@ -2762,7 +2746,7 @@
 "n": 6
 },
 {
-"id": 115,
+"id": 114,
 "title": "S_P1_FG_Azi",
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_P1_AusbG_Azi/FeatureServer/0",
 "group": "infra",
@@ -2778,7 +2762,7 @@
 "n": 10
 },
 {
-"id": 116,
+"id": 115,
 "title": "S_P1_FG_1_500",
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_P1_AusbG_1_500/FeatureServer/0",
 "group": "fotos",
@@ -2799,7 +2783,7 @@
 "n": 277
 },
 {
-"id": 117,
+"id": 116,
 "title": "S_P1_FG_AEB",
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_P1_AusbG_Freie/FeatureServer/0",
 "group": "bereiche",
@@ -2815,7 +2799,7 @@
 "n": 40
 },
 {
-"id": 118,
+"id": 117,
 "title": "S_P3_AVG",
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_P3_AVG/FeatureServer/0",
 "group": "bereiche",
@@ -2831,7 +2815,7 @@
 "n": 222
 },
 {
-"id": 119,
+"id": 118,
 "title": "S_P2__AVG",
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_P2__AVG/FeatureServer/0",
 "group": "bereiche",
@@ -2847,7 +2831,7 @@
 "n": 13
 },
 {
-"id": 120,
+"id": 119,
 "title": "S_P1_AGew_AV",
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_P1_AGew_AV/FeatureServer/0",
 "group": "bereiche",
@@ -2863,7 +2847,7 @@
 "n": 168
 },
 {
-"id": 121,
+"id": 120,
 "title": "S_NSG_Vereine",
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_NSG_Vereine/FeatureServer/0",
 "group": "bereiche",
@@ -2879,7 +2863,7 @@
 "n": 107
 },
 {
-"id": 122,
+"id": 121,
 "title": "S_P3_NSG_AVB",
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_P3_NSG_AVB/FeatureServer/14",
 "group": "verbot",
@@ -2924,7 +2908,7 @@
 "n": 63
 },
 {
-"id": 123,
+"id": 122,
 "title": "S_P3_AG_AVB",
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_P3_AG_AVB/FeatureServer/15",
 "group": "verbot",
@@ -2953,7 +2937,7 @@
 "n": 34
 },
 {
-"id": 124,
+"id": 123,
 "title": "S_NSG_BAVB",
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_NSG_BAVB/FeatureServer/0",
 "group": "verbot",
@@ -2994,7 +2978,7 @@
 "n": 16
 },
 {
-"id": 125,
+"id": 124,
 "title": "Bille + Bille-Kanäle",
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_P2_BSys_Tiefen/FeatureServer/19",
 "group": "tiefen",
@@ -3067,7 +3051,7 @@
 "n": 1125
 },
 {
-"id": 126,
+"id": 125,
 "title": "Dove-Elbe",
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_DE_GE_Mündung_Tiefen/FeatureServer/0",
 "group": "tiefen",
@@ -3151,7 +3135,7 @@
 "n": 595
 },
 {
-"id": 127,
+"id": 126,
 "title": "Gewässertiefen",
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_P1_HS_Tiefen_Sicher_220422/FeatureServer/0",
 "group": "tiefen",
@@ -3228,7 +3212,7 @@
 "n": 102
 },
 {
-"id": 128,
+"id": 127,
 "title": "NSG-Angelverbotsbereiche",
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_NSG_AngVB_2/FeatureServer/0",
 "group": "verbot",
@@ -3269,7 +3253,7 @@
 "n": 84
 },
 {
-"id": 129,
+"id": 128,
 "title": "Angelverbotsbereiche",
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_P2_AVB/FeatureServer/0",
 "group": "verbot",
@@ -3298,7 +3282,7 @@
 "n": 119
 },
 {
-"id": 130,
+"id": 129,
 "title": "Angel-Geschäfte",
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_P2_AngG_Freigabe_050524/FeatureServer/0",
 "group": "shops",
@@ -3335,7 +3319,7 @@
 "n": 4
 },
 {
-"id": 131,
+"id": 130,
 "title": "Anglerische Zusatzinformationen",
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/AKS_AAl_WSFoto_gpsETRS/FeatureServer/2",
 "group": "infra",
@@ -3351,7 +3335,7 @@
 "n": 106
 },
 {
-"id": 132,
+"id": 131,
 "title": "Fotos",
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_AAl_1_50/FeatureServer/0",
 "group": "fotos",
@@ -3372,7 +3356,7 @@
 "n": 69
 },
 {
-"id": 133,
+"id": 132,
 "title": "Angel-Erlaubnisbereiche",
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_BAl_aeb/FeatureServer/0",
 "group": "bereiche",
@@ -3409,7 +3393,7 @@
 "n": 13
 },
 {
-"id": 134,
+"id": 133,
 "title": "S_BAVB",
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_BAVB/FeatureServer/0",
 "group": "verbot",
@@ -3710,13 +3694,6 @@
 },
 {
 "t": "fill",
-"c": "rgba(255,255,0,1.0)",
-"oc": "rgba(255,255,0,1.0)",
-"ow": 0.53,
-"op": 1.0
-},
-{
-"t": "fill",
 "c": "rgba(255,115,223,1.0)",
 "oc": "rgba(255,115,223,1.0)",
 "ow": 2.0,
@@ -3809,5 +3786,5 @@
 ],
 "title": "Topografisch"
 },
-"built": "2026-11-05T22:10:23.651457Z"
+"built": "2026-11-05T22:13:43.498558Z"
 }
