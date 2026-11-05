@@ -1,8 +1,15 @@
 {
  "scale": 36111.909643,
  "zoom": 13,
+ "extent": [
+  1107887.0697305968,
+  7080170.58321087,
+  1111823.576687278,
+  7086858.823185814
+ ],
  "layers": [
   {
+   "count": "err lv.queryFeatureCount is not a function",
    "title": "Weltweite topografische Karte",
    "url": "https://cdn.arcgis.com/sharing/rest/content/items/e8905c5709fe4a679db84f0a82da41c3/resources/styles/root.json/undefined",
    "visible": true,
@@ -14,6 +21,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_Be_VbEl_SE_WbKl",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_BeschrKl_Ver_ElOst_SElWilh/FeatureServer/0",
    "visible": true,
@@ -26,6 +34,7 @@
    "def": null
   },
   {
+   "count": 0,
    "title": "S_Be_VbEl_SE_WbGr",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_Pacht_ElOst_SElWilhV/FeatureServer/0",
    "visible": true,
@@ -38,6 +47,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_Be_VbKl",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_BeschrKl_Verb/FeatureServer/0",
    "visible": true,
@@ -50,6 +60,7 @@
    "def": null
   },
   {
+   "count": 0,
    "title": "S_Be_VbGr",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_GFlHH_BeschrVerband/FeatureServer/0",
    "visible": true,
@@ -62,6 +73,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_Be_FrKl",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_BeschrKl_Freie/FeatureServer/0",
    "visible": true,
@@ -74,6 +86,7 @@
    "def": null
   },
   {
+   "count": 9,
    "title": "S_Be_FrGr",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_BeschrGr_Freie/FeatureServer/0",
    "visible": true,
@@ -86,6 +99,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "Bootsangelbereiche",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_P1_BoAng/FeatureServer/0",
    "visible": false,
@@ -98,6 +112,7 @@
    "def": null
   },
   {
+   "count": 0,
    "title": "S_FlVerb_ASE",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_FlVerb_ASE/FeatureServer/0",
    "visible": true,
@@ -110,6 +125,7 @@
    "def": null
   },
   {
+   "count": 0,
    "title": "S_FlVerb_E",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_FlVerb_EASE/FeatureServer/0",
    "visible": true,
@@ -122,6 +138,7 @@
    "def": null
   },
   {
+   "count": 0,
    "title": "S___FlV_OhneEASE",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S___FlV_OhneEASE/FeatureServer/0",
    "visible": true,
@@ -134,6 +151,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_DE_AZI",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_DE_AZI/FeatureServer/0",
    "visible": true,
@@ -146,6 +164,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_DE_701_800",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_DE_701_800/FeatureServer/0",
    "visible": true,
@@ -158,6 +177,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_DE_501_700",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_DE_501_700/FeatureServer/0",
    "visible": true,
@@ -170,6 +190,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_DE_251_500",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_DE_251_500/FeatureServer/0",
    "visible": true,
@@ -182,6 +203,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_DE_101_250",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_DE_101_250/FeatureServer/0",
    "visible": true,
@@ -194,6 +216,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_DE_1_100",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_DE_1_100/FeatureServer/0",
    "visible": true,
@@ -206,6 +229,7 @@
    "def": null
   },
   {
+   "count": 0,
    "title": "S_DE_AEB",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_DE_AEB/FeatureServer/0",
    "visible": true,
@@ -218,6 +242,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_GE_AZI",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_GE_AZI/FeatureServer/0",
    "visible": true,
@@ -230,6 +255,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_GE_651_999",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_GE_651_999/FeatureServer/0",
    "visible": true,
@@ -242,6 +268,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_GE_451_650",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_GE_451_650/FeatureServer/0",
    "visible": true,
@@ -254,6 +281,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_GE_201_450",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_GE_201_450/FeatureServer/0",
    "visible": true,
@@ -266,6 +294,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_GE_1_200",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_GE_1_200/FeatureServer/0",
    "visible": true,
@@ -278,6 +307,7 @@
    "def": null
   },
   {
+   "count": 0,
    "title": "S_GE_AEB",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_GE_AEB/FeatureServer/0",
    "visible": true,
@@ -290,6 +320,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_HS_AZI",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_HS_AZI/FeatureServer/0",
    "visible": true,
@@ -302,6 +333,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_HS_151_180",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_HS_151_180/FeatureServer/0",
    "visible": true,
@@ -314,6 +346,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_HS_1_150",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_HS_1_150/FeatureServer/0",
    "visible": true,
@@ -326,6 +359,7 @@
    "def": null
   },
   {
+   "count": 0,
    "title": "S_HS_AEB",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_HS_AEB/FeatureServer/0",
    "visible": true,
@@ -338,6 +372,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_ES_AZI",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_ES_AZI/FeatureServer/0",
    "visible": true,
@@ -350,6 +385,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_ES_1_125",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_ES_1_125/FeatureServer/0",
    "visible": true,
@@ -362,6 +398,7 @@
    "def": null
   },
   {
+   "count": 0,
    "title": "S_ES_AEB",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_ES_AEB/FeatureServer/0",
    "visible": true,
@@ -374,6 +411,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_AsE_AZI",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_AsE_AZI/FeatureServer/0",
    "visible": true,
@@ -386,6 +424,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_AsE_701_800",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_AsE_701_800/FeatureServer/0",
    "visible": true,
@@ -398,6 +437,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_AsE_601_700",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_AsE_601_700/FeatureServer/0",
    "visible": true,
@@ -410,6 +450,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_AsE_201_600",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_AsE_201_600/FeatureServer/0",
    "visible": true,
@@ -422,6 +463,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_AsE_1_200",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_AsE_1_200/FeatureServer/0",
    "visible": true,
@@ -434,6 +476,7 @@
    "def": null
   },
   {
+   "count": 0,
    "title": "S_AsE__AEB",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_AsE__AEB/FeatureServer/0",
    "visible": true,
@@ -446,6 +489,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_HuS_AZI",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_HuS_AZI/FeatureServer/0",
    "visible": true,
@@ -458,6 +502,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_HuS_1_100",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_HuS_1_100/FeatureServer/0",
    "visible": true,
@@ -470,6 +515,7 @@
    "def": null
   },
   {
+   "count": 0,
    "title": "S_HuS_AEB",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_HuS_AEB/FeatureServer/0",
    "visible": true,
@@ -482,6 +528,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_EN1_AZI",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_EN1_AZI/FeatureServer/0",
    "visible": true,
@@ -494,6 +541,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_E_NS_AZI",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_E_NS_AZI/FeatureServer/0",
    "visible": true,
@@ -506,6 +554,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_E_AZI",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_E_AZI/FeatureServer/0",
    "visible": true,
@@ -518,6 +567,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_E_2501_4000",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_E_2501_4000/FeatureServer/0",
    "visible": true,
@@ -530,6 +580,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_E_2001_2500",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_E_2001_2500/FeatureServer/0",
    "visible": true,
@@ -542,6 +593,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_E_1500_2000",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_E_1500_2000/FeatureServer/0",
    "visible": true,
@@ -554,6 +606,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_E_1001_1500",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_E_1001_1500/FeatureServer/0",
    "visible": true,
@@ -566,6 +619,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_E_501_1000",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_E_501_1000/FeatureServer/0",
    "visible": true,
@@ -578,6 +632,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_E_100_500",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_E_100_500/FeatureServer/0",
    "visible": true,
@@ -590,6 +645,7 @@
    "def": null
   },
   {
+   "count": 44,
    "title": "S_E_NS_AEB",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_E_NS_AEB/FeatureServer/0",
    "visible": true,
@@ -602,6 +658,7 @@
    "def": null
   },
   {
+   "count": 1,
    "title": "S_E__AEB",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_E__AEB/FeatureServer/0",
    "visible": true,
@@ -614,6 +671,7 @@
    "def": null
   },
   {
+   "count": 51,
    "title": "S_EN1_AEB",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_EN1_AEB/FeatureServer/0",
    "visible": true,
@@ -626,6 +684,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_E_HuK_AZI",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_E_HuK_AZI/FeatureServer/0",
    "visible": true,
@@ -638,6 +697,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_E_HuK_5001_8000_mitGelöschten",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_E_HuK_5001_8000/FeatureServer/0",
    "visible": true,
@@ -650,6 +710,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_E_HuK_4001_5000",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_E_HuK_4001_5000/FeatureServer/0",
    "visible": true,
@@ -662,6 +723,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_E_HuK_3001_4000",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_E_HuK_3001_4000/FeatureServer/0",
    "visible": true,
@@ -674,6 +736,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_E_HuK_2601_3000",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_E_HuK_2601_3000/FeatureServer/0",
    "visible": true,
@@ -686,6 +749,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_E_HuK_2501_2600",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_E_HuK_2501_2600/FeatureServer/0",
    "visible": true,
@@ -698,6 +762,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_E_HuK_1001_2500",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_E_HuK_1001_2500/FeatureServer/0",
    "visible": true,
@@ -710,6 +775,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_E_HuK_1_1000",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_E_HuK_1_1000/FeatureServer/0",
    "visible": true,
@@ -722,6 +788,7 @@
    "def": null
   },
   {
+   "count": 331,
    "title": "S_E_HuK_Mitte_AEB",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_E_HuK_AEB_Mitte/FeatureServer/0",
    "visible": true,
@@ -734,6 +801,7 @@
    "def": null
   },
   {
+   "count": 204,
    "title": "S_E__HuK_N_AEB",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_E__HuK_N_AEB/FeatureServer/0",
    "visible": true,
@@ -746,6 +814,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_Al_Azi",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_Al_Azi/FeatureServer/0",
    "visible": true,
@@ -758,6 +827,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "SAl_105_160",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/SAl_105_160/FeatureServer/0",
    "visible": true,
@@ -770,6 +840,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "SAl_59_104",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/SAl_59_104/FeatureServer/0",
    "visible": true,
@@ -782,6 +853,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "SAl_1_58",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/SAl_1_58/FeatureServer/0",
    "visible": true,
@@ -794,6 +866,7 @@
    "def": null
   },
   {
+   "count": 0,
    "title": "SAl_Aeb",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/SAl_Aeb/FeatureServer/0",
    "visible": true,
@@ -806,6 +879,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_AAl_51_118",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_AAl_51_118/FeatureServer/0",
    "visible": true,
@@ -818,6 +892,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_P2_AAl_1_200",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_P2_AAl_1_200/FeatureServer/0",
    "visible": true,
@@ -830,6 +905,7 @@
    "def": null
   },
   {
+   "count": 39,
    "title": "S__AAl_AEB",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S__AAl_AEB/FeatureServer/0",
    "visible": true,
@@ -842,6 +918,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_BAl_AZI",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_BAl_AZI/FeatureServer/0",
    "visible": true,
@@ -854,6 +931,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_P2_BAl_1_52",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_P1_BAl_1_52/FeatureServer/0",
    "visible": true,
@@ -866,6 +944,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_BAl_1_13",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_BAl_1_13/FeatureServer/0",
    "visible": true,
@@ -878,6 +957,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_AlKuF_AZI",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_AlKuF_AZI/FeatureServer/0",
    "visible": true,
@@ -890,6 +970,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_AlKuF_752_818",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_AlKuF_752_818/FeatureServer/0",
    "visible": true,
@@ -902,6 +983,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "SAlKuF_680_751",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/SAlKuF_680_751/FeatureServer/0",
    "visible": true,
@@ -914,6 +996,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "SAlKuF_629_679",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/SAlKuF_629_679/FeatureServer/0",
    "visible": true,
@@ -926,6 +1009,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "SAlKuF_594_628",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/SAlKuF_594_628/FeatureServer/0",
    "visible": true,
@@ -938,6 +1022,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "SAlKuF_495_593",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/SAlKuF_495_593/FeatureServer/0",
    "visible": true,
@@ -950,6 +1035,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "SAlKuF_422_494",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/SAlKuF_422_494/FeatureServer/0",
    "visible": true,
@@ -962,6 +1048,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "SAlKuF_321_421",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/SAlKuF_321_421/FeatureServer/0",
    "visible": true,
@@ -974,6 +1061,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_AlKuF_295_320",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_AlKuF_295_320/FeatureServer/0",
    "visible": true,
@@ -986,6 +1074,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_AlKuF_201_294",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_AlKuF_110419/FeatureServer/0",
    "visible": true,
@@ -998,6 +1087,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_AlKuF_101_200",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_AlKuF_100419/FeatureServer/0",
    "visible": true,
@@ -1010,6 +1100,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_ALKUF_1_100",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_ALKUF_140319/FeatureServer/0",
    "visible": true,
@@ -1022,6 +1113,7 @@
    "def": null
   },
   {
+   "count": 97,
    "title": "S_alkuf_aeb",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_alkuf_aeb/FeatureServer/0",
    "visible": true,
@@ -1034,6 +1126,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S__BBu_Azi",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S__BBu_Azi/FeatureServer/0",
    "visible": true,
@@ -1046,6 +1139,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_BBu_1_53",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_BBu_1_53/FeatureServer/0",
    "visible": true,
@@ -1058,6 +1152,7 @@
    "def": null
   },
   {
+   "count": 0,
    "title": "S__BBu_Aeb",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S__BBu_Aeb/FeatureServer/0",
    "visible": true,
@@ -1070,6 +1165,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_B_AZI",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_B_AZI/FeatureServer/0",
    "visible": true,
@@ -1082,6 +1178,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_B_326_425",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_B_326_425/FeatureServer/0",
    "visible": true,
@@ -1094,6 +1191,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_B_203_325",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_B_203_325/FeatureServer/0",
    "visible": true,
@@ -1106,6 +1204,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_B_176_202",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_B_176_202/FeatureServer/0",
    "visible": true,
@@ -1118,6 +1217,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_B_101_175",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_B_101_175/FeatureServer/0",
    "visible": true,
@@ -1130,6 +1230,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_B_1_100",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_B_1_100/FeatureServer/0",
    "visible": true,
@@ -1142,6 +1243,7 @@
    "def": null
   },
   {
+   "count": 0,
    "title": "S_B_Aeb",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_B_Aeb/FeatureServer/0",
    "visible": true,
@@ -1154,6 +1256,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_BK_AZI",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_BK_AZI/FeatureServer/0",
    "visible": true,
@@ -1166,6 +1269,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_BK_418_530",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_BK_418_530/FeatureServer/0",
    "visible": true,
@@ -1178,6 +1282,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_BK_365_396",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_BK_365_396/FeatureServer/0",
    "visible": true,
@@ -1190,6 +1295,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_BK_313_355",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_BK_313_355/FeatureServer/0",
    "visible": true,
@@ -1202,6 +1308,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_BK_256_303",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_BK_256_303/FeatureServer/0",
    "visible": true,
@@ -1214,6 +1321,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_BK_184_245",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_BK_184_245/FeatureServer/0",
    "visible": true,
@@ -1226,6 +1334,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_BK_151_183",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_BK_151_183/FeatureServer/0",
    "visible": true,
@@ -1238,6 +1347,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_BK_91_150",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_BK_91_150/FeatureServer/0",
    "visible": true,
@@ -1250,6 +1360,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_BK_56_90",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_BK_56_90/FeatureServer/0",
    "visible": true,
@@ -1262,6 +1373,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_BK_1_55",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_BK_1_55/FeatureServer/0",
    "visible": true,
@@ -1274,6 +1386,7 @@
    "def": null
   },
   {
+   "count": 24,
    "title": "S_BK_Aeb",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_BK_Aeb/FeatureServer/0",
    "visible": true,
@@ -1286,6 +1399,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_WG_1_500",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_WG_1_500/FeatureServer/0",
    "visible": true,
@@ -1298,6 +1412,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_____WG_AZI",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_____WG_AZI/FeatureServer/0",
    "visible": true,
@@ -1310,6 +1425,7 @@
    "def": null
   },
   {
+   "count": 11,
    "title": "S_WG_AEB",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_WG_AEB/FeatureServer/0",
    "visible": true,
@@ -1322,6 +1438,7 @@
    "def": null
   },
   {
+   "count": 0,
    "title": "S__P3_InfoS_AngNu",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S__P3_InfoS_AngNu/FeatureServer/0",
    "visible": true,
@@ -1334,6 +1451,7 @@
    "def": null
   },
   {
+   "count": 9,
    "title": "S_OhneAnglNutz_WilhG",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_OhneAnglNutz_WilhG/FeatureServer/0",
    "visible": true,
@@ -1346,6 +1464,7 @@
    "def": null
   },
   {
+   "count": 0,
    "title": "S_P2_Vereinspacht",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_P2_Vereinspacht/FeatureServer/0",
    "visible": true,
@@ -1358,6 +1477,7 @@
    "def": null
   },
   {
+   "count": 0,
    "title": "S_P1_PG",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_P1_PG/FeatureServer/0",
    "visible": true,
@@ -1370,6 +1490,7 @@
    "def": null
   },
   {
+   "count": 1,
    "title": "S__Fl_Verein_EWG",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S__Fl_Verein_EWG/FeatureServer/0",
    "visible": true,
@@ -1382,6 +1503,7 @@
    "def": null
   },
   {
+   "count": 0,
    "title": "S_Pachtgewaesser",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_Pachtgewaesse/FeatureServer/0",
    "visible": true,
@@ -1394,6 +1516,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_P1_FG_Azi",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_P1_AusbG_Azi/FeatureServer/0",
    "visible": true,
@@ -1406,6 +1529,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "S_P1_FG_1_500",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_P1_AusbG_1_500/FeatureServer/0",
    "visible": true,
@@ -1418,6 +1542,7 @@
    "def": null
   },
   {
+   "count": 1,
    "title": "S_P1_FG_AEB",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_P1_AusbG_Freie/FeatureServer/0",
    "visible": true,
@@ -1430,6 +1555,7 @@
    "def": null
   },
   {
+   "count": 0,
    "title": "S_P3_AVG",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_P3_AVG/FeatureServer/0",
    "visible": true,
@@ -1442,6 +1568,7 @@
    "def": null
   },
   {
+   "count": 0,
    "title": "S_P2__AVG",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_P2__AVG/FeatureServer/0",
    "visible": true,
@@ -1454,6 +1581,7 @@
    "def": null
   },
   {
+   "count": 0,
    "title": "S_P1_AGew_AV",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_P1_AGew_AV/FeatureServer/0",
    "visible": true,
@@ -1466,6 +1594,7 @@
    "def": null
   },
   {
+   "count": 0,
    "title": "S_NSG_Vereine",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_NSG_Vereine/FeatureServer/0",
    "visible": true,
@@ -1478,6 +1607,7 @@
    "def": null
   },
   {
+   "count": 63,
    "title": "S_P3_NSG_AVB",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_P3_NSG_AVB/FeatureServer/14",
    "visible": true,
@@ -1490,6 +1620,7 @@
    "def": null
   },
   {
+   "count": 34,
    "title": "S_P3_AG_AVB",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_P3_AG_AVB/FeatureServer/15",
    "visible": true,
@@ -1502,6 +1633,7 @@
    "def": null
   },
   {
+   "count": 16,
    "title": "S_NSG_BAVB",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_NSG_BAVB/FeatureServer/0",
    "visible": true,
@@ -1514,6 +1646,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "Bille + Bille-Kanäle",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_P2_BSys_Tiefen/FeatureServer/19",
    "visible": true,
@@ -1526,6 +1659,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "Dove-Elbe",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_DE_GE_Mündung_Tiefen/FeatureServer/0",
    "visible": true,
@@ -1538,6 +1672,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "Gewässertiefen",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_P1_HS_Tiefen_Sicher_220422/FeatureServer/0",
    "visible": true,
@@ -1550,6 +1685,7 @@
    "def": null
   },
   {
+   "count": 84,
    "title": "NSG-Angelverbotsbereiche",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_NSG_AngVB_2/FeatureServer/0",
    "visible": true,
@@ -1562,6 +1698,7 @@
    "def": null
   },
   {
+   "count": 119,
    "title": "Angelverbotsbereiche",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_P2_AVB/FeatureServer/0",
    "visible": true,
@@ -1574,6 +1711,7 @@
    "def": null
   },
   {
+   "count": 52,
    "title": "Angel-Geschäfte",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_P2_AngG_Freigabe_050524/FeatureServer/0",
    "visible": true,
@@ -1586,6 +1724,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "Gewässertiefe",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_GewTief_Legende/FeatureServer/0",
    "visible": true,
@@ -1598,6 +1737,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "Anglerische Zusatzinformationen",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/AKS_AAl_WSFoto_gpsETRS/FeatureServer/2",
    "visible": true,
@@ -1610,6 +1750,7 @@
    "def": null
   },
   {
+   "count": null,
    "title": "Fotos",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_AAl_1_50/FeatureServer/0",
    "visible": true,
@@ -1622,6 +1763,7 @@
    "def": null
   },
   {
+   "count": 13,
    "title": "Angel-Erlaubnisbereiche",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_BAl_aeb/FeatureServer/0",
    "visible": true,
@@ -1634,6 +1776,7 @@
    "def": null
   },
   {
+   "count": 8,
    "title": "Gewässerbereiche",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_Elbe_Leg/FeatureServer/0",
    "visible": true,
@@ -1646,6 +1789,7 @@
    "def": null
   },
   {
+   "count": 2,
    "title": "S_BAVB",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_BAVB/FeatureServer/0",
    "visible": true,
@@ -1658,6 +1802,7 @@
    "def": null
   },
   {
+   "count": 0,
    "title": "S__BA_AEB",
    "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S__BA_AEB/FeatureServer/0",
    "visible": true,
