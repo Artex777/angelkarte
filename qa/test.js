@@ -14,6 +14,7 @@ const fs = require('fs');
   p.on('console', m => { if (m.type() === 'error') log.push('console ' + m.text()); });
   p.on('requestfailed', r => log.push('FAILED ' + r.url().slice(0, 150) + ' ' + (r.failure() || {}).errorText));
   const url = 'https://artex777.github.io/angelkarte/?qa=' + Date.now();
+  for (let i = 0; i < 30; i++) { const r = await fetch('https://artex777.github.io/angelkarte/extras.js?x=' + Date.now()); if (r.ok) break; await new Promise(r => setTimeout(r, 10000)); }
   const ready = () => p.waitForFunction(() => document.getElementById('status').style.display === 'none', null, { timeout: 90000 });
   await p.goto(url); await ready();
   // Мост Luisenweg: ищем место, где Luisenweg пересекает воду (по OSM), иначе первая точка
@@ -36,7 +37,14 @@ const fs = require('fs');
   });
   log.push('photo point ' + JSON.stringify(pt));
   if (pt) { await p.mouse.click(pt[0], pt[1]); await p.waitForTimeout(5000); await p.screenshot({ path: `${out}/popup.png` }); }
-  await p.click('#bLayers'); await p.waitForTimeout(800); await p.screenshot({ path: `${out}/layers.png` });
+  await p.click('[data-close]').catch(() => {});
+  await p.evaluate(() => { openSheet(null); map.jumpTo({ center: [9.97, 53.545], zoom: 14 }); });
+  await p.click('#bWx'); await p.waitForTimeout(8000); await p.screenshot({ path: `${out}/weather.png`, fullPage: false });
+  log.push('wx text ' + (await p.textContent('#wx')).slice(0, 600));
+  await p.evaluate(() => openSheet(null));
+  await p.mouse.click(200, 400, { button: 'right' }); await p.waitForTimeout(1000); await p.screenshot({ path: `${out}/edit.png` });
+  await p.evaluate(() => { openSheet(null); map.jumpTo({ center: [10.0466, 53.5497], zoom: 17.5 }); }); await p.waitForTimeout(5000);
+  await p.screenshot({ path: `${out}/icons-luisenweg.png` });
   fs.writeFileSync(`${out}/log.txt`, log.join('\n'));
   await b.close();
 })();
