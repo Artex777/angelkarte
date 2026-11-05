@@ -1,0 +1,37 @@
+{
+ "scale": 72223.819286,
+ "zoom": 12,
+ "extent": [
+  1109814.9984300209,
+  7068401.354774446,
+  1117688.0123433836,
+  7081777.834724334
+ ],
+ "layers": [
+  {
+   "count": "err lv.queryFeatureCount is not a function",
+   "title": "Weltweite topografische Karte",
+   "url": "https://cdn.arcgis.com/sharing/rest/content/items/e8905c5709fe4a679db84f0a82da41c3/resources/styles/root.json/undefined",
+   "visible": true,
+   "effVisible": true,
+   "minScale": 0,
+   "maxScale": 0,
+   "opacity": 1,
+   "suspended": false,
+   "def": null
+  },
+  {
+   "count": 31,
+   "title": "S OhneAnglNutz WilhG - GFHH WilhG ohneAnglerischeNutzung",
+   "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_OhneAnglNutz_WilhG/FeatureServer/0",
+   "visible": true,
+   "effVisible": true,
+   "minScale": 364768,
+   "maxScale": 739,
+   "opacity": 1,
+   "suspended": false,
+   "renderer": "simple",
+   "def": null
+  }
+ ]
+}
