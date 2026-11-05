@@ -268,7 +268,8 @@ function buildLayers(meta, iconW) {
                  "fill-opacity": matchExpr(S, s => s.op, 1) } });
       add(b, { id: "outline", type: "line", source: "polys", filter: ["all", inIds(b.ids), hasStyle("fill")],
         paint: { "line-color": matchExpr(S, s => s.t === "fill" && s.oc ? s.oc : null, "rgba(0,0,0,0)"),
-                 "line-width": matchExpr(S, s => s.t === "fill" ? s.ow : null, 1) } });
+                 "line-width": matchExpr(S, s => s.t === "fill" ? s.ow : null, 1),
+                 "line-opacity": matchExpr(S, s => s.op, 1) } });
     }
     if (b.geom === "esriGeometryPolyline") {
       const base = ["all", inIds(b.ids), hasStyle("line")];
