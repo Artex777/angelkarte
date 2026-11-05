@@ -217,7 +217,7 @@
 "id": 11,
 "title": "Anglerische Zusatzinformationen",
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/AKS_AAl_WSFoto_gpsETRS/FeatureServer/2",
-"group": "fotos",
+"group": "infra",
 "geom": "esriGeometryPoint",
 "minz": 16.47,
 "maxz": null,
@@ -2634,5 +2634,5 @@
 ],
 "title": "Topografisch"
 },
-"built": "2026-11-05T18:02:24.854127Z"
+"built": "2026-11-05T18:06:43.782835Z"
 }
