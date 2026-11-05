@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="theme-color" content="#1b5e20">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Angelkarte HH</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="https://js.arcgis.com/4.30/esri/themes/light/main.css">
+<style>
+  html, body, #view { margin:0; padding:0; height:100%; width:100%; }
+  #err { position:absolute; top:8px; left:50%; transform:translateX(-50%); background:#b71c1c; color:#fff;
+         padding:8px 12px; border-radius:6px; font:14px sans-serif; display:none; z-index:10; }
+</style>
+<script src="https://js.arcgis.com/4.30/"></script>
+</head>
+<body>
+<div id="view"></div>
+<div id="err"></div>
+<script>
+// Daten: öffentliche WebMap des Anglerverbands Hamburg auf ArcGIS Online
+const WEBMAP_ID = "24533f5e5b154ba5bd5d03fa473abd86";
+const KEY = "angelkarte-hh-state-v1";
+
+function load() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+function save(s) { try { localStorage.setItem(KEY, JSON.stringify(s)); } catch (e) {} }
+
+require([
+  "esri/WebMap", "esri/views/MapView", "esri/widgets/Locate", "esri/widgets/Search",
+  "esri/widgets/LayerList", "esri/widgets/Legend", "esri/widgets/Expand", "esri/core/reactiveUtils"
+], (WebMap, MapView, Locate, Search, LayerList, Legend, Expand, reactiveUtils) => {
+  const state = load();
+  const map = new WebMap({ portalItem: { id: WEBMAP_ID } });
+
+  const view = new MapView({
+    container: "view", map,
+    popup: { dockEnabled: true, dockOptions: { buttonEnabled: true, breakpoint: { width: 600 } } },
+    constraints: { snapToZoom: false }
+  });
+
+  map.when(() => {
+    // gespeicherte Layer-Sichtbarkeit wiederherstellen
+    if (state.layers) map.allLayers.forEach(l => { if (l.id in state.layers) l.visible = state.layers[l.id]; });
+    map.allLayers.forEach(l => reactiveUtils.watch(() => l.visible, () => persist()));
+  }).catch(e => showErr("Karte konnte nicht geladen werden: " + e.message));
+
+  view.when(() => {
+    // gespeicherte Position wiederherstellen
+    if (state.center && state.scale) view.goTo({ center: state.center, scale: state.scale, rotation: state.rotation || 0 }, { animate: false });
+  });
+
+  function persist() {
+    if (!view.center) return;
+    const layers = {};
+    map.allLayers.forEach(l => layers[l.id] = l.visible);
+    save({ center: [view.center.longitude, view.center.latitude], scale: view.scale, rotation: view.rotation, layers });
+  }
+  reactiveUtils.when(() => view.stationary, persist);
+  document.addEventListener("visibilitychange", persist);
+  window.addEventListener("pagehide", persist);
+
+  view.ui.add(new Search({ view }), "top-right");
+  view.ui.add(new Locate({ view }), "top-left");
+  view.ui.add(new Expand({ view, content: new LayerList({ view }), expandTooltip: "Ebenen", group: "tr" }), "top-right");
+  view.ui.add(new Expand({ view, content: new Legend({ view }), expandIcon: "legend", expandTooltip: "Legende", group: "tr" }), "top-right");
+});
+
+function showErr(t) { const e = document.getElementById("err"); e.textContent = t; e.style.display = "block"; }
+if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
+</script>
+</body>
+</html>
