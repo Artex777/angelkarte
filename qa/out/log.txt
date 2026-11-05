@@ -1,0 +1,3 @@
+geo [["53.5539701","10.0499191","Luisenweg, Hamm, Hamburg-Mitte, Hamburg, 20537, Deutschland"],["53.5476888","10.0452814","Luisenweg, Hamm, Hamburg-Mitte, Hamburg, 20537, Deutschland"],["53.5469438","10.0446463","Luisenweg, Hammerbrook, Hamburg-Mitte, Hamburg, 20537, Deutschland"]]
+console Error
+photo point [146.13454857168273,438.027739780633]
