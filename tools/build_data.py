@@ -25,6 +25,73 @@ def get(url):
 def zoom(scale):  # ArcGIS-Maßstab -> Web-Mercator-Zoom
     return round(math.log2(591657527.591555 / scale), 2) if scale else None
 
+
+# --- Geometrie verkleinern: Douglas-Peucker + 5 Nachkommastellen (~1 m) ---
+TOL = 0.000012
+def _rdp(pts, tol):
+    if len(pts) < 3: return pts
+    keep = [False] * len(pts); keep[0] = keep[-1] = True
+    stack = [(0, len(pts) - 1)]
+    while stack:
+        a, b = stack.pop()
+        ax, ay = pts[a]; bx, by = pts[b]; dx, dy = bx - ax, by - ay; L = dx * dx + dy * dy
+        best, bi = 0, -1
+        for i in range(a + 1, b):
+            px, py = pts[i]
+            if L == 0: d = (px - ax) ** 2 + (py - ay) ** 2
+            else:
+                t = max(0, min(1, ((px - ax) * dx + (py - ay) * dy) / L))
+                d = (px - ax - t * dx) ** 2 + (py - ay - t * dy) ** 2
+            if d > best: best, bi = d, i
+        if best > tol * tol:
+            keep[bi] = True; stack += [(a, bi), (bi, b)]
+    return [p for p, k in zip(pts, keep) if k]
+def _r(pt): return [round(pt[0], 5), round(pt[1], 5)]
+def simplify(g):
+    t, c = g["type"], g["coordinates"]
+    if t == "LineString": c = [_r(p) for p in _rdp(c, TOL)]
+    elif t == "MultiLineString": c = [[_r(p) for p in _rdp(l, TOL)] for l in c]
+    elif t == "Polygon": c = [r for r in ([_r(p) for p in _rdp(r, TOL)] for r in c) if len(r) >= 4]
+    elif t == "MultiPolygon": c = [[r for r in ([_r(p) for p in _rdp(r, TOL)] for r in poly) if len(r) >= 4] for poly in c]
+    else: return g
+    return {"type": t, "coordinates": c}
+
+def _inside(x, y, ring):
+    ins = False; j = len(ring) - 1
+    for i in range(len(ring)):
+        xi, yi = ring[i]; xj, yj = ring[j]
+        if (yi > y) != (yj > y) and x < (xj - xi) * (y - yi) / (yj - yi + 1e-30) + xi: ins = not ins
+        j = i
+    return ins
+def label_point(g):
+    """Punkt im Inneren des größten Polygons, möglichst weit vom Rand (für Beschriftungen)."""
+    polys = g["coordinates"] if g["type"] == "MultiPolygon" else [g["coordinates"]]
+    def area(r): return abs(sum(r[i][0] * r[i - 1][1] - r[i - 1][0] * r[i][1] for i in range(len(r)))) / 2
+    poly = max(polys, key=lambda p: area(p[0]) if p and p[0] else 0)
+    ring = poly[0]
+    xs = [p[0] for p in ring]; ys = [p[1] for p in ring]
+    x0, x1, y0, y1 = min(xs), max(xs), min(ys), max(ys)
+    segs = [(r[i - 1], r[i]) for r in poly for i in range(1, len(r))]
+    def dist(x, y):
+        m = 1e9
+        for (ax, ay), (bx, by) in segs[::max(1, len(segs) // 400)]:
+            dx, dy = bx - ax, by - ay; L = dx * dx + dy * dy
+            t = 0 if L == 0 else max(0, min(1, ((x - ax) * dx + (y - ay) * dy) / L))
+            m = min(m, (x - ax - t * dx) ** 2 + (y - ay - t * dy) ** 2)
+        return m
+    best, bp, N = -1, [(x0 + x1) / 2, (y0 + y1) / 2], 24
+    for i in range(N):
+        for j in range(N):
+            x = x0 + (x1 - x0) * (i + .5) / N; y = y0 + (y1 - y0) * (j + .5) / N
+            if _inside(x, y, ring) and not any(_inside(x, y, h) for h in poly[1:]):
+                d = dist(x, y)
+                if d > best: best, bp = d, [x, y]
+    return {"type": "Point", "coordinates": _r(bp)}
+
+DROP = {"OBJECTID", "FID", "GlobalID", "GlobalID_2", "Shape__Area", "Shape__Length", "Shape_Area", "Shape_Length",
+        "CreationDate", "Creator", "EditDate", "Editor", "geom", "MinFot", "MinBil", "Umfang_km",
+        "MAJ_CAT", "MIN_CAT", "L_LIMIT", "U_LIMIT", "ZORDER", "LAYER", "MODE", "COLOR", "WIDTH", "VALUE", "Id", "ID"}
+
 wm = get(f"https://www.arcgis.com/sharing/rest/content/items/{WEBMAP}/data?f=json")
 
 def flat(ls):
@@ -154,14 +221,18 @@ for i, l, meta, feats in results:
         s = style_of(sym, round(op, 3)) if op > 0 else None
         if s is None and not (lab and p.get(lab["f"])): continue
         props = {"_l": rec["id"], "_o": f.get("id", p.get("OBJECTID") or p.get("FID"))}
+        gk = kind
+        geo = simplify(f["geometry"]) if kind != "Point" else f["geometry"]
+        if kind == "Polygon" and s is None:   # nur Beschriftung -> Punkt statt Fläche
+            geo, gk = label_point(geo), "Point"
+            rec.setdefault("labelPoints", True)
         if s is not None: props["_s"] = s
         if cat: props["_k"] = cat.strip()
         if lab and p.get(lab["f"]): props["_n"] = str(p[lab["f"]]).strip()
         for k, v in p.items():
-            if v in (None, "", " ") or k in ("OBJECTID", "FID", "GlobalID", "GlobalID_2", "Shape__Area", "Shape__Length",
-                                            "CreationDate", "Creator", "EditDate", "Editor", "geom"): continue
+            if v in (None, "", " ") or k in DROP or k.startswith("Bearb_"): continue
             props[k] = v
-        out[kind].append({"type": "Feature", "geometry": f["geometry"], "properties": props})
+        out[gk].append({"type": "Feature", "geometry": geo, "properties": props})
         rec["n"] += 1
     if rec["n"]: layers.append(rec)
 
