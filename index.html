@@ -54,22 +54,33 @@
 <body>
 <div id="map"></div>
 <div class="bar">
-  <input id="q" type="search" placeholder="Водоём или адрес…" autocomplete="off" enterkeyhint="search">
-  <button class="btn" id="bLayers" title="Слои">☰</button>
+  <input id="q" type="search" data-i18n-ph="search" autocomplete="off" enterkeyhint="search">
+  <button class="btn" id="bLayers">☰</button>
+  <button class="btn" id="bSet">⚙</button>
 </div>
 <div id="results"></div>
 <div class="sheet" id="layersSheet"><div class="grip"></div>
-  <h3>Слои <button class="x" data-close>✕</button></h3>
-  <div class="grp"><label>Подложка</label>
+  <h3><span data-i18n="layers"></span> <button class="x" data-close>✕</button></h3>
+  <div class="grp"><label data-i18n="basemap"></label>
     <div class="leg" style="margin-left:0">
-      <button class="btn" data-bm="topo">Карта</button>
-      <button class="btn" data-bm="sat">Спутник</button>
+      <button class="btn" data-bm="topo" data-i18n="bm_topo"></button>
+      <button class="btn" data-bm="sat" data-i18n="bm_sat"></button>
     </div></div>
   <div id="groups"></div>
+</div>
+<div class="sheet" id="setSheet"><div class="grip"></div>
+  <h3><span data-i18n="settings"></span> <button class="x" data-close>✕</button></h3>
+  <div class="grp"><label data-i18n="language"></label>
+    <div class="leg" style="margin-left:0">
+      <button class="btn" data-lang="ru">Русский</button>
+      <button class="btn" data-lang="de">Deutsch</button>
+    </div></div>
+  <div class="grp"><label data-i18n="refresh"></label><p style="margin-left:0" data-i18n="refresh_desc"></p>
+    <div class="leg" style="margin-left:0"><button class="btn" id="bRefresh" data-i18n="refresh_btn"></button></div></div>
   <div class="foot" id="built"></div>
 </div>
 <div class="sheet" id="infoSheet"><div class="grip"></div><div id="info"></div></div>
-<div id="status">Загружаю карту…</div>
+<div id="status"></div>
 
 <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
 <script>
@@ -78,18 +89,74 @@ const KEY = "angelkarte-hh-v2";
 const st = (() => { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } })();
 const saveState = () => { try { localStorage.setItem(KEY, JSON.stringify(st)); } catch (e) {} };
 
+// Языки интерфейса
+const I18N = {
+  ru: {
+    search: "Водоём или адрес…", layers: "Слои", basemap: "Подложка", bm_topo: "Карта", bm_sat: "Спутник",
+    settings: "Настройки", language: "Язык", refresh: "Данные", refresh_btn: "Обновить сейчас",
+    refresh_desc: "Карта хранит данные на телефоне и работает быстро даже без интернета. Обновление идёт само раз в неделю.",
+    loading: "Загружаю карту…", error: "Ошибка загрузки: ", object: "Объект", photos_loading: "Загружаю фото…",
+    photo_fail: "Фото не загрузилось.", nothing: "Ничего не найдено", water: "водоём",
+    built: d => `Данные Anglerverband Hamburg от ${d}. Обновляются автоматически раз в неделю.`,
+    g: {
+      bereiche: ["Зоны ловли вдоль берега", "Цветные линии у воды: где ловить можно, ограниченно или нельзя."],
+      verbot: ["Запреты на ловлю", "Точки с запретом ловли, в том числе в заповедниках (NSG)."],
+      fotos: ["Фото мест ловли", "Нажми на значок, чтобы увидеть фото места."],
+      infra: ["Инфраструктура", "Туалеты, кафе, причалы, слипы, скамейки и т. п."],
+      shops: ["Рыболовные магазины", ""],
+      gewaesser: ["Клубные и арендованные водоёмы", "Заливка: воды клубов, аренда союза, заповедники."],
+      tiefen: ["Глубины", "Линии глубин с подписями."],
+      namen: ["Названия водоёмов", ""],
+      boot: ["Ловля с лодки", "Зоны, где разрешена ловля с лодки (по умолчанию скрыто)."],
+    },
+    // перевод частых категорий из данных
+    k: { "angeln möglich": "Ловить можно", "angeln verboten": "Ловить запрещено", "angeln nicht möglich": "Ловить невозможно",
+      "angeln nicht möglichen": "Ловить невозможно", "angeln eingeschränkt möglich": "Ловить можно с ограничениями",
+      "keine anglerische nutzung": "Не для рыбалки", "angelstelle / -bereich": "Место ловли", "angelstelle / angelbereich": "Место ловли",
+      "angelstellen / -bereich": "Место ловли", "angelstelle / -angelbereich": "Место ловли", "angelstelle / -bereiche": "Место ловли",
+      "zusatzfoto": "Доп. фото", "ergänzungsfoto": "Доп. фото", "ergänzgungsfoto": "Доп. фото", "ergänzungsfoto / info-": "Инфо-фото",
+      "info- / ergänzungsfoto": "Инфо-фото", "infofoto": "Инфо-фото", "sonstiges foto": "Прочее фото", "sonstige fotos": "Прочее фото",
+      "hot-spot": "Хот-спот", "gastronomie": "Кафе / еда", "steganlage": "Мостки / причал", "fähranleger": "Паромный причал",
+      "baustelle": "Стройка", "sitzbank": "Скамейка", "mülleimer": "Мусорка", "infotafel": "Инфо-табличка", "polizei": "Полиция",
+      "wc": "Туалет", "zufahrt": "Подъезд", "fahrradverleihstation": "Прокат велосипедов", "fahrradverleih": "Прокат велосипедов",
+      "dlrg": "Спасатели (DLRG)", "badestelle": "Место для купания", "behindertengerecht": "Доступно для инвалидов",
+      "feuerwehr": "Пожарные", "grill": "Гриль", "grillplatz": "Место для гриля", "slipanlage": "Слип для лодок",
+      "fischtreppe": "Рыбоход", "steile böschung": "Крутой берег", "freie gewässer": "Свободные воды",
+      "verbandsgewässer": "Воды союза", "vereinsgewässer": "Воды клубов", "undefinierte gewässer": "Неопределённые воды" },
+  },
+  de: {
+    search: "Gewässer oder Adresse…", layers: "Ebenen", basemap: "Hintergrund", bm_topo: "Karte", bm_sat: "Satellit",
+    settings: "Einstellungen", language: "Sprache", refresh: "Daten", refresh_btn: "Jetzt aktualisieren",
+    refresh_desc: "Die Karte speichert die Daten auf dem Handy und läuft auch ohne Internet schnell. Sie aktualisiert sich einmal pro Woche selbst.",
+    loading: "Karte wird geladen…", error: "Ladefehler: ", object: "Objekt", photos_loading: "Fotos werden geladen…",
+    photo_fail: "Foto konnte nicht geladen werden.", nothing: "Nichts gefunden", water: "Gewässer",
+    built: d => `Daten des Anglerverbands Hamburg vom ${d}. Automatische Aktualisierung einmal pro Woche.`,
+    g: {
+      bereiche: ["Angel-Erlaubnisbereiche (Ufer)", "Farbige Linien am Ufer: wo Angeln möglich, eingeschränkt oder verboten ist."],
+      verbot: ["Angelverbote", "Punkte mit Angelverbot, auch in Naturschutzgebieten (NSG)."],
+      fotos: ["Fotos der Angelstellen", "Auf ein Symbol tippen, um das Foto zu sehen."],
+      infra: ["Infrastruktur", "WC, Gastronomie, Stege, Slipanlagen, Bänke usw."],
+      shops: ["Angelgeschäfte", ""],
+      gewaesser: ["Vereins- und Pachtgewässer", "Flächen: Vereinsgewässer, Verbandspacht, Schutzgebiete."],
+      tiefen: ["Gewässertiefen", "Tiefenlinien mit Beschriftung."],
+      namen: ["Gewässernamen", ""],
+      boot: ["Bootsangeln", "Bereiche, in denen vom Boot geangelt werden darf (standardmäßig aus)."],
+    },
+    k: {},
+  },
+};
+st.lang = st.lang || ((navigator.language || "").startsWith("de") ? "de" : "ru");
+const T = I18N[st.lang] || I18N.ru;
+const LOC = st.lang === "de" ? "de-DE" : "ru-RU";
+const tk = k => T.k[String(k).trim().toLowerCase()] || k;
+document.documentElement.lang = st.lang;
+document.querySelectorAll("[data-i18n]").forEach(e => e.textContent = T[e.dataset.i18n]);
+document.querySelectorAll("[data-i18n-ph]").forEach(e => e.placeholder = T[e.dataset.i18nPh]);
+document.getElementById("status").textContent = T.loading;
+
 // Группы слоёв: понятные названия вместо технических имён ArcGIS
-const GROUPS = [
-  { id: "bereiche", name: "Зоны ловли вдоль берега", desc: "Цветные линии у воды: где ловить можно, ограниченно или нельзя." },
-  { id: "verbot",   name: "Запреты на ловлю", desc: "Точки с запретом ловли, в том числе в заповедниках (NSG)." },
-  { id: "fotos",    name: "Фото мест ловли", desc: "Нажми на значок, чтобы увидеть фото места." },
-  { id: "infra",    name: "Инфраструктура", desc: "Туалеты, кафе, причалы, слипы, скамейки и т. п." },
-  { id: "shops",    name: "Рыболовные магазины", desc: "" },
-  { id: "gewaesser",name: "Клубные и арендованные водоёмы", desc: "Заливка: воды клубов, аренда союза, заповедники." },
-  { id: "tiefen",   name: "Глубины", desc: "Линии глубин с подписями." },
-  { id: "namen",    name: "Названия водоёмов", desc: "" },
-  { id: "boot",     name: "Ловля с лодки", desc: "Зоны, где разрешена ловля с лодки (по умолчанию скрыто)." },
-];
+const GROUPS = ["bereiche", "verbot", "fotos", "infra", "shops", "gewaesser", "tiefen", "namen", "boot"]
+  .map(id => ({ id, name: T.g[id][0], desc: T.g[id][1] }));
 const DEFAULT_OFF = new Set(["boot"]);
 if (!st.groups) st.groups = {};
 const groupOn = g => st.groups[g] ?? !DEFAULT_OFF.has(g);
@@ -150,11 +217,10 @@ map.on("load", async () => {
     map.addSource("polys", { type: "geojson", data: polys });
     buildLayers(meta, iconW);
     buildPanel(meta, pts, lines, polys);
-    document.getElementById("built").textContent = "Данные Anglerverband Hamburg, обновлены " +
-      new Date(meta.built).toLocaleDateString("ru-RU") + ". Обновляются автоматически раз в неделю.";
+    document.getElementById("built").textContent = T.built(new Date(meta.built).toLocaleDateString(LOC));
     window._search = buildSearchIndex(pts, lines, polys);
     status("");
-  } catch (e) { status("Ошибка загрузки: " + e.message); console.error(e); }
+  } catch (e) { status(T.error + e.message); console.error(e); }
 });
 
 function matchExpr(styles, pick, fallback) {
@@ -198,7 +264,8 @@ function buildLayers(meta, iconW) {
     if (b.geom === "esriGeometryPolyline") {
       const base = ["all", inIds(b.ids), hasStyle("line")];
       const paint = { "line-color": matchExpr(S, s => s.t === "line" ? s.c : null, "#888"),
-        "line-width": ["interpolate", ["linear"], ["zoom"], 10, matchExpr(S, s => s.t === "line" ? s.w : null, 1.5),
+        "line-width": ["interpolate", ["linear"], ["zoom"], 9, ["*", 0.6, matchExpr(S, s => s.t === "line" ? s.w : null, 1.5)],
+                        13, matchExpr(S, s => s.t === "line" ? s.w : null, 1.5),
                         17, ["*", 2.2, matchExpr(S, s => s.t === "line" ? s.w : null, 1.5)]],
         "line-opacity": matchExpr(S, s => s.op, 1) };
       add(b, { id: "line", type: "line", source: "lines", filter: ["all", base, ["!", ["in", ["get", "_s"], ["literal", dashIds]]]],
@@ -225,7 +292,9 @@ function buildLayers(meta, iconW) {
   const lab = {};
   for (const l of meta.layers) if (l.label) {
     const k = [l.label.minz, l.label.maxz, l.geom].join("|");
-    (lab[k] = lab[k] || { l: l.label, geom: l.geom, ids: [], g: l.group === "tiefen" ? "tiefen" : "namen" }).ids.push(l.id);
+    const lz = Math.max(l.label.minz || 0, l.minz || 0) || null;
+    const k2 = k + "|" + lz;
+    (lab[k2] = lab[k2] || { l: Object.assign({}, l.label, { minz: lz }), geom: l.geom, ids: [], g: l.group === "tiefen" ? "tiefen" : "namen" }).ids.push(l.id);
   }
   for (const b of Object.values(lab)) for (const src of
       (b.geom === "esriGeometryPoint" ? ["pts"] : b.geom === "esriGeometryPolyline" ? ["lines"] : ["polys", "pts"])) {
@@ -247,10 +316,14 @@ function buildPanel(meta, ...colls) {
   const leg = {};
   for (const c of colls) for (const f of c.features) {
     const p = f.properties, l = LAYERS[p._l]; if (!l || p._s == null) continue;
-    const k = (p._k || "").trim(); if (!k) continue;
+    const k = tk((p._k || "").trim()); if (!k) continue;
     const g = (leg[l.group] = leg[l.group] || new Map());
-    if (!g.has(k)) g.set(k, meta.styles[p._s]);
+    const c = g.get(k) || new Map(); g.set(k, c);
+    c.set(p._s, (c.get(p._s) || 0) + 1);
   }
+  // одна подпись = самый частый символ
+  for (const g of Object.values(leg)) for (const [k, c] of g)
+    g.set(k, meta.styles[[...c].sort((a, b) => b[1] - a[1])[0][0]]);
   const el = document.getElementById("groups");
   for (const g of GROUPS) {
     if (!styleLayerGroups[g.id]) continue;
@@ -279,9 +352,19 @@ function setBasemap(k) {
 document.querySelectorAll("[data-bm]").forEach(b => { b.onclick = () => setBasemap(b.dataset.bm); b.classList.toggle("on", b.dataset.bm === st.bm); });
 
 // Листы
-const sheets = { layers: document.getElementById("layersSheet"), info: document.getElementById("infoSheet") };
+const sheets = { layers: document.getElementById("layersSheet"), info: document.getElementById("infoSheet"), set: document.getElementById("setSheet") };
 const openSheet = n => { Object.entries(sheets).forEach(([k, s]) => s.classList.toggle("open", k === n)); };
 document.getElementById("bLayers").onclick = () => openSheet(sheets.layers.classList.contains("open") ? null : "layers");
+document.getElementById("bSet").onclick = () => openSheet(sheets.set.classList.contains("open") ? null : "set");
+document.querySelectorAll("[data-lang]").forEach(b => {
+  b.classList.toggle("on", b.dataset.lang === st.lang);
+  b.onclick = () => { if (b.dataset.lang === st.lang) return; persist(); st.lang = b.dataset.lang; saveState(); location.reload(); };
+});
+document.getElementById("bRefresh").onclick = async () => {
+  persist();
+  try { const ks = await caches.keys(); await Promise.all(ks.filter(k => k.startsWith("angelkarte-app")).map(k => caches.delete(k))); } catch (e) {}
+  location.reload();
+};
 document.addEventListener("click", e => { if (e.target.closest("[data-close]")) openSheet(null); });
 
 // Клик по объекту
@@ -301,7 +384,7 @@ map.on("mousemove", e => {
 
 async function showInfo(f) {
   const p = f.properties, l = LAYERS[p._l], g = GROUPS.find(x => x.id === l.group);
-  let title = p._k || p._n || p.Gewässer_Name || p.Name || g?.name || "Объект";
+  let title = (p._k && tk(p._k)) || p._n || p.Gewässer_Name || p.Name || g?.name || T.object;
   if (l.popupTitle) title = l.popupTitle.replace(/\{([^}]+)\}/g, (_, k) => p[k] ?? "") || title;
   const rows = (l.popupFields.length ? l.popupFields.map(([k, lab]) => [lab || k, p[k]]) :
     Object.entries(p).filter(([k]) => !HIDE.test(k)).map(([k, v]) => [k, v]))
@@ -309,7 +392,7 @@ async function showInfo(f) {
     .map(([k, v]) => `<tr><td>${esc(String(k).replace(/:\s*$/, ""))}</td><td>${fmt(v)}</td></tr>`).join("");
   document.getElementById("info").innerHTML =
     `<h3>${esc(title)} <button class="x" data-close>✕</button></h3><span class="tag">${esc(g?.name || "")}</span>` +
-    (rows ? `<table>${rows}</table>` : "") + (l.att ? `<div class="photos" id="ph">Загружаю фото…</div>` : "");
+    (rows ? `<table>${rows}</table>` : "") + (l.att ? `<div class="photos" id="ph">${T.photos_loading}</div>` : "");
   openSheet("info");
   if (l.att) {
     try {
@@ -317,11 +400,11 @@ async function showInfo(f) {
       const ims = (a.attachmentInfos || []).filter(x => /image/.test(x.contentType));
       document.getElementById("ph").innerHTML = ims.length ? ims.map(x =>
         `<a href="${l.url}/${p._o}/attachments/${x.id}" target="_blank"><img loading="lazy" src="${l.url}/${p._o}/attachments/${x.id}" alt=""></a>`).join("") : "";
-    } catch (e) { document.getElementById("ph").textContent = "Фото не загрузилось."; }
+    } catch (e) { document.getElementById("ph").textContent = T.photo_fail; }
   }
 }
 function fmt(v) {
-  if (typeof v === "number" && v > 946684800000 && v < 4102444800000) return new Date(v).toLocaleDateString("ru-RU");
+  if (typeof v === "number" && v > 946684800000 && v < 4102444800000) return new Date(v).toLocaleDateString(LOC);
   const s = String(v);
   if (/^(https?:\/\/|www\.)/i.test(s)) { const u = s.startsWith("www.") ? "https://" + s : s; return `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(s)}</a>`; }
   return esc(s);
@@ -351,7 +434,7 @@ async function search(remote) {
   const q = qEl.value.trim().toLowerCase();
   if (q.length < 2) { resEl.style.display = "none"; return; }
   const local = [...(window._search || new Map())].filter(([n]) => n.toLowerCase().includes(q)).slice(0, 8)
-    .map(([n, b]) => ({ n, sub: "водоём", b }));
+    .map(([n, b]) => ({ n, sub: T.water, b }));
   let addr = [];
   if (remote || local.length < 3) {
     try {
@@ -361,7 +444,7 @@ async function search(remote) {
     } catch (e) {}
   }
   const all = local.concat(addr);
-  resEl.innerHTML = all.length ? "" : "<div>Ничего не найдено</div>";
+  resEl.innerHTML = all.length ? "" : `<div>${T.nothing}</div>`;
   all.forEach(x => {
     const d = document.createElement("div"); d.innerHTML = `${esc(x.n)}<br><small>${esc(x.sub)}</small>`;
     d.onclick = () => { map.fitBounds([[x.b[0], x.b[1]], [x.b[2], x.b[3]]], { padding: 60, maxZoom: 16 }); resEl.style.display = "none"; qEl.blur(); };
