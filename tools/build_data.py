@@ -5,7 +5,7 @@ Läuft in GitHub Actions (siehe .github/workflows/build-data.yml)."""
 import json, os, math, base64, hashlib, re, urllib.request, urllib.parse
 from concurrent.futures import ThreadPoolExecutor
 
-WEBMAP = "24533f5e5b154ba5bd5d03fa473abd86"
+WEBMAP = "a1ff38ae31254838a4048a091bb03884"   # "Anglerkarte_2024", wird von der offiziellen App genutzt
 OUT = "data"
 os.makedirs(f"{OUT}/icons", exist_ok=True)
 
@@ -94,15 +94,22 @@ DROP = {"OBJECTID", "FID", "GlobalID", "GlobalID_2", "Shape__Area", "Shape__Leng
 
 wm = get(f"https://www.arcgis.com/sharing/rest/content/items/{WEBMAP}/data?f=json")
 
-def flat(ls):
+def flat(ls, vis=True, op=1.0):
+    """Gruppen auflösen: Sichtbarkeit und Deckkraft der Gruppe gelten für die Kinder."""
     for l in ls:
-        if l.get("layers"): yield from flat(l["layers"])
-        elif l.get("url"): yield l
+        v = vis and l.get("visibility", True) is not False
+        o = op * (l.get("opacity") if l.get("opacity") is not None else 1)
+        if l.get("layers"): yield from flat(l["layers"], v, o)
+        elif l.get("url"):
+            l = dict(l); l["visibility"] = v; l["opacity"] = o
+            yield l
 wlayers = list(flat(wm["operationalLayers"]))
+# ausgeblendete Ebenen weglassen (außer Bootsangeln, das bleibt als abschaltbare Gruppe)
+wlayers = [l for l in wlayers if l["visibility"] or "boang" in l["url"].lower()]
 
 def group(title, url, geom, fields, poly_has_fill):
     n = (title + " " + url.split("/services/")[1]).lower()
-    if "legende" in n: return None
+    if "legende" in n or "_leg/" in n + "/" or "elbe_leg" in n: return None
     if "boang" in n: return "boot"
     if "tiefen" in n: return "tiefen"
     if "gewässernamen" in n: return "namen"
@@ -110,7 +117,7 @@ def group(title, url, geom, fields, poly_has_fill):
     if "zusatzinformationen" in n: return "infra"
     if geom == "esriGeometryPoint":
         if "Fototyp" in fields or "Fotoart" in fields or "WSFoto" in url: return "fotos"
-        if "avb" in n: return "verbot"
+        if "avb" in n or "verbot" in n or "angvb" in n: return "verbot"
         if "azi" in n or "AZI" in fields: return "infra"
         return "fotos"
     if geom == "esriGeometryPolyline": return "bereiche"
