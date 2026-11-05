@@ -1875,7 +1875,7 @@
 "popup": false,
 "popupFields": [],
 "popupTitle": null,
-"n": 72
+"n": 71
 },
 {
 "id": 115,
@@ -1996,7 +1996,7 @@
 ]
 ],
 "popupTitle": "{Gewässername}",
-"n": 56
+"n": 55
 },
 {
 "id": 122,
@@ -2634,5 +2634,5 @@
 ],
 "title": "Topografisch"
 },
-"built": "2026-11-05T18:06:43.782835Z"
+"built": "2026-11-05T18:25:07.984047Z"
 }
