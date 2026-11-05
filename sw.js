@@ -1,6 +1,6 @@
 // Service Worker: приложение и данные работают офлайн, просмотренные тайлы карты кэшируются
-const APP = "angelkarte-app-v2", TILES = "angelkarte-tiles-v1", MAX_TILES = 4000;
-const SHELL = ["./", "./index.html", "./manifest.webmanifest", "./icon-192.png", "./icon-512.png",
+const APP = "angelkarte-app-v3", TILES = "angelkarte-tiles-v1", MAX_TILES = 4000;
+const SHELL = ["./", "./index.html", "./manifest.webmanifest", "./icon-192.png", "./icon-512.png", "./extras.js",
   "https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js", "https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css"];
 self.addEventListener("install", e => { self.skipWaiting(); e.waitUntil(caches.open(APP).then(c => c.addAll(SHELL))); });
 self.addEventListener("activate", e => e.waitUntil(

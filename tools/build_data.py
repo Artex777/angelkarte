@@ -52,7 +52,7 @@ def simplify(g):
     if t == "LineString": c = [_r(p) for p in _rdp(c, TOL)]
     elif t == "MultiLineString": c = [[_r(p) for p in _rdp(l, TOL)] for l in c]
     elif t == "Polygon": c = [r for r in ([_r(p) for p in _rdp(r, TOL)] for r in c) if len(r) >= 4]
-    elif t == "MultiPolygon": c = [[r for r in ([_r(p) for p in _rdp(r, TOL)] for r in poly) if len(r) >= 4] for poly in c]
+    elif t == "MultiPolygon": c = [q for q in ([r for r in ([_r(p) for p in _rdp(r, TOL)] for r in poly) if len(r) >= 4] for poly in c) if q]
     else: return g
     return {"type": t, "coordinates": c}
 
@@ -224,6 +224,7 @@ for i, l, meta, feats in results:
         props = {"_l": rec["id"], "_o": f.get("id", p.get("OBJECTID") or p.get("FID"))}
         gk = kind
         geo = simplify(f["geometry"]) if kind != "Point" else f["geometry"]
+        if not geo.get("coordinates"): continue
         if kind == "Polygon" and s is None:   # nur Beschriftung -> Punkt statt Fläche
             geo, gk = label_point(geo), "Point"
             rec.setdefault("labelPoints", True)
