@@ -14,7 +14,7 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 20 }
       - run: npm i playwright@1.47.2 && npx playwright install --with-deps chromium
-      - run: ONLY_TEST=1 node qa/compare.js || true
+      - run: node qa/compare.js || true
       - run: |
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"

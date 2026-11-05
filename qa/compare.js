@@ -1,23 +1,15 @@
 // Сравнение: официальная WebMap (ArcGIS JS) против нашего приложения в одних и тех же местах
 const { chromium } = require('playwright');
 const fs = require('fs'), path = require('path');
-const PLACES = [['wilhelmsburg', 10.005, 53.495, 13], ['hafen', 9.97, 53.54, 14], ['alster', 10.01, 53.57, 14], ['bergedorf', 10.2, 53.45, 13]];
+const PLACES = [['wilhelmsburg', 10.005, 53.495, 13], ['hafen', 9.97, 53.54, 14]];
 (async () => {
   const out = 'qa/cmp'; fs.mkdirSync(out, { recursive: true }); fs.writeFileSync('qa/cmp/console.txt', '');
   for (let i = 0; i < 40; i++) { // ждём, пока GitHub Pages отдаст новые данные
     const m = await (await fetch('https://artex777.github.io/angelkarte/data/meta.json?x=' + Date.now())).json().catch(() => ({}));
-    break;
+    if ((m.layers || []).length && !(m.layers || []).some(l => l.url.includes('OhneAnglNutz'))) break;
     await new Promise(r => setTimeout(r, 15000));
   }
   const b = await chromium.launch();
-  for (const [n, extra] of [['only-ohne', '&only=S_OhneAnglNutz_WilhG'], ['direct-ohne', '&direct=' + encodeURIComponent('https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_OhneAnglNutz_WilhG/FeatureServer/0')]]) {
-    const p = await b.newPage({ viewport: { width: 412, height: 700 } });
-    p.on('console', m => fs.appendFileSync('qa/cmp/console.txt', n + ' ' + m.type() + ' ' + m.text() + '\n'));
-    await p.goto('file://' + path.resolve('qa/arcgis.html') + `?id=a1ff38ae31254838a4048a091bb03884&lon=10.005&lat=53.495&scale=72224${extra}`);
-    await p.waitForFunction(() => window.READY, null, { timeout: 180000 }).catch(() => {});
-    await p.screenshot({ path: `qa/cmp/${n}.png` });
-    fs.writeFileSync(`qa/cmp/${n}.json`, JSON.stringify(await p.evaluate(() => window.INFO), null, 1)); await p.close();
-  }
   if (process.env.ONLY_TEST) { await b.close(); return; }
   const vp = { viewport: { width: 412, height: 700 } };
   for (const [name, lon, lat, z] of PLACES) {
