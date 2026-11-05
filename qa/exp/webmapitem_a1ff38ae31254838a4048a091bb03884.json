@@ -1,0 +1,68 @@
+{
+ "id": "a1ff38ae31254838a4048a091bb03884",
+ "owner": "jkamps@gmx.net",
+ "ownerId": "2e2dd12499f49a80391d76a337528fa0",
+ "created": 1732036174000,
+ "modified": 1793899675000,
+ "guid": null,
+ "name": null,
+ "title": "Anglerkarte_2024",
+ "type": "Web Map",
+ "typeKeywords": [
+  "ArcGIS API for JavaScript",
+  "ArcGIS Online",
+  "Explorer Web Map",
+  "FieldMapsDisabled",
+  "Map",
+  "Online Map",
+  "useOnly",
+  "Web Map"
+ ],
+ "description": "",
+ "tags": [
+  "AK"
+ ],
+ "snippet": "Anglerkarte_2024_MapViewerNeu",
+ "thumbnail": "thumbnail/ago_downloaded.png",
+ "documentation": null,
+ "extent": [
+  [
+   10.004100369575335,
+   53.609199849650444
+  ],
+  [
+   10.012940930488654,
+   53.61387809133106
+  ]
+ ],
+ "categories": [],
+ "spatialReference": "",
+ "accessInformation": "",
+ "classification": null,
+ "licenseInfo": "",
+ "culture": "de",
+ "properties": null,
+ "advancedSettings": null,
+ "url": "",
+ "proxyFilter": null,
+ "access": "public",
+ "size": 141007,
+ "subInfo": 0,
+ "appCategories": [],
+ "industries": [],
+ "languages": [],
+ "largeThumbnail": null,
+ "banner": null,
+ "screenshots": [],
+ "listed": false,
+ "commentsEnabled": false,
+ "numComments": 0,
+ "numRatings": 0,
+ "avgRating": 0,
+ "numViews": 118102,
+ "scoreCompleteness": 35,
+ "groupDesignations": null,
+ "apiToken1ExpirationDate": -1,
+ "apiToken2ExpirationDate": -1,
+ "lastViewed": 1793912400000
+}
