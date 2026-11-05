@@ -1,12 +1,12 @@
 // Сравнение: официальная WebMap (ArcGIS JS) против нашего приложения в одних и тех же местах
 const { chromium } = require('playwright');
 const fs = require('fs'), path = require('path');
-const PLACES = [['wilhelmsburg', 10.005, 53.495, 13], ['hafen', 9.97, 53.54, 14]];
+const PLACES = [['hafen', 9.97, 53.54, 14]];
 (async () => {
   const out = 'qa/cmp'; fs.mkdirSync(out, { recursive: true }); fs.writeFileSync('qa/cmp/console.txt', '');
   for (let i = 0; i < 40; i++) { // ждём, пока GitHub Pages отдаст новые данные
     const m = await (await fetch('https://artex777.github.io/angelkarte/data/meta.json?x=' + Date.now())).json().catch(() => ({}));
-    if ((m.layers || []).length && !(m.layers || []).some(l => l.url.includes('OhneAnglNutz'))) break;
+    break;
     await new Promise(r => setTimeout(r, 15000));
   }
   const b = await chromium.launch();

@@ -3,7 +3,7 @@
 <style>html,body,#v{margin:0;height:100%}</style><script src="https://js.arcgis.com/4.30/"></script></head>
 <body><div id="v"></div><script>
 const q = new URLSearchParams(location.search);
-require(["esri/WebMap", "esri/views/MapView", "esri/core/reactiveUtils"], (WebMap, MapView, ru) => {
+require(["esri/WebMap", "esri/views/MapView", "esri/core/reactiveUtils", "esri/symbols/support/symbolUtils"], (WebMap, MapView, ru, symbolUtils) => {
   const map = new WebMap({ portalItem: { id: q.get("id") } });
   const view = window.view = new MapView({ container: "v", map, ui: { components: [] } });
   view.when(async () => {
@@ -19,8 +19,19 @@ require(["esri/WebMap", "esri/views/MapView", "esri/core/reactiveUtils"], (WebMa
     for (const l of map.allLayers.toArray()) {
       if (l.type === "group" || !l.url) continue;
       const lv = view.allLayerViews.find(v => v.layer === l);
-      let cnt = null; try { if (lv && !lv.suspended) cnt = await lv.queryFeatureCount(); } catch (e) { cnt = "err " + e.message; }
-      info.push({ count: cnt, title: l.title, url: l.url + "/" + l.layerId, visible: l.visible, effVisible: l.visible && (!l.parent || l.parent.visible !== false),
+      let cnt = null, drawn = null, sample = null;
+      try {
+        if (lv && !lv.suspended && lv.queryFeatures) {
+          const res = await lv.queryFeatures({ geometry: view.extent, returnGeometry: false, outFields: ["*"] });
+          cnt = res.features.length; drawn = 0;
+          for (const g of res.features) {
+            g.layer = l;
+            const sym = await symbolUtils.getDisplayedSymbol(g);
+            if (sym) drawn++; else if (!sample) sample = g.attributes;
+          }
+        }
+      } catch (e) { cnt = "err " + e.message; }
+      info.push({ count: cnt, drawn, undrawnSample: sample, rendererJSON: l.renderer ? JSON.stringify(l.renderer.toJSON()).slice(0, 1500) : null, title: l.title, url: l.url + "/" + l.layerId, visible: l.visible, effVisible: l.visible && (!l.parent || l.parent.visible !== false),
         minScale: l.minScale, maxScale: l.maxScale, opacity: l.opacity, suspended: lv ? lv.suspended : null, renderer: l.renderer && l.renderer.type,
         def: l.definitionExpression || null });
     }
