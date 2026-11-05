@@ -6,21 +6,46 @@
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_BeschrKl_Ver_ElOst_SElWilh/FeatureServer/0",
 "group": "namen",
 "geom": "esriGeometryPolygon",
-"minz": 15.84,
+"minz": 14.87,
 "maxz": null,
 "visible": true,
 "att": false,
 "label": {
 "f": "Gewässer_Name",
-"minz": 15.72,
+"minz": 14.9,
 "maxz": null,
 "c": "rgba(0,0,0,1.0)",
 "h": null,
 "sz": 13.0
 },
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"geom",
+"geom"
+],
+[
+"Gewässer_Bereich",
+"Gewässer_Bereich"
+],
+[
+"Gewässer_Name",
+"Gewässer_Name"
+],
+[
+"Shape__Area",
+"Shape__Area"
+],
+[
+"Shape__Length",
+"Shape__Length"
+],
+[
+"Umfang_km",
+"Umfang_km"
+]
+],
+"popupTitle": "S_Be_VbEl_SE_WbKl: {Gewässer_Name}",
 "n": 8,
 "labelPoints": true
 },
@@ -31,20 +56,45 @@
 "group": "namen",
 "geom": "esriGeometryPolygon",
 "minz": 12.69,
-"maxz": null,
+"maxz": 14.85,
 "visible": true,
 "att": false,
 "label": {
 "f": "Gewässer_Name",
 "minz": 12.67,
-"maxz": 15.32,
+"maxz": 14.79,
 "c": "rgba(0,0,0,1.0)",
 "h": null,
 "sz": 13.0
 },
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"geom",
+"geom"
+],
+[
+"Gewässer_Bereich",
+"Gewässer_Bereich"
+],
+[
+"Gewässer_Name",
+"Gewässer_Name"
+],
+[
+"Shape__Area",
+"Shape__Area"
+],
+[
+"Shape__Length",
+"Shape__Length"
+],
+[
+"Umfang_km",
+"Umfang_km"
+]
+],
+"popupTitle": "S_Be_VbEl_SE_WbGr: {Gewässer_Name}",
 "n": 2,
 "labelPoints": true
 },
@@ -54,21 +104,70 @@
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_BeschrKl_Verb/FeatureServer/0",
 "group": "namen",
 "geom": "esriGeometryPolygon",
-"minz": 15.69,
+"minz": 15.0,
 "maxz": 22.5,
 "visible": true,
 "att": false,
 "label": {
 "f": "Gewässer_Name",
-"minz": 15.68,
+"minz": 14.62,
 "maxz": null,
-"c": "rgba(0,0,0,1.0)",
+"c": "rgba(38,38,38,1.0)",
 "h": null,
 "sz": 13.0
 },
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"Bearb_Ende",
+"Bearb_Ende"
+],
+[
+"Bearb_GesStd",
+"Bearb_GesStd"
+],
+[
+"Bearb_GesT",
+"Bearb_GesT"
+],
+[
+"Bearb_GesWo",
+"Bearb_GesWo"
+],
+[
+"Bearb_Kategorie",
+"Bearb_Kategorie"
+],
+[
+"Bearb_Std",
+"Bearb_Std"
+],
+[
+"geom",
+"geom"
+],
+[
+"Gewässer_Bereich",
+"Gewässer_Bereich"
+],
+[
+"Gewässer_Name",
+"Gewässer_Name"
+],
+[
+"Shape__Area",
+"Shape__Area"
+],
+[
+"Shape__Length",
+"Shape__Length"
+],
+[
+"Umfang_km",
+"Umfang_km"
+]
+],
+"popupTitle": "S_Be_VbKl: {Gewässer_Name}",
 "n": 24,
 "labelPoints": true
 },
@@ -79,20 +178,69 @@
 "group": "namen",
 "geom": "esriGeometryPolygon",
 "minz": 12.69,
-"maxz": 15.84,
+"maxz": 14.76,
 "visible": true,
 "att": false,
 "label": {
 "f": "Gewässer_Name",
 "minz": 12.67,
-"maxz": 15.77,
-"c": "rgba(0,0,0,1.0)",
+"maxz": 14.65,
+"c": "rgba(38,38,38,1.0)",
 "h": null,
 "sz": 13.0
 },
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"Bearb_Ende",
+"Bearb_Ende"
+],
+[
+"Bearb_GesStd",
+"Bearb_GesStd"
+],
+[
+"Bearb_GesT",
+"Bearb_GesT"
+],
+[
+"Bearb_GesWo",
+"Bearb_GesWo"
+],
+[
+"Bearb_Kategorie",
+"Bearb_Kategorie"
+],
+[
+"Bearb_Std",
+"Bearb_Std"
+],
+[
+"geom",
+"geom"
+],
+[
+"Gewässer_Bereich",
+"Gewässer_Bereich"
+],
+[
+"Gewässer_Name",
+"Gewässer_Name"
+],
+[
+"Shape__Area",
+"Shape__Area"
+],
+[
+"Shape__Length",
+"Shape__Length"
+],
+[
+"Umfang_km",
+"Umfang_km"
+]
+],
+"popupTitle": "S_Be_VbGr: {Gewässer_Name}",
 "n": 8,
 "labelPoints": true
 },
@@ -100,25 +248,45 @@
 "id": 4,
 "title": "S_Be_FrKl",
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_BeschrKl_Freie/FeatureServer/0",
-"group": "namen",
+"group": "gewaesser",
 "geom": "esriGeometryPolygon",
-"minz": 15.76,
+"minz": 14.66,
 "maxz": 22.5,
 "visible": true,
 "att": false,
 "label": {
 "f": "Gewässer_Name",
-"minz": 15.68,
-"maxz": null,
-"c": "rgba(0,0,0,1.0)",
+"minz": 14.73,
+"maxz": 22.5,
+"c": "rgba(38,38,38,1.0)",
 "h": null,
 "sz": 13.0
 },
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
-"n": 59,
-"labelPoints": true
+"popup": true,
+"popupFields": [
+[
+"geom",
+"geom"
+],
+[
+"Gewässer_Name",
+"Gewässer_Name"
+],
+[
+"gml_parent_id",
+"gml_parent_id"
+],
+[
+"Shape__Area",
+"Shape__Area"
+],
+[
+"Shape__Length",
+"Shape__Length"
+]
+],
+"popupTitle": "S_BeschrKl_Freie: {Gewässer_Name}",
+"n": 59
 },
 {
 "id": 5,
@@ -127,20 +295,69 @@
 "group": "namen",
 "geom": "esriGeometryPolygon",
 "minz": 12.76,
-"maxz": 15.69,
+"maxz": 14.96,
 "visible": true,
 "att": false,
 "label": {
 "f": "Gewässer_Name",
 "minz": 12.69,
-"maxz": 15.38,
+"maxz": 15.11,
 "c": "rgba(0,0,0,1.0)",
 "h": null,
 "sz": 13.0
 },
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"Bearb_Ende",
+"Bearb_Ende"
+],
+[
+"Bearb_GesStd",
+"Bearb_GesStd"
+],
+[
+"Bearb_GesT",
+"Bearb_GesT"
+],
+[
+"Bearb_GesWo",
+"Bearb_GesWo"
+],
+[
+"Bearb_Kategorie",
+"Bearb_Kategorie"
+],
+[
+"Bearb_Std",
+"Bearb_Std"
+],
+[
+"geom",
+"geom"
+],
+[
+"Gewässer_Bereich",
+"Gewässer_Bereich"
+],
+[
+"Gewässer_Name",
+"Gewässer_Name"
+],
+[
+"Shape__Area",
+"Shape__Area"
+],
+[
+"Shape__Length",
+"Shape__Length"
+],
+[
+"Umfang_km",
+"Umfang_km"
+]
+],
+"popupTitle": "S_Be_FrGr: {Gewässer_Name}",
 "n": 16,
 "labelPoints": true
 },
@@ -155,9 +372,26 @@
 "visible": false,
 "att": false,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"Bootsangel",
+"Bootsangel-Erlaubnisbereich: "
+],
+[
+"Voraussetzung",
+"Voraussetzung: "
+],
+[
+"Kontakt",
+"Kontakt: "
+],
+[
+"KontaktII",
+"Weiterer Kontakt: "
+]
+],
+"popupTitle": "Bootsangel-Erlaubnis",
 "n": 11
 },
 {
@@ -293,9 +527,22 @@
 "visible": true,
 "att": false,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"Shape__Area",
+"Shape__Area"
+],
+[
+"Shape__Length",
+"Shape__Length"
+],
+[
+"Gewässer2",
+"2Gewässer"
+]
+],
+"popupTitle": "FlV_OhneEASE: {Shape_Length}",
 "n": 5
 },
 {
@@ -304,14 +551,14 @@
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_DE_AZI/FeatureServer/0",
 "group": "infra",
 "geom": "esriGeometryPoint",
-"minz": 15.64,
+"minz": 16.51,
 "maxz": null,
 "visible": true,
 "att": false,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "{AZI}",
 "n": 32
 },
 {
@@ -325,9 +572,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 54
 },
 {
@@ -341,9 +593,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinBil",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fotoart}",
 "n": 119
 },
 {
@@ -357,9 +614,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinBil",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fotoart}",
 "n": 114
 },
 {
@@ -373,9 +635,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinBil",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fotoart}",
 "n": 78
 },
 {
@@ -389,9 +656,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinBil",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fotoart}",
 "n": 38
 },
 {
@@ -405,9 +677,9 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "{AEB}",
 "n": 162
 },
 {
@@ -416,14 +688,14 @@
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_GE_AZI/FeatureServer/0",
 "group": "infra",
 "geom": "esriGeometryPoint",
-"minz": 15.76,
+"minz": 16.61,
 "maxz": null,
 "visible": true,
 "att": false,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "{AZI}",
 "n": 4
 },
 {
@@ -437,9 +709,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 249
 },
 {
@@ -453,9 +730,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergröß"
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 109
 },
 {
@@ -469,9 +751,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinBil",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fotoart}",
 "n": 156
 },
 {
@@ -485,9 +772,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinBil",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fotoart}",
 "n": 113
 },
 {
@@ -501,9 +793,9 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "{AEB}",
 "n": 181
 },
 {
@@ -512,14 +804,14 @@
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_HS_AZI/FeatureServer/0",
 "group": "infra",
 "geom": "esriGeometryPoint",
-"minz": 15.62,
+"minz": 16.78,
 "maxz": null,
 "visible": true,
 "att": false,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "{Standort}",
 "n": 78
 },
 {
@@ -533,9 +825,18 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinBil",
+"Bild vergrößern: "
+],
+[
+"Besonderheit",
+"Besonderheit: "
+]
+],
+"popupTitle": "{Fotoart}",
 "n": 21
 },
 {
@@ -549,9 +850,18 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern: "
+],
+[
+"Besonderheit",
+"Besonderheit: "
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 86
 },
 {
@@ -565,9 +875,9 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "{AEB}",
 "n": 29
 },
 {
@@ -576,14 +886,14 @@
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_ES_AZI/FeatureServer/0",
 "group": "infra",
 "geom": "esriGeometryPoint",
-"minz": 15.76,
+"minz": 16.76,
 "maxz": null,
 "visible": true,
 "att": false,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "{AZI}",
 "n": 43
 },
 {
@@ -597,9 +907,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern"
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 77
 },
 {
@@ -613,9 +928,9 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "{AEB}",
 "n": 28
 },
 {
@@ -629,9 +944,9 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "{AZI}",
 "n": 17
 },
 {
@@ -645,9 +960,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 6
 },
 {
@@ -661,9 +981,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 12
 },
 {
@@ -677,9 +1002,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 230
 },
 {
@@ -693,9 +1023,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 117
 },
 {
@@ -709,9 +1044,9 @@
 "visible": true,
 "att": false,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "{AEB}",
 "n": 77
 },
 {
@@ -725,9 +1060,9 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "{AZI}",
 "n": 9
 },
 {
@@ -766,9 +1101,9 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "{AEB}",
 "n": 6
 },
 {
@@ -777,14 +1112,14 @@
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_EN1_AZI/FeatureServer/0",
 "group": "infra",
 "geom": "esriGeometryPoint",
-"minz": 15.76,
+"minz": 16.79,
 "maxz": null,
 "visible": true,
 "att": false,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "{AZI}",
 "n": 136
 },
 {
@@ -793,14 +1128,14 @@
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_E_NS_AZI/FeatureServer/0",
 "group": "infra",
 "geom": "esriGeometryPoint",
-"minz": 15.76,
+"minz": 16.89,
 "maxz": null,
 "visible": true,
 "att": false,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "{AZI}",
 "n": 58
 },
 {
@@ -809,14 +1144,14 @@
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_E_AZI/FeatureServer/0",
 "group": "infra",
 "geom": "esriGeometryPoint",
-"minz": 15.62,
+"minz": 16.72,
 "maxz": null,
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "{AZI}",
 "n": 7
 },
 {
@@ -830,9 +1165,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 747
 },
 {
@@ -846,9 +1186,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 183
 },
 {
@@ -862,9 +1207,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 246
 },
 {
@@ -878,9 +1228,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 297
 },
 {
@@ -915,9 +1270,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 312
 },
 {
@@ -952,9 +1312,9 @@
 "visible": true,
 "att": false,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "{AEB}",
 "n": 49
 },
 {
@@ -968,9 +1328,9 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "{AEB}",
 "n": 114
 },
 {
@@ -979,14 +1339,14 @@
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_E_HuK_AZI/FeatureServer/0",
 "group": "infra",
 "geom": "esriGeometryPoint",
-"minz": 15.76,
+"minz": 16.51,
 "maxz": null,
 "visible": true,
 "att": false,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "{AZI}",
 "n": 397
 },
 {
@@ -1000,9 +1360,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 1952
 },
 {
@@ -1016,9 +1381,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 645
 },
 {
@@ -1032,9 +1402,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 829
 },
 {
@@ -1048,9 +1423,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 284
 },
 {
@@ -1064,9 +1444,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 15
 },
 {
@@ -1080,9 +1465,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 1082
 },
 {
@@ -1096,9 +1486,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 661
 },
 {
@@ -1112,9 +1507,9 @@
 "visible": true,
 "att": false,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "{AEB}",
 "n": 657
 },
 {
@@ -1128,9 +1523,9 @@
 "visible": true,
 "att": false,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "{AEB}",
 "n": 357
 },
 {
@@ -1139,7 +1534,7 @@
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_Al_Azi/FeatureServer/0",
 "group": "infra",
 "geom": "esriGeometryPoint",
-"minz": 15.44,
+"minz": 16.89,
 "maxz": null,
 "visible": true,
 "att": false,
@@ -1277,9 +1672,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern:"
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 49
 },
 {
@@ -1325,14 +1725,14 @@
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_BAl_AZI/FeatureServer/0",
 "group": "infra",
 "geom": "esriGeometryPoint",
-"minz": 15.69,
+"minz": 16.48,
 "maxz": null,
 "visible": true,
 "att": false,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "{AZInf}",
 "n": 3
 },
 {
@@ -1404,9 +1804,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern:"
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 70
 },
 {
@@ -1420,9 +1825,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"Minfot",
+"Bild vergrößern:"
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 69
 },
 {
@@ -1436,9 +1846,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern:"
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 51
 },
 {
@@ -1452,9 +1867,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern:"
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 35
 },
 {
@@ -1468,9 +1888,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern:"
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 98
 },
 {
@@ -1484,9 +1909,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFoto",
+"Bild vergrößern:"
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 72
 },
 {
@@ -1500,9 +1930,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern:"
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 101
 },
 {
@@ -1516,9 +1951,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern:"
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 25
 },
 {
@@ -1532,9 +1972,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern"
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 45
 },
 {
@@ -1548,9 +1993,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern"
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 77
 },
 {
@@ -1564,9 +2014,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern:"
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 123
 },
 {
@@ -1580,9 +2035,14 @@
 "visible": true,
 "att": false,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"AngErlBer",
+"AngErlBer"
+]
+],
+"popupTitle": "{AngErlBer}",
 "n": 537
 },
 {
@@ -1591,14 +2051,14 @@
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S__BBu_Azi/FeatureServer/0",
 "group": "infra",
 "geom": "esriGeometryPoint",
-"minz": 15.62,
+"minz": 16.93,
 "maxz": null,
 "visible": true,
 "att": false,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "{Name}",
 "n": 7
 },
 {
@@ -1612,9 +2072,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern"
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 52
 },
 {
@@ -1624,13 +2089,13 @@
 "group": "bereiche",
 "geom": "esriGeometryPolyline",
 "minz": 9.77,
-"maxz": null,
+"maxz": 19.72,
 "visible": true,
 "att": false,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "{AngErlBer}",
 "n": 69
 },
 {
@@ -1644,9 +2109,9 @@
 "visible": true,
 "att": false,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "{AZI}",
 "n": 50
 },
 {
@@ -1660,9 +2125,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 54
 },
 {
@@ -1676,9 +2146,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 81
 },
 {
@@ -1692,9 +2167,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 26
 },
 {
@@ -1708,9 +2188,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 26
 },
 {
@@ -1724,9 +2209,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 68
 },
 {
@@ -1740,9 +2230,9 @@
 "visible": true,
 "att": false,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "{AngErlBer}",
 "n": 167
 },
 {
@@ -1756,9 +2246,9 @@
 "visible": true,
 "att": false,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "{Name}",
 "n": 55
 },
 {
@@ -1772,9 +2262,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 63
 },
 {
@@ -1788,9 +2283,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 35
 },
 {
@@ -1804,9 +2304,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 60
 },
 {
@@ -1820,9 +2325,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern:"
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 51
 },
 {
@@ -1836,9 +2346,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern:"
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 63
 },
 {
@@ -1852,9 +2367,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern:"
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 39
 },
 {
@@ -1868,9 +2388,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 58
 },
 {
@@ -1884,9 +2409,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Foto vergrößern: "
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 35
 },
 {
@@ -1900,9 +2430,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Foto vergrößern: "
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 55
 },
 {
@@ -1916,9 +2451,9 @@
 "visible": true,
 "att": false,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "{AngErlBer}",
 "n": 298
 },
 {
@@ -1932,9 +2467,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern: "
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 288
 },
 {
@@ -1943,14 +2483,14 @@
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_____WG_AZI/FeatureServer/0",
 "group": "infra",
 "geom": "esriGeometryPoint",
-"minz": 15.76,
+"minz": 16.53,
 "maxz": null,
 "visible": true,
 "att": false,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "{AZI}",
 "n": 36
 },
 {
@@ -1964,9 +2504,9 @@
 "visible": true,
 "att": false,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "{AEB}",
 "n": 90
 },
 {
@@ -1980,9 +2520,122 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"Gew_Name",
+"Gew.Name: "
+],
+[
+"Besonderheit",
+"Anmerkung: "
+],
+[
+"GewTyp",
+"Gew._Typ: "
+],
+[
+"Shape__Length",
+"Uferlänge (m): "
+],
+[
+"Flächen",
+"Anlage: "
+],
+[
+"Name",
+"Anl.Name: "
+],
+[
+"GrAnlG_HA",
+"GrAnlG HA: "
+],
+[
+"GrAnlV_HA",
+"GrAnlV HA: "
+],
+[
+"Eigentümer",
+"Eigentümer: "
+],
+[
+"VerpachtungsInt",
+"Verpacht.-Option: "
+],
+[
+"FischR_Zust",
+"FischR_Zust.: "
+],
+[
+"GesGrdl",
+"Ges.Grdl.: "
+],
+[
+"HmbFAnG",
+"HmbFAnG:"
+],
+[
+"AvGrund",
+"AVerb.-Grund.:"
+],
+[
+"Bezirk",
+"Bezirk"
+],
+[
+"Stadtteil",
+"Stadtteil"
+],
+[
+"Ortsteil",
+"Ortsteil"
+],
+[
+"Flurstück",
+"Flurstück: "
+],
+[
+"Schutzgebiet",
+"Schutzgebiet:"
+],
+[
+"SchG_Verordnung",
+"SchG_Verordnung:"
+],
+[
+"Gewässernetz",
+"Gewässernetz:"
+],
+[
+"HmbFAnGDVO",
+"HmbFAnGDVO:"
+],
+[
+"Geoportal_HH",
+"Geoportal_HH:"
+],
+[
+"Google_Maps",
+"Google_Maps:"
+],
+[
+"Luftbild_Auswertung",
+"Luftbild:"
+],
+[
+"Wikipedia",
+"Wikipedia:"
+],
+[
+"HH_de",
+"HH_de"
+],
+[
+"MinBil",
+"3d-Ansicht vergrößern: "
+]
+],
+"popupTitle": "{Gew_Name}",
 "n": 33
 },
 {
@@ -1996,9 +2649,9 @@
 "visible": true,
 "att": false,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "Keine anglerische Nutzung",
 "n": 31
 },
 {
@@ -2012,9 +2665,18 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"Vereinspacht",
+"Vereinspacht:"
+],
+[
+"Webseite",
+"Link:"
+]
+],
+"popupTitle": "{Gewässername}",
 "n": 55
 },
 {
@@ -2028,9 +2690,18 @@
 "visible": true,
 "att": false,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"Vereinspacht",
+"Vereinspacht: "
+],
+[
+"Link",
+"Kontakt: "
+]
+],
+"popupTitle": "{GewName}",
 "n": 71
 },
 {
@@ -2039,14 +2710,23 @@
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S__Fl_Verein_EWG/FeatureServer/0",
 "group": "gewaesser",
 "geom": "esriGeometryPolygon",
-"minz": 10.32,
+"minz": 8.81,
 "maxz": null,
 "visible": true,
 "att": false,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"Angelpacht",
+"Vereinspacht: "
+],
+[
+"Webseite",
+"Kontakt: "
+]
+],
+"popupTitle": "{Gewässer_Name}",
 "n": 11
 },
 {
@@ -2067,9 +2747,18 @@
 "h": null,
 "sz": 13.0
 },
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"Angelpacht",
+"Angelpacht: "
+],
+[
+"Webseite",
+"Kontakt: "
+]
+],
+"popupTitle": "{gewaesser_typ}",
 "n": 6
 },
 {
@@ -2078,14 +2767,14 @@
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_P1_AusbG_Azi/FeatureServer/0",
 "group": "infra",
 "geom": "esriGeometryPoint",
-"minz": 15.57,
+"minz": 16.7,
 "maxz": null,
 "visible": true,
 "att": false,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "{AZI}",
 "n": 10
 },
 {
@@ -2116,7 +2805,7 @@
 "group": "bereiche",
 "geom": "esriGeometryPolyline",
 "minz": 9.82,
-"maxz": null,
+"maxz": 19.82,
 "visible": true,
 "att": true,
 "label": null,
@@ -2136,9 +2825,9 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "Angeln verboten",
 "n": 222
 },
 {
@@ -2152,9 +2841,9 @@
 "visible": true,
 "att": false,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "{AEB}",
 "n": 13
 },
 {
@@ -2164,13 +2853,13 @@
 "group": "bereiche",
 "geom": "esriGeometryPolyline",
 "minz": 9.53,
-"maxz": null,
+"maxz": 19.68,
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "Angeln verboten",
 "n": 168
 },
 {
@@ -2245,9 +2934,22 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"Gewässername",
+"Gewässername"
+],
+[
+"Angelverbot",
+"Grund für Angelverbot"
+],
+[
+"NachweisAngVerb",
+"Nachweis für Angelverbot"
+]
+],
+"popupTitle": "Angelverbotsbereich",
 "n": 34
 },
 {
@@ -2261,9 +2963,34 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"LinkSchGKarte",
+"Gebiets-Karte: "
+],
+[
+"Angelverbotsbereiche",
+"Grund für Angelverbot: "
+],
+[
+"NSGVo",
+"Gebiets-Verordnung: "
+],
+[
+"NSGName",
+"Gebiets-Name: "
+],
+[
+"SonstigerAVGrund",
+"Sonstiger AV-Grund: "
+],
+[
+"LinkBild",
+"Gebiets-Foto:"
+]
+],
+"popupTitle": "NSG Bootsangel-Verbotsbereich",
 "n": 16
 },
 {
@@ -2276,17 +3003,67 @@
 "maxz": null,
 "visible": true,
 "att": false,
-"label": {
-"f": "VALUE",
-"minz": null,
-"maxz": null,
-"c": "rgba(51,51,51,1.0)",
-"h": null,
-"sz": 11.0
-},
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"label": null,
+"popup": true,
+"popupFields": [
+[
+"MAJ_CAT",
+"MAJ_CAT"
+],
+[
+"L_LIMIT",
+"L_LIMIT"
+],
+[
+"U_LIMIT",
+"U_LIMIT"
+],
+[
+"ZORDER",
+"ZORDER"
+],
+[
+"LAYER",
+"LAYER"
+],
+[
+"MODE",
+"MODE"
+],
+[
+"COLOR",
+"COLOR"
+],
+[
+"WIDTH",
+"WIDTH"
+],
+[
+"MIN_CAT",
+"MIN_CAT"
+],
+[
+"RTP_LIMIT",
+"RTP_LIMIT"
+],
+[
+"RTP_COLOR",
+"RTP_COLOR"
+],
+[
+"FONT",
+"FONT"
+],
+[
+"VALUE",
+"VALUE"
+],
+[
+"TYPE",
+"TYPE"
+]
+],
+"popupTitle": "P2_BilSys_Tiefen_Major Contours: {MAJ_CAT}",
 "n": 1125
 },
 {
@@ -2307,9 +3084,70 @@
 "h": null,
 "sz": 11.0
 },
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"COLOR",
+"COLOR"
+],
+[
+"FONT",
+"FONT"
+],
+[
+"L_LIMIT",
+"L_LIMIT"
+],
+[
+"LAYER",
+"LAYER"
+],
+[
+"MAJ_CAT",
+"MAJ_CAT"
+],
+[
+"MIN_CAT",
+"MIN_CAT"
+],
+[
+"MODE",
+"MODE"
+],
+[
+"RTP_COLOR",
+"RTP_COLOR"
+],
+[
+"RTP_LIMIT",
+"RTP_LIMIT"
+],
+[
+"Shape__Length",
+"Shape__Length"
+],
+[
+"TYPE",
+"TYPE"
+],
+[
+"U_LIMIT",
+"U_LIMIT"
+],
+[
+"VALUE",
+"VALUE"
+],
+[
+"WIDTH",
+"WIDTH"
+],
+[
+"ZORDER",
+"ZORDER"
+]
+],
+"popupTitle": "S_T_DE: {MAJ_CAT}",
 "n": 595
 },
 {
@@ -2318,21 +3156,75 @@
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_P1_HS_Tiefen_Sicher_220422/FeatureServer/0",
 "group": "tiefen",
 "geom": "esriGeometryPolyline",
-"minz": 11.0,
+"minz": 15.79,
 "maxz": null,
 "visible": true,
 "att": false,
-"label": {
-"f": "VALUE",
-"minz": null,
-"maxz": null,
-"c": "rgba(51,51,51,1.0)",
-"h": null,
-"sz": 11.0
-},
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"label": null,
+"popup": true,
+"popupFields": [
+[
+"COLOR",
+"COLOR"
+],
+[
+"FONT",
+"FONT"
+],
+[
+"L_LIMIT",
+"L_LIMIT"
+],
+[
+"LAYER",
+"LAYER"
+],
+[
+"MAJ_CAT",
+"MAJ_CAT"
+],
+[
+"MIN_CAT",
+"MIN_CAT"
+],
+[
+"MODE",
+"MODE"
+],
+[
+"RTP_COLOR",
+"RTP_COLOR"
+],
+[
+"RTP_LIMIT",
+"RTP_LIMIT"
+],
+[
+"Shape__Length",
+"Shape__Length"
+],
+[
+"TYPE",
+"TYPE"
+],
+[
+"U_LIMIT",
+"U_LIMIT"
+],
+[
+"VALUE",
+"VALUE"
+],
+[
+"WIDTH",
+"WIDTH"
+],
+[
+"ZORDER",
+"ZORDER"
+]
+],
+"popupTitle": "S_P1_HS_Tiefen_Sicher_220422: {MAJ_CAT}",
 "n": 102
 },
 {
@@ -2387,9 +3279,22 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"Gewässername",
+"Gewässername"
+],
+[
+"Angelverbot",
+"Grund für Angelverbot"
+],
+[
+"NachweisAngVerb",
+"Nachweis für Angelverbot"
+]
+],
+"popupTitle": "Angelverbotsbereich",
 "n": 119
 },
 {
@@ -2403,9 +3308,30 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"Angelgeschäft",
+"Name: "
+],
+[
+"Anschrift",
+"Anschrift: "
+],
+[
+"Webseit",
+"Webseite: "
+],
+[
+"Telefonnummer",
+"Telefonnummer:"
+],
+[
+"Fischereiabgabe",
+"Fischereiabgabe: "
+]
+],
+"popupTitle": "{Kategorue}",
 "n": 4
 },
 {
@@ -2414,14 +3340,14 @@
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/AKS_AAl_WSFoto_gpsETRS/FeatureServer/2",
 "group": "infra",
 "geom": "esriGeometryPoint",
-"minz": 15.92,
+"minz": 16.51,
 "maxz": null,
 "visible": true,
 "att": false,
 "label": null,
-"popup": false,
+"popup": true,
 "popupFields": [],
-"popupTitle": null,
+"popupTitle": "{AZI}",
 "n": 106
 },
 {
@@ -2435,9 +3361,14 @@
 "visible": true,
 "att": true,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"MinFot",
+"Bild vergrößern:"
+]
+],
+"popupTitle": "{Fototyp}",
 "n": 69
 },
 {
@@ -2451,9 +3382,30 @@
 "visible": true,
 "att": false,
 "label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
+"popup": true,
+"popupFields": [
+[
+"AErl",
+"AErl"
+],
+[
+"CreationDate",
+"CreationDate"
+],
+[
+"Creator",
+"Creator"
+],
+[
+"EditDate",
+"EditDate"
+],
+[
+"Editor",
+"Editor"
+]
+],
+"popupTitle": "{AErl}",
 "n": 13
 },
 {
@@ -2462,7 +3414,7 @@
 "url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S_BAVB/FeatureServer/0",
 "group": "verbot",
 "geom": "esriGeometryPoint",
-"minz": null,
+"minz": 13.79,
 "maxz": null,
 "visible": true,
 "att": true,
@@ -2476,25 +3428,16 @@
 ],
 "popupTitle": "Bootsangel-Verbotsbereich",
 "n": 2
-},
-{
-"id": 135,
-"title": "S__BA_AEB",
-"url": "https://services9.arcgis.com/S9RWwBADLvmfvI9X/arcgis/rest/services/S__BA_AEB/FeatureServer/0",
-"group": "bereiche",
-"geom": "esriGeometryPolyline",
-"minz": null,
-"maxz": null,
-"visible": true,
-"att": false,
-"label": null,
-"popup": false,
-"popupFields": [],
-"popupTitle": null,
-"n": 10
 }
 ],
 "styles": [
+{
+"t": "fill",
+"c": "rgba(0,0,0,0.0)",
+"oc": "rgba(0,0,0,0.0)",
+"ow": 0.53,
+"op": 1.0
+},
 {
 "t": "fill",
 "c": "rgba(132,0,168,1.0)",
@@ -2546,10 +3489,10 @@
 },
 {
 "t": "fill",
-"c": "rgba(202,237,250,1.0)",
-"oc": "rgba(110,110,110,1.0)",
+"c": "rgba(0,76,115,1.0)",
+"oc": "rgba(0,0,0,0.0)",
 "ow": 0.53,
-"op": 1.0
+"op": 0.24
 },
 {
 "t": "icon",
@@ -2788,10 +3731,10 @@
 },
 {
 "t": "fill",
-"c": "rgba(255,115,223,1.0)",
-"oc": "rgba(110,110,110,1.0)",
+"c": "rgba(232,44,188,1.0)",
+"oc": "rgba(232,44,188,1.0)",
 "ow": 0.53,
-"op": 0.25
+"op": 1.0
 },
 {
 "t": "fill",
@@ -2848,15 +3791,8 @@
 },
 {
 "t": "icon",
-"i": "dac4b1269b",
+"i": "b72ba4a39a",
 "sz": 20.0,
-"op": 1.0
-},
-{
-"t": "line",
-"c": "rgba(71,147,34,1.0)",
-"w": 1.33,
-"d": false,
 "op": 1.0
 }
 ],
@@ -2873,5 +3809,5 @@
 ],
 "title": "Topografisch"
 },
-"built": "2026-11-05T22:00:30.880482Z"
+"built": "2026-11-05T22:08:53.556026Z"
 }
