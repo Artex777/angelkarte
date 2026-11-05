@@ -1,3 +1,0 @@
-{
- "error": "'ascii' codec can't encode character '\\xfc' in position 52: ordinal not in range(128)"
-}
