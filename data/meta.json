@@ -2112,7 +2112,8 @@
 "popup": false,
 "popupFields": [],
 "popupTitle": null,
-"n": 24
+"n": 24,
+"labelPoints": true
 },
 {
 "id": 128,
@@ -2135,7 +2136,8 @@
 "popup": false,
 "popupFields": [],
 "popupTitle": null,
-"n": 8
+"n": 8,
+"labelPoints": true
 },
 {
 "id": 129,
@@ -2158,7 +2160,8 @@
 "popup": false,
 "popupFields": [],
 "popupTitle": null,
-"n": 2
+"n": 2,
+"labelPoints": true
 },
 {
 "id": 130,
@@ -2181,7 +2184,8 @@
 "popup": false,
 "popupFields": [],
 "popupTitle": null,
-"n": 8
+"n": 8,
+"labelPoints": true
 },
 {
 "id": 131,
@@ -2204,7 +2208,8 @@
 "popup": false,
 "popupFields": [],
 "popupTitle": null,
-"n": 16
+"n": 16,
+"labelPoints": true
 },
 {
 "id": 132,
@@ -2629,5 +2634,5 @@
 ],
 "title": "Topografisch"
 },
-"built": "2026-11-05T17:59:12.929090Z"
+"built": "2026-11-05T18:02:24.854127Z"
 }
