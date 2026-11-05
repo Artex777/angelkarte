@@ -9,6 +9,9 @@ require(["esri/WebMap", "esri/views/MapView", "esri/core/reactiveUtils"], (WebMa
   view.when(async () => {
     await view.goTo({ center: [+q.get("lon"), +q.get("lat")], scale: +q.get("scale") }, { animate: false });
     await map.loadAll();
+    const only = q.get("only");
+    if (only) map.allLayers.forEach(l => { if (l.type !== "group" && l.url) l.visible = l.title === only; });
+    if (q.get("direct")) { const FL = await new Promise(r => require(["esri/layers/FeatureLayer"], r)); map.removeAll(); map.add(new FL({ url: q.get("direct") })); }
     await ru.whenOnce(() => !view.updating);
     await new Promise(r => setTimeout(r, 8000));
     await ru.whenOnce(() => !view.updating);
