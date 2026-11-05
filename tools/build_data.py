@@ -161,20 +161,49 @@ def style_of(sym, opacity):
         style_idx[k] = len(styles); styles.append(s)
     return style_idx[k]
 
-def fetch_all(url):
+def fetch_all(url, where="1=1"):
     feats, off = [], 0
     while True:
-        r = get(f"{url}/query?where=1%3D1&outFields=*&outSR=4326&geometryPrecision=6"
+        r = get(f"{url}/query?where={urllib.parse.quote(where)}&outFields=*&outSR=4326&geometryPrecision=6"
                 f"&resultOffset={off}&resultRecordCount=1000&f=geojson")
         fs = r.get("features", [])
         feats += fs; off += len(fs)
         if not fs or not (r.get("properties") or {}).get("exceededTransferLimit"): break
     return feats
 
+_items = {}
+def item_layer(l):
+    """Einstellungen aus dem Layer-Element (Portal-Item): Symbolik, Popup, Filter, Maßstab.
+    Die offizielle App nutzt diese, wenn die WebMap selbst nichts festlegt."""
+    iid = l.get("itemId")
+    if not iid: return {}
+    if iid not in _items:
+        try: _items[iid] = get(f"https://www.arcgis.com/sharing/rest/content/items/{iid}/data?f=json") or {}
+        except Exception: _items[iid] = {}
+    idx = int(l["url"].rstrip("/").rsplit("/", 1)[1])
+    for x in (_items[iid].get("layers") or []):
+        if x.get("id") == idx: return x
+    return {}
+
+def merged(l):
+    """WebMap-Einstellungen haben Vorrang vor dem Layer-Element."""
+    it = item_layer(l)
+    ld = dict(it.get("layerDefinition") or {})
+    for k, v in (l.get("layerDefinition") or {}).items():
+        if v is not None: ld[k] = v
+    l = dict(l); l["layerDefinition"] = ld
+    if not l.get("popupInfo") and it.get("popupInfo"): l["popupInfo"] = it["popupInfo"]
+    if "showLabels" not in l and "showLabels" in it: l["showLabels"] = it["showLabels"]
+    if it.get("opacity") is not None: l["opacity"] = l.get("opacity", 1) * it["opacity"]
+    if it.get("visibility") is False: l["visibility"] = False
+    return l
+
 def load(i_l):
     i, l = i_l
+    l = merged(l)
     meta = get(l["url"] + "?f=json")
-    feats = fetch_all(l["url"]) if "error" not in meta else []
+    where = (l.get("layerDefinition") or {}).get("definitionExpression") or "1=1"
+    feats = fetch_all(l["url"], where) if "error" not in meta and l.get("visibility", True) is not False or "boang" in l["url"].lower() else []
     return i, l, meta, feats
 
 with ThreadPoolExecutor(8) as ex:
@@ -184,6 +213,7 @@ out = {"Point": [], "Line": [], "Polygon": []}
 layers = []
 for i, l, meta, feats in results:
     if "error" in meta: print("FEHLER", l["title"], meta["error"]); continue
+    if l.get("visibility") is False and "boang" not in l["url"].lower(): continue
     ld = l.get("layerDefinition") or {}
     di = ld.get("drawingInfo") or meta.get("drawingInfo") or {}
     r = di.get("renderer") or {}
@@ -251,6 +281,7 @@ for kind, fs in out.items():
 json.dump({"layers": layers, "styles": styles, "basemap": wm.get("baseMap"),
            "built": __import__("datetime").datetime.utcnow().isoformat() + "Z"},
           open(f"{OUT}/meta.json", "w"), ensure_ascii=False, indent=0)
+print("Layer-Elemente geladen:", len(_items))
 print({k: len(v) for k, v in out.items()}, len(layers), "layers", len(styles), "styles", len(icons), "icons")
 for f in sorted(os.listdir(OUT)):
     if f.endswith((".geojson", ".json")): print(f, os.path.getsize(f"{OUT}/{f}"))
