@@ -107,6 +107,7 @@ def group(title, url, geom, fields, poly_has_fill):
     if "tiefen" in n: return "tiefen"
     if "gewässernamen" in n: return "namen"
     if "angg" in n: return "shops"
+    if "zusatzinformationen" in n: return "infra"
     if geom == "esriGeometryPoint":
         if "Fototyp" in fields or "Fotoart" in fields or "WSFoto" in url: return "fotos"
         if "avb" in n: return "verbot"
@@ -245,3 +246,13 @@ json.dump({"layers": layers, "styles": styles, "basemap": wm.get("baseMap"),
 print({k: len(v) for k, v in out.items()}, len(layers), "layers", len(styles), "styles", len(icons), "icons")
 for f in sorted(os.listdir(OUT)):
     if f.endswith((".geojson", ".json")): print(f, os.path.getsize(f"{OUT}/{f}"))
+
+# Schrift für Beschriftungen lokal ablegen (sonst fehlen Kacheln, wenn der Schrift-Server nicht erreichbar ist)
+FONT = "Noto Sans Regular"
+os.makedirs(f"fonts/{FONT}", exist_ok=True)
+for rng in ["0-255", "256-511", "8192-8447"]:
+    fp = f"fonts/{FONT}/{rng}.pbf"
+    if not os.path.exists(fp):
+        u = "https://protomaps.github.io/basemaps-assets/fonts/" + urllib.parse.quote(FONT) + f"/{rng}.pbf"
+        with urllib.request.urlopen(u, timeout=60) as r: open(fp, "wb").write(r.read())
+print("fonts ok")

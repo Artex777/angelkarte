@@ -1,73 +1,376 @@
 <!doctype html>
-<html lang="de">
+<html lang="ru">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#1b5e20">
-<meta name="apple-mobile-web-app-capable" content="yes">
 <title>Angelkarte HH</title>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icon-192.png">
-<link rel="stylesheet" href="https://js.arcgis.com/4.30/esri/themes/light/main.css">
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
 <style>
-  html, body, #view { margin:0; padding:0; height:100%; width:100%; }
-  #err { position:absolute; top:8px; left:50%; transform:translateX(-50%); background:#b71c1c; color:#fff;
-         padding:8px 12px; border-radius:6px; font:14px sans-serif; display:none; z-index:10; }
+  :root { --g:#1b5e20; --bg:#fff; --fg:#1d1d1d; --mut:#666; --line:#e3e3e3; }
+  * { box-sizing: border-box; }
+  html, body { margin:0; height:100%; background:var(--bg); color:var(--fg);
+    font: 15px/1.35 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; overscroll-behavior:none; }
+  #map { position:absolute; inset:0; }
+  .bar { position:absolute; top:calc(10px + env(safe-area-inset-top)); left:10px; right:10px; display:flex; gap:8px; z-index:5; }
+  .bar input { flex:1; min-width:0; height:42px; border:0; border-radius:21px; padding:0 16px; font-size:16px;
+    box-shadow:0 1px 6px rgba(0,0,0,.25); background:#fff; }
+  .btn { height:42px; min-width:42px; border:0; border-radius:21px; background:#fff; box-shadow:0 1px 6px rgba(0,0,0,.25);
+    font-size:18px; cursor:pointer; padding:0 12px; color:var(--fg); }
+  .btn.on { background:var(--g); color:#fff; }
+  #results { position:absolute; top:calc(58px + env(safe-area-inset-top)); left:10px; right:10px; z-index:6; background:#fff;
+    border-radius:12px; box-shadow:0 2px 10px rgba(0,0,0,.25); max-height:50vh; overflow:auto; display:none; }
+  #results div { padding:10px 14px; border-bottom:1px solid var(--line); cursor:pointer; }
+  #results small { color:var(--mut); }
+  .sheet { position:absolute; left:0; right:0; bottom:0; z-index:7; background:#fff; border-radius:16px 16px 0 0;
+    box-shadow:0 -2px 12px rgba(0,0,0,.25); max-height:70vh; overflow:auto; padding:6px 16px calc(16px + env(safe-area-inset-bottom));
+    transform:translateY(105%); transition:transform .2s ease; }
+  .sheet.open { transform:none; }
+  .sheet .grip { width:40px; height:5px; border-radius:3px; background:#ccc; margin:4px auto 10px; }
+  .sheet h3 { margin:4px 0 10px; font-size:17px; display:flex; justify-content:space-between; align-items:center; gap:8px; }
+  .x { border:0; background:#eee; border-radius:50%; width:32px; height:32px; font-size:16px; cursor:pointer; flex:none; }
+  .grp { border-top:1px solid var(--line); padding:10px 0; }
+  .grp label { display:flex; align-items:center; gap:10px; font-weight:600; }
+  .grp input { width:22px; height:22px; accent-color:var(--g); }
+  .grp p { margin:4px 0 0 32px; color:var(--mut); font-size:13px; }
+  .leg { margin:6px 0 0 32px; display:flex; flex-wrap:wrap; gap:4px 12px; font-size:13px; }
+  .leg span { display:inline-flex; align-items:center; gap:6px; }
+  .sw { width:22px; height:22px; border-radius:4px; display:inline-block; flex:none; background-size:contain; background-repeat:no-repeat; background-position:center; }
+  .sw.l { height:5px; border-radius:2px; }
+  table { border-collapse:collapse; width:100%; font-size:14px; }
+  td { padding:5px 4px; border-top:1px solid var(--line); vertical-align:top; word-break:break-word; }
+  td:first-child { color:var(--mut); width:40%; }
+  .photos img { width:100%; border-radius:10px; margin:6px 0; background:#eee; min-height:120px; }
+  .tag { display:inline-block; padding:2px 8px; border-radius:10px; font-size:12px; background:#eee; margin-bottom:8px; }
+  #status { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); background:rgba(0,0,0,.75); color:#fff;
+    padding:10px 16px; border-radius:10px; z-index:9; font-size:14px; }
+  .maplibregl-ctrl-bottom-right { bottom:env(safe-area-inset-bottom); }
+  .foot { color:var(--mut); font-size:12px; margin-top:12px; }
+  a { color:var(--g); }
 </style>
-<script src="https://js.arcgis.com/4.30/"></script>
 </head>
 <body>
-<div id="view"></div>
-<div id="err"></div>
+<div id="map"></div>
+<div class="bar">
+  <input id="q" type="search" placeholder="Водоём или адрес…" autocomplete="off" enterkeyhint="search">
+  <button class="btn" id="bLayers" title="Слои">☰</button>
+</div>
+<div id="results"></div>
+<div class="sheet" id="layersSheet"><div class="grip"></div>
+  <h3>Слои <button class="x" data-close>✕</button></h3>
+  <div class="grp"><label>Подложка</label>
+    <div class="leg" style="margin-left:0">
+      <button class="btn" data-bm="topo">Карта</button>
+      <button class="btn" data-bm="sat">Спутник</button>
+    </div></div>
+  <div id="groups"></div>
+  <div class="foot" id="built"></div>
+</div>
+<div class="sheet" id="infoSheet"><div class="grip"></div><div id="info"></div></div>
+<div id="status">Загружаю карту…</div>
+
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
 <script>
-// Daten: öffentliche WebMap des Anglerverbands Hamburg auf ArcGIS Online
-const WEBMAP_ID = "24533f5e5b154ba5bd5d03fa473abd86";
-const KEY = "angelkarte-hh-state-v1";
+"use strict";
+const KEY = "angelkarte-hh-v2";
+const st = (() => { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } })();
+const saveState = () => { try { localStorage.setItem(KEY, JSON.stringify(st)); } catch (e) {} };
 
-function load() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
-function save(s) { try { localStorage.setItem(KEY, JSON.stringify(s)); } catch (e) {} }
+// Группы слоёв: понятные названия вместо технических имён ArcGIS
+const GROUPS = [
+  { id: "bereiche", name: "Зоны ловли вдоль берега", desc: "Цветные линии у воды: где ловить можно, ограниченно или нельзя." },
+  { id: "verbot",   name: "Запреты на ловлю", desc: "Точки с запретом ловли, в том числе в заповедниках (NSG)." },
+  { id: "fotos",    name: "Фото мест ловли", desc: "Нажми на значок, чтобы увидеть фото места." },
+  { id: "infra",    name: "Инфраструктура", desc: "Туалеты, кафе, причалы, слипы, скамейки и т. п." },
+  { id: "shops",    name: "Рыболовные магазины", desc: "" },
+  { id: "gewaesser",name: "Клубные и арендованные водоёмы", desc: "Заливка: воды клубов, аренда союза, заповедники." },
+  { id: "tiefen",   name: "Глубины", desc: "Линии глубин с подписями." },
+  { id: "namen",    name: "Названия водоёмов", desc: "" },
+  { id: "boot",     name: "Ловля с лодки", desc: "Зоны, где разрешена ловля с лодки (по умолчанию скрыто)." },
+];
+const DEFAULT_OFF = new Set(["boot"]);
+if (!st.groups) st.groups = {};
+const groupOn = g => st.groups[g] ?? !DEFAULT_OFF.has(g);
 
-require([
-  "esri/WebMap", "esri/views/MapView", "esri/widgets/Locate", "esri/widgets/Search",
-  "esri/widgets/LayerList", "esri/widgets/Legend", "esri/widgets/Expand", "esri/core/reactiveUtils"
-], (WebMap, MapView, Locate, Search, LayerList, Legend, Expand, reactiveUtils) => {
-  const state = load();
-  const map = new WebMap({ portalItem: { id: WEBMAP_ID } });
+const BASEMAPS = {
+  topo: "https://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}",
+  sat:  "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+};
+st.bm = st.bm || "topo";
 
-  const view = new MapView({
-    container: "view", map,
-    popup: { dockEnabled: true, dockOptions: { buttonEnabled: true, breakpoint: { width: 600 } } },
-    constraints: { snapToZoom: false }
-  });
+const map = new maplibregl.Map({
+  container: "map",
+  center: st.center || [9.99, 53.55], zoom: st.zoom ?? 10.5, bearing: st.bearing || 0, pitch: 0,
+  maxPitch: 0, dragRotate: false, attributionControl: { compact: true },
+  fadeDuration: 0,
+  style: {
+    version: 8,
+    glyphs: location.href.replace(/[?#].*$/, "").replace(/[^/]*$/, "") + "fonts/{fontstack}/{range}.pbf",
+    sources: { bm: { type: "raster", tiles: [BASEMAPS[st.bm]], tileSize: 256, maxzoom: 19,
+      attribution: "Esri · Daten: Anglerverband Hamburg" } },
+    layers: [{ id: "bm", type: "raster", source: "bm" }],
+  },
+});
+map.touchZoomRotate.disableRotation();
+map.addControl(new maplibregl.GeolocateControl({ positionOptions: { enableHighAccuracy: true }, trackUserLocation: true }), "bottom-right");
+map.addControl(new maplibregl.ScaleControl({ unit: "metric" }), "bottom-left");
 
-  map.when(() => {
-    // gespeicherte Layer-Sichtbarkeit wiederherstellen
-    if (state.layers) map.allLayers.forEach(l => { if (l.id in state.layers) l.visible = state.layers[l.id]; });
-    map.allLayers.forEach(l => reactiveUtils.watch(() => l.visible, () => persist()));
-  }).catch(e => showErr("Karte konnte nicht geladen werden: " + e.message));
+function persist() {
+  const c = map.getCenter();
+  st.center = [+c.lng.toFixed(6), +c.lat.toFixed(6)]; st.zoom = +map.getZoom().toFixed(2); st.bearing = map.getBearing();
+  saveState();
+}
+map.on("moveend", persist);
+document.addEventListener("visibilitychange", persist);
+window.addEventListener("pagehide", persist);
 
-  view.when(() => {
-    // gespeicherte Position wiederherstellen
-    if (state.center && state.scale) view.goTo({ center: state.center, scale: state.scale, rotation: state.rotation || 0 }, { animate: false });
-  });
+// ArcGIS-масштаб → зум MapLibre (тайлы 512 px, поэтому −1)
+const mz = z => z == null ? null : Math.max(0, z - 1);
 
-  function persist() {
-    if (!view.center) return;
-    const layers = {};
-    map.allLayers.forEach(l => layers[l.id] = l.visible);
-    save({ center: [view.center.longitude, view.center.latitude], scale: view.scale, rotation: view.rotation, layers });
-  }
-  reactiveUtils.when(() => view.stationary, persist);
-  document.addEventListener("visibilitychange", persist);
-  window.addEventListener("pagehide", persist);
+let META, LAYERS = {}, styleLayerGroups = {};
+const status = t => { const s = document.getElementById("status"); s.textContent = t; s.style.display = t ? "block" : "none"; };
 
-  view.ui.add(new Search({ view }), "top-right");
-  view.ui.add(new Locate({ view }), "top-left");
-  view.ui.add(new Expand({ view, content: new LayerList({ view }), expandTooltip: "Ebenen", group: "tr" }), "top-right");
-  view.ui.add(new Expand({ view, content: new Legend({ view }), expandIcon: "legend", expandTooltip: "Legende", group: "tr" }), "top-right");
+async function loadJSON(u) { const r = await fetch(u); if (!r.ok) throw new Error(u + ": " + r.status); return r.json(); }
+
+map.on("load", async () => {
+  try {
+    const [meta, pts, lines, polys] = await Promise.all([
+      loadJSON("data/meta.json"), loadJSON("data/points.geojson"), loadJSON("data/lines.geojson"), loadJSON("data/polygons.geojson")]);
+    META = meta; meta.layers.forEach(l => LAYERS[l.id] = l);
+    // иконки
+    const iconIds = [...new Set(meta.styles.filter(s => s.t === "icon").map(s => s.i))];
+    const iconW = {};
+    await Promise.all(iconIds.map(async h => {
+      try { const im = await map.loadImage("data/icons/" + h + ".png"); map.addImage(h, im.data); iconW[h] = im.data.width; } catch (e) {}
+    }));
+    map.addSource("pts", { type: "geojson", data: pts });
+    map.addSource("lines", { type: "geojson", data: lines });
+    map.addSource("polys", { type: "geojson", data: polys });
+    buildLayers(meta, iconW);
+    buildPanel(meta, pts, lines, polys);
+    document.getElementById("built").textContent = "Данные Anglerverband Hamburg, обновлены " +
+      new Date(meta.built).toLocaleDateString("ru-RU") + ". Обновляются автоматически раз в неделю.";
+    window._search = buildSearchIndex(pts, lines, polys);
+    status("");
+  } catch (e) { status("Ошибка загрузки: " + e.message); console.error(e); }
 });
 
-function showErr(t) { const e = document.getElementById("err"); e.textContent = t; e.style.display = "block"; }
+function matchExpr(styles, pick, fallback) {
+  const e = ["match", ["get", "_s"]]; let n = 0;
+  styles.forEach((s, i) => { const v = pick(s); if (v != null) { e.push(i, v); n++; } });
+  e.push(fallback);
+  return n ? e : fallback;
+}
+
+function buildLayers(meta, iconW) {
+  const S = meta.styles;
+  // Объединяем ArcGIS-слои с одинаковыми группой и диапазоном масштаба в один слой MapLibre
+  const buckets = {};
+  for (const l of meta.layers) {
+    const k = [l.group, l.geom, l.minz, l.maxz].join("|");
+    (buckets[k] = buckets[k] || { g: l.group, geom: l.geom, minz: mz(l.minz), maxz: mz(l.maxz), ids: [] }).ids.push(l.id);
+  }
+  const order = { esriGeometryPolygon: 0, esriGeometryPolyline: 1, esriGeometryPoint: 2 };
+  const list = Object.values(buckets).sort((a, b) => order[a.geom] - order[b.geom]);
+  const add = (b, spec) => {
+    spec.id = spec.id + "-" + b.g + "-" + (map.getStyle().layers.length);
+    if (b.minz) spec.minzoom = b.minz;
+    if (b.maxz) spec.maxzoom = b.maxz;
+    spec.layout = Object.assign({ visibility: groupOn(b.g) ? "visible" : "none" }, spec.layout || {});
+    map.addLayer(spec);
+    (styleLayerGroups[b.g] = styleLayerGroups[b.g] || []).push(spec.id);
+  };
+  const inIds = ids => ["in", ["get", "_l"], ["literal", ids]];
+  const hasStyle = (t) => ["in", ["get", "_s"], ["literal", S.map((s, i) => s.t === t ? i : -1).filter(i => i >= 0)]];
+  const dashIds = S.map((s, i) => s.t === "line" && s.d ? i : -1).filter(i => i >= 0);
+
+  for (const b of list) {
+    if (b.geom === "esriGeometryPolygon") {
+      add(b, { id: "fill", type: "fill", source: "polys", filter: ["all", inIds(b.ids), hasStyle("fill")],
+        paint: { "fill-color": matchExpr(S, s => s.t === "fill" && s.c ? s.c : null, "rgba(0,0,0,0)"),
+                 "fill-opacity": matchExpr(S, s => s.op, 1) } });
+      add(b, { id: "outline", type: "line", source: "polys", filter: ["all", inIds(b.ids), hasStyle("fill")],
+        paint: { "line-color": matchExpr(S, s => s.t === "fill" && s.oc ? s.oc : null, "rgba(0,0,0,0)"),
+                 "line-width": matchExpr(S, s => s.t === "fill" ? s.ow : null, 1) } });
+    }
+    if (b.geom === "esriGeometryPolyline") {
+      const base = ["all", inIds(b.ids), hasStyle("line")];
+      const paint = { "line-color": matchExpr(S, s => s.t === "line" ? s.c : null, "#888"),
+        "line-width": ["interpolate", ["linear"], ["zoom"], 10, matchExpr(S, s => s.t === "line" ? s.w : null, 1.5),
+                        17, ["*", 2.2, matchExpr(S, s => s.t === "line" ? s.w : null, 1.5)]],
+        "line-opacity": matchExpr(S, s => s.op, 1) };
+      add(b, { id: "line", type: "line", source: "lines", filter: ["all", base, ["!", ["in", ["get", "_s"], ["literal", dashIds]]]],
+        layout: { "line-cap": "round", "line-join": "round" }, paint });
+      if (dashIds.length) add(b, { id: "dash", type: "line", source: "lines",
+        filter: ["all", base, ["in", ["get", "_s"], ["literal", dashIds]]], paint: Object.assign({ "line-dasharray": [2, 1.5] }, paint) });
+    }
+    if (b.geom === "esriGeometryPoint") {
+      add(b, { id: "circle", type: "circle", source: "pts", filter: ["all", inIds(b.ids), hasStyle("circle")],
+        paint: { "circle-color": matchExpr(S, s => s.t === "circle" ? s.c : null, "#999"),
+                 "circle-radius": matchExpr(S, s => s.t === "circle" ? s.r : null, 4),
+                 "circle-stroke-color": matchExpr(S, s => s.t === "circle" && s.oc ? s.oc : null, "rgba(0,0,0,0)"),
+                 "circle-stroke-width": matchExpr(S, s => s.t === "circle" ? s.ow : null, 0) } });
+      // Значки: в оригинале они очень мелкие (выглядят как квадратики), поэтому крупнее и растут с зумом
+      const sz = matchExpr(S, s => s.t === "icon" ? s.sz / (iconW[s.i] || 64) : null, 0.3);
+      add(b, { id: "icon", type: "symbol", source: "pts", filter: ["all", inIds(b.ids), hasStyle("icon")],
+        layout: { "icon-image": matchExpr(S, s => s.t === "icon" ? s.i : null, ""),
+                  "icon-size": ["interpolate", ["linear"], ["zoom"], 13, ["*", 0.9, sz], 16, ["*", 1.4, sz], 18, ["*", 2, sz]],
+                  "icon-allow-overlap": true, "icon-ignore-placement": true },
+        paint: { "icon-opacity": matchExpr(S, s => s.op, 1) } });
+    }
+  }
+  // Подписи (названия водоёмов, глубины)
+  const lab = {};
+  for (const l of meta.layers) if (l.label) {
+    const k = [l.label.minz, l.label.maxz, l.geom].join("|");
+    (lab[k] = lab[k] || { l: l.label, geom: l.geom, ids: [], g: l.group === "tiefen" ? "tiefen" : "namen" }).ids.push(l.id);
+  }
+  for (const b of Object.values(lab)) for (const src of
+      (b.geom === "esriGeometryPoint" ? ["pts"] : b.geom === "esriGeometryPolyline" ? ["lines"] : ["polys", "pts"])) {
+    add({ g: b.g, minz: mz(b.l.minz), maxz: mz(b.l.maxz) }, { id: "label", type: "symbol", source: src,
+      filter: ["all", inIds(b.ids), ["has", "_n"]],
+      layout: { "text-field": ["get", "_n"], "text-font": ["Noto Sans Regular"], "text-size": Math.max(12, b.l.sz),
+                "symbol-placement": b.geom === "esriGeometryPolyline" ? "line" : "point", "text-max-width": 10 },
+      paint: { "text-color": b.l.c, "text-halo-color": b.l.h || "rgba(255,255,255,.9)", "text-halo-width": 1.5 } });
+  }
+}
+
+function setGroup(g, on) {
+  st.groups[g] = on; saveState();
+  (styleLayerGroups[g] || []).forEach(id => map.setLayoutProperty(id, "visibility", on ? "visible" : "none"));
+}
+
+function buildPanel(meta, ...colls) {
+  // легенда по категориям (_k) внутри каждой группы
+  const leg = {};
+  for (const c of colls) for (const f of c.features) {
+    const p = f.properties, l = LAYERS[p._l]; if (!l || p._s == null) continue;
+    const k = (p._k || "").trim(); if (!k) continue;
+    const g = (leg[l.group] = leg[l.group] || new Map());
+    if (!g.has(k)) g.set(k, meta.styles[p._s]);
+  }
+  const el = document.getElementById("groups");
+  for (const g of GROUPS) {
+    if (!styleLayerGroups[g.id]) continue;
+    const d = document.createElement("div"); d.className = "grp";
+    const items = [...(leg[g.id] || new Map())].slice(0, 24).map(([k, s]) => `<span>${swatch(s)}${esc(k)}</span>`).join("");
+    d.innerHTML = `<label><input type="checkbox" ${groupOn(g.id) ? "checked" : ""}> ${g.name}</label>` +
+      (g.desc ? `<p>${g.desc}</p>` : "") + (items ? `<div class="leg">${items}</div>` : "");
+    d.querySelector("input").onchange = e => setGroup(g.id, e.target.checked);
+    el.appendChild(d);
+  }
+}
+function swatch(s) {
+  if (!s) return "";
+  if (s.t === "icon") return `<i class="sw" style="background-image:url(data/icons/${s.i}.png)"></i>`;
+  if (s.t === "line") return `<i class="sw l" style="background:${s.c}"></i>`;
+  return `<i class="sw" style="background:${s.c || "transparent"};border:2px solid ${s.oc || "transparent"}"></i>`;
+}
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+// Подложка
+function setBasemap(k) {
+  st.bm = k; saveState();
+  map.getSource("bm").setTiles([BASEMAPS[k]]);
+  document.querySelectorAll("[data-bm]").forEach(b => b.classList.toggle("on", b.dataset.bm === k));
+}
+document.querySelectorAll("[data-bm]").forEach(b => { b.onclick = () => setBasemap(b.dataset.bm); b.classList.toggle("on", b.dataset.bm === st.bm); });
+
+// Листы
+const sheets = { layers: document.getElementById("layersSheet"), info: document.getElementById("infoSheet") };
+const openSheet = n => { Object.entries(sheets).forEach(([k, s]) => s.classList.toggle("open", k === n)); };
+document.getElementById("bLayers").onclick = () => openSheet(sheets.layers.classList.contains("open") ? null : "layers");
+document.addEventListener("click", e => { if (e.target.closest("[data-close]")) openSheet(null); });
+
+// Клик по объекту
+const HIDE = /^(_|Shape|OBJECTID|FID|GlobalID|MinFot$)/;
+map.on("click", e => {
+  const r = 10, bbox = [[e.point.x - r, e.point.y - r], [e.point.x + r, e.point.y + r]];
+  const fs = map.queryRenderedFeatures(bbox).filter(f => f.source !== "bm" && f.properties._l != null && !f.layer.id.startsWith("label"));
+  if (!fs.length) { openSheet(null); return; }
+  const rank = f => ({ symbol: 0, circle: 0, line: 1, fill: 2 }[f.layer.type] ?? 3);
+  fs.sort((a, b) => rank(a) - rank(b));
+  showInfo(fs[0]);
+});
+map.on("mousemove", e => {
+  const fs = map.queryRenderedFeatures(e.point).filter(f => f.properties._l != null);
+  map.getCanvas().style.cursor = fs.length ? "pointer" : "";
+});
+
+async function showInfo(f) {
+  const p = f.properties, l = LAYERS[p._l], g = GROUPS.find(x => x.id === l.group);
+  let title = p._k || p._n || p.Gewässer_Name || p.Name || g?.name || "Объект";
+  if (l.popupTitle) title = l.popupTitle.replace(/\{([^}]+)\}/g, (_, k) => p[k] ?? "") || title;
+  const rows = (l.popupFields.length ? l.popupFields.map(([k, lab]) => [lab || k, p[k]]) :
+    Object.entries(p).filter(([k]) => !HIDE.test(k)).map(([k, v]) => [k, v]))
+    .filter(([, v]) => v != null && v !== "" && String(v) !== String(title))
+    .map(([k, v]) => `<tr><td>${esc(String(k).replace(/:\s*$/, ""))}</td><td>${fmt(v)}</td></tr>`).join("");
+  document.getElementById("info").innerHTML =
+    `<h3>${esc(title)} <button class="x" data-close>✕</button></h3><span class="tag">${esc(g?.name || "")}</span>` +
+    (rows ? `<table>${rows}</table>` : "") + (l.att ? `<div class="photos" id="ph">Загружаю фото…</div>` : "");
+  openSheet("info");
+  if (l.att) {
+    try {
+      const a = await loadJSON(`${l.url}/${p._o}/attachments?f=json`);
+      const ims = (a.attachmentInfos || []).filter(x => /image/.test(x.contentType));
+      document.getElementById("ph").innerHTML = ims.length ? ims.map(x =>
+        `<a href="${l.url}/${p._o}/attachments/${x.id}" target="_blank"><img loading="lazy" src="${l.url}/${p._o}/attachments/${x.id}" alt=""></a>`).join("") : "";
+    } catch (e) { document.getElementById("ph").textContent = "Фото не загрузилось."; }
+  }
+}
+function fmt(v) {
+  if (typeof v === "number" && v > 946684800000 && v < 4102444800000) return new Date(v).toLocaleDateString("ru-RU");
+  const s = String(v);
+  if (/^(https?:\/\/|www\.)/i.test(s)) { const u = s.startsWith("www.") ? "https://" + s : s; return `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(s)}</a>`; }
+  return esc(s);
+}
+
+// Поиск: сначала названия водоёмов из данных, затем адреса (OpenStreetMap)
+function buildSearchIndex(...colls) {
+  const idx = new Map();
+  for (const c of colls) for (const f of c.features) {
+    const p = f.properties, n = (p._n || p.Gewässer_Name || p.Gewässernamen || "").toString().trim();
+    if (!n || n.length < 3) continue;
+    const b = bboxOf(f.geometry), cur = idx.get(n);
+    idx.set(n, cur ? [Math.min(cur[0], b[0]), Math.min(cur[1], b[1]), Math.max(cur[2], b[2]), Math.max(cur[3], b[3])] : b);
+  }
+  return idx;
+}
+function bboxOf(g) {
+  let b = [180, 90, -180, -90];
+  const walk = c => typeof c[0] === "number" ? (b = [Math.min(b[0], c[0]), Math.min(b[1], c[1]), Math.max(b[2], c[0]), Math.max(b[3], c[1])]) : c.forEach(walk);
+  walk(g.coordinates); return b;
+}
+const qEl = document.getElementById("q"), resEl = document.getElementById("results");
+let qTimer;
+qEl.addEventListener("input", () => { clearTimeout(qTimer); qTimer = setTimeout(search, 250); });
+qEl.addEventListener("keydown", e => { if (e.key === "Enter") { clearTimeout(qTimer); search(true); } });
+async function search(remote) {
+  const q = qEl.value.trim().toLowerCase();
+  if (q.length < 2) { resEl.style.display = "none"; return; }
+  const local = [...(window._search || new Map())].filter(([n]) => n.toLowerCase().includes(q)).slice(0, 8)
+    .map(([n, b]) => ({ n, sub: "водоём", b }));
+  let addr = [];
+  if (remote || local.length < 3) {
+    try {
+      const r = await loadJSON("https://nominatim.openstreetmap.org/search?format=json&limit=5&countrycodes=de&viewbox=9.6,53.8,10.4,53.3&q=" + encodeURIComponent(qEl.value));
+      addr = r.map(x => ({ n: x.display_name.split(",").slice(0, 2).join(","), sub: x.display_name.split(",").slice(2, 4).join(","),
+        b: [+x.boundingbox[2], +x.boundingbox[0], +x.boundingbox[3], +x.boundingbox[1]] }));
+    } catch (e) {}
+  }
+  const all = local.concat(addr);
+  resEl.innerHTML = all.length ? "" : "<div>Ничего не найдено</div>";
+  all.forEach(x => {
+    const d = document.createElement("div"); d.innerHTML = `${esc(x.n)}<br><small>${esc(x.sub)}</small>`;
+    d.onclick = () => { map.fitBounds([[x.b[0], x.b[1]], [x.b[2], x.b[3]]], { padding: 60, maxZoom: 16 }); resEl.style.display = "none"; qEl.blur(); };
+    resEl.appendChild(d);
+  });
+  resEl.style.display = "block";
+}
+map.on("movestart", () => { resEl.style.display = "none"; });
+
 if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
 </script>
 </body>
