@@ -1,3 +1,15 @@
-geo [["53.5539701","10.0499191","Luisenweg, Hamm, Hamburg-Mitte, Hamburg, 20537, Deutschland"],["53.5476888","10.0452814","Luisenweg, Hamm, Hamburg-Mitte, Hamburg, 20537, Deutschland"],["53.5469438","10.0446463","Luisenweg, Hammerbrook, Hamburg-Mitte, Hamburg, 20537, Deutschland"]]
-console Error
+geo [["53.5539701","10.0499191","Luisenweg, Hamm, Hamburg-Mitte, Hamburg, 20537, Deutschland"],["53.5501356","10.0473576","Luisenweg, Hamm, Hamburg-Mitte, Hamburg, 20537, Deutschland"],["53.5469438","10.0446463","Luisenweg, Hammerbrook, Hamburg-Mitte, Hamburg, 20537, Deutschland"]]
 photo point [146.13454857168273,438.027739780633]
+wx text Погода и вода ✕Для точки в центре карты7°C
+      Ясно
+      
+        ВетерВ (76°) 2.5 м/с · порывы 5 м/с
+        Давление1030 hPa · ↘ падает (-4.3 за 24 ч)
+        Осадки0 mm · Облачность 0%
+        Солнце🌅 07:26 · 🌇 16:39
+        Луна🌘 Убывающий серп, 18%
+      Ближайшие часы19:007°2 м/с0% 💧20:007°2 м/с0% 💧21:006°2 м/с0% 💧22:006°2 м/с0% 💧23:005°2 м/с0% 💧00:005°2 м/с0% 💧01:005°2 м/с0% 💧02:004°2 м/с0% 💧03:004°2 м/с0% 💧04:004°2 м/с0% 💧05:004°2 м/с0% 💧06:004°2 м/с0% 💧🌊 Уровень Эльбы: HAMBURG ST. PAULI
+    313 cm
+    ↘ Отлив (вода убывает)
+    
+    24 h: 285–666 cm · 18:20 · PEGELO
