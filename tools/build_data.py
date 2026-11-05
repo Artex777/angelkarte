@@ -161,6 +161,36 @@ def style_of(sym, opacity):
         style_idx[k] = len(styles); styles.append(s)
     return style_idx[k]
 
+def _area(r):  # > 0: gegen den Uhrzeigersinn
+    return sum(r[i - 1][0] * r[i][1] - r[i][0] * r[i - 1][1] for i in range(len(r))) / 2
+
+DROPPED = {}
+def fetch_polygons(url, where="1=1"):
+    """Flächen als Esri-JSON laden und wie ArcGIS auswerten: Außenringe laufen im Uhrzeigersinn,
+    Ringe gegen den Uhrzeigersinn sind Löcher. Flächen nur aus Löchern zeichnet ArcGIS nicht."""
+    feats, off = [], 0
+    while True:
+        r = get(f"{url}/query?where={urllib.parse.quote(where)}&outFields=*&outSR=4326&geometryPrecision=6"
+                f"&resultOffset={off}&resultRecordCount=1000&f=json")
+        fs = r.get("features", [])
+        for f in fs:
+            rings = (f.get("geometry") or {}).get("rings") or []
+            outers = [x for x in rings if len(x) >= 4 and _area(x) < 0]
+            holes = [x for x in rings if len(x) >= 4 and _area(x) > 0]
+            if not outers:
+                DROPPED[url] = DROPPED.get(url, 0) + 1; continue
+            polys = [[o[::-1]] for o in outers]
+            for h in holes:
+                for pi, o in enumerate(outers):
+                    if _inside(h[0][0], h[0][1], o): polys[pi].append(h[::-1]); break
+            geom = {"type": "Polygon", "coordinates": polys[0]} if len(polys) == 1 else {"type": "MultiPolygon", "coordinates": polys}
+            a = f.get("attributes") or {}
+            oid = a.get("OBJECTID", a.get("FID"))
+            feats.append({"type": "Feature", "id": oid, "geometry": geom, "properties": a})
+        off += len(fs)
+        if not fs or not r.get("exceededTransferLimit"): break
+    return feats
+
 def fetch_all(url, where="1=1"):
     feats, off = [], 0
     while True:
@@ -203,7 +233,8 @@ def load(i_l):
     l = merged(l)
     meta = get(l["url"] + "?f=json")
     where = (l.get("layerDefinition") or {}).get("definitionExpression") or "1=1"
-    feats = fetch_all(l["url"], where) if "error" not in meta and l.get("visibility", True) is not False or "boang" in l["url"].lower() else []
+    fetch = fetch_polygons if meta.get("geometryType") == "esriGeometryPolygon" else fetch_all
+    feats = fetch(l["url"], where) if "error" not in meta and l.get("visibility", True) is not False or "boang" in l["url"].lower() else []
     return i, l, meta, feats
 
 with ThreadPoolExecutor(8) as ex:
@@ -282,6 +313,7 @@ json.dump({"layers": layers, "styles": styles, "basemap": wm.get("baseMap"),
            "built": __import__("datetime").datetime.utcnow().isoformat() + "Z"},
           open(f"{OUT}/meta.json", "w"), ensure_ascii=False, indent=0)
 print("Layer-Elemente geladen:", len(_items))
+print("Flächen ohne Außenring (zeichnet ArcGIS nicht):", DROPPED)
 print({k: len(v) for k, v in out.items()}, len(layers), "layers", len(styles), "styles", len(icons), "icons")
 for f in sorted(os.listdir(OUT)):
     if f.endswith((".geojson", ".json")): print(f, os.path.getsize(f"{OUT}/{f}"))
