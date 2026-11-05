@@ -1,0 +1,485 @@
+{
+ "currentVersion": 12,
+ "id": 0,
+ "name": "BeschrGr_Ver_ElOst_SElWilh",
+ "type": "Feature Layer",
+ "serviceItemId": "5a4bea59b622413f80de8bb00909b82b",
+ "cacheMaxAge": 3600,
+ "isView": true,
+ "isUpdatableView": true,
+ "sourceSchemaChangesAllowed": true,
+ "displayField": "Gewässer_Name",
+ "description": "",
+ "copyrightText": "",
+ "defaultVisibility": true,
+ "editingInfo": {
+  "lastEditDate": 1789226574441,
+  "schemaLastEditDate": 1789226574441,
+  "dataLastEditDate": 1789226555629
+ },
+ "multiScaleGeometryInfo": {
+  "levels": [
+   8,
+   10,
+   12,
+   14
+  ],
+  "maxAllowableVertices": 1000000,
+  "generalizationType": "Quantization"
+ },
+ "relationships": [],
+ "isDataVersioned": false,
+ "hasContingentValuesDefinition": false,
+ "supportsAppend": true,
+ "supportsCalculate": true,
+ "supportsASyncCalculate": true,
+ "supportsTruncate": false,
+ "supportsAttachmentsByUploadId": true,
+ "supportsAttachmentsResizing": true,
+ "supportsRollbackOnFailureParameter": true,
+ "supportsStatistics": true,
+ "supportsExceedsLimitStatistics": true,
+ "supportsAdvancedQueries": true,
+ "supportsValidateSql": true,
+ "supportsCoordinatesQuantization": true,
+ "supportsLayerOverrides": true,
+ "supportsTilesAndBasicQueriesMode": true,
+ "supportsFieldDescriptionProperty": true,
+ "supportsQuantizationEditMode": true,
+ "supportsColumnStoreIndex": true,
+ "supportsApplyEditsWithGlobalIds": true,
+ "supportsMultiScaleGeometry": true,
+ "supportsReturningQueryGeometry": true,
+ "enableNullGeometry": false,
+ "hasGeometryProperties": true,
+ "geometryProperties": {
+  "shapeAreaFieldName": "Shape__Area",
+  "shapeLengthFieldName": "Shape__Length",
+  "units": "esriMeters"
+ },
+ "advancedQueryCapabilities": {
+  "supportsPagination": true,
+  "supportsPaginationOnAggregatedQueries": true,
+  "supportsQueryRelatedPagination": true,
+  "supportsQueryWithDistance": true,
+  "supportsOutDistance": true,
+  "supportsReturningQueryExtent": true,
+  "supportsStatistics": true,
+  "supportsOrderBy": true,
+  "supportsDistinct": true,
+  "supportsQueryWithResultType": true,
+  "supportsSqlExpression": true,
+  "supportsTimeRelation": true,
+  "supportsAdvancedQueryRelated": true,
+  "supportsCountDistinct": true,
+  "supportsPercentileStatistics": true,
+  "supportsApproxPercentileStatistics": true,
+  "supportsSpatialAggregationStatistics": true,
+  "supportsTrueCurve": true,
+  "supportedSpatialAggregationStatistics": [
+   "EnvelopeAggregate",
+   "CentroidAggregate",
+   "ConvexHullAggregate"
+  ],
+  "supportsLod": true,
+  "supportsQueryWithLodSR": false,
+  "supportedLodTypes": [
+   "geohash"
+  ],
+  "supportsReturningGeometryCentroid": true,
+  "supportsReturningGeometryEnvelope": true,
+  "supportsReturningGeometryProperties": true,
+  "supportsQueryWithDatumTransformation": true,
+  "supportsCurrentUserQueries": true,
+  "supportsHavingClause": true,
+  "supportsOutFieldSQLExpression": true,
+  "supportsMaxRecordCountFactor": true,
+  "supportsTopFeaturesQuery": true,
+  "supportsDisjointSpatialRel": true,
+  "supportsQueryWithCacheHint": true,
+  "supportedOperationsWithCacheHint": [
+   "query",
+   "queryTopFilter",
+   "queryAnalytics",
+   "queryAttachments",
+   "queryRelated",
+   "queryBins",
+   "queryPivot"
+  ],
+  "supportsQueryAnalytic": true,
+  "supportsQueryPivot": true,
+  "supportsQueryBins": true,
+  "supportsDefaultSR": true,
+  "supportsTranslations": false,
+  "supportsAggIds": true,
+  "supportsQueryWithCollation": true,
+  "supportsISODOW": true,
+  "supportsISOWeek": true,
+  "supportsFullTextSearch": true,
+  "fullTextSearchCapabilities": {
+   "supportsAccentSensitivity": true,
+   "supportsStopWords": true,
+   "supportsSearchOperator": true,
+   "supportsOperator": true
+  }
+ },
+ "advancedQueryAnalyticCapabilities": {
+  "supportsLinearRegression": true,
+  "supportsTrendlineRegression": true,
+  "supportsAsync": true,
+  "supportsPercentileAnalytic": true
+ },
+ "queryBinsCapabilities": {
+  "supportsAsync": true,
+  "supportsAutoIntervalBin": true,
+  "supportsFixedIntervalBin": true,
+  "supportsFixedBoundariesBin": true,
+  "supportsDateBin": true,
+  "supportsClassificationBin": true,
+  "supportsStackBy": true,
+  "supportsSplitBy": true,
+  "supportsFirstDayOfWeek": true,
+  "supportsSnapToData": true,
+  "supportsReturnFullIntervalBin": true,
+  "supportsReturnStackValueRange": true,
+  "supportsNormalization": true,
+  "supportedStatisticTypes": [
+   "COUNT",
+   "SUM",
+   "AVG",
+   "VAR",
+   "STDDEV",
+   "MIN",
+   "MAX",
+   "PERCENTILE_CONT",
+   "PERCENTILE_DISC",
+   "APPROX_PERCENTILE_CONT",
+   "APPROX_PERCENTILE_DISC",
+   "CentroidAggregate",
+   "EnvelopeAggregate",
+   "ConvexHullAggregate"
+  ],
+  "supportedNormalizationTypes": [
+   "boxCox",
+   "field",
+   "inverse",
+   "log",
+   "naturalLog",
+   "percentOfTotal",
+   "squareRoot"
+  ]
+ },
+ "supportedOperationsWithCollation": "query,addField,updateField",
+ "advancedEditingCapabilities": {
+  "supportedSqlFormatsInCalculate": [
+   "standard"
+  ],
+  "supportsAsyncApplyEdits": true,
+  "supportsReturnEditResults": true,
+  "supportsApplyEditsbyUploadID": true,
+  "supportedApplyEditsUploadIDFormats": "JSON,PBF",
+  "supportsTranslation": false,
+  "supportsMaxTranslations": 10
+ },
+ "infoInEstimates": [
+  "extent",
+  "count"
+ ],
+ "useStandardizedQueries": true,
+ "geometryType": "esriGeometryPolygon",
+ "minScale": 89549,
+ "maxScale": 0,
+ "extent": {
+  "xmin": 566071.3670000015,
+  "ymin": 5916925.955,
+  "xmax": 587555.1290000007,
+  "ymax": 5925956.746000003,
+  "spatialReference": {
+   "wkid": 25832,
+   "latestWkid": 25832
+  }
+ },
+ "spatialReference": {
+  "wkid": 102100,
+  "latestWkid": 3857
+ },
+ "drawingInfo": {
+  "renderer": {
+   "type": "simple",
+   "label": "",
+   "description": "",
+   "symbol": {
+    "color": null,
+    "outline": {
+     "color": null,
+     "width": 0.4,
+     "type": "esriSLS",
+     "style": "esriSLSNull"
+    },
+    "type": "esriSFS",
+    "style": "esriSFSSolid"
+   }
+  },
+  "labelingInfo": [
+   {
+    "labelExpression": null,
+    "labelExpressionInfo": {
+     "expression": "$feature[\"Gewässer_Name\"]",
+     "value": "{Gewässer_Name}"
+    },
+    "useCodedValues": true,
+    "maxScale": 14477,
+    "minScale": 90593,
+    "where": null,
+    "labelPlacement": "esriServerPolygonPlacementAlwaysHorizontal",
+    "symbol": {
+     "color": [
+      0,
+      0,
+      0,
+      255
+     ],
+     "type": "esriTS",
+     "backgroundColor": null,
+     "borderLineColor": null,
+     "haloSize": 0,
+     "haloColor": null,
+     "horizontalAlignment": "center",
+     "rightToLeft": false,
+     "angle": 0,
+     "xoffset": 0,
+     "yoffset": 0,
+     "text": "",
+     "rotated": false,
+     "kerning": true,
+     "font": {
+      "size": 9.75,
+      "style": "normal",
+      "decoration": "none",
+      "weight": "bold",
+      "family": "Arial"
+     }
+    }
+   }
+  ],
+  "transparency": 0
+ },
+ "allowGeometryUpdates": true,
+ "trueCurveSupportMode": "OGC",
+ "supportedCurveTypes": [
+  "esriGeometryCircularArc"
+ ],
+ "supportedTrueCurvePbfFeatureEncodings": [
+  "esriCompressedShapeBuffer",
+  "esriDefault"
+ ],
+ "allowTrueCurvesUpdates": true,
+ "onlyAllowTrueCurveUpdatesByTrueCurveClients": false,
+ "hasAttachments": false,
+ "viewSourceHasAttachments": false,
+ "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+ "hasM": false,
+ "hasZ": false,
+ "objectIdField": "OBJECTID",
+ "uniqueIdField": {
+  "name": "OBJECTID",
+  "isSystemMaintained": true
+ },
+ "globalIdField": "GlobalID",
+ "typeIdField": "",
+ "collation": {
+  "locale": "neutral",
+  "caseSensitive": false,
+  "accentSensitive": true
+ },
+ "fields": [
+  {
+   "name": "OBJECTID",
+   "type": "esriFieldTypeOID",
+   "alias": "OBJECTID",
+   "sqlType": "sqlTypeOther",
+   "nullable": false,
+   "editable": false,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "geom",
+   "type": "esriFieldTypeString",
+   "alias": "geom",
+   "sqlType": "sqlTypeOther",
+   "length": 254,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Umfang_km",
+   "type": "esriFieldTypeSmallInteger",
+   "alias": "Umfang_km",
+   "sqlType": "sqlTypeOther",
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Gewässer_Name",
+   "type": "esriFieldTypeString",
+   "alias": "Gewässer_Name",
+   "sqlType": "sqlTypeOther",
+   "length": 50,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Gewässer_Bereich",
+   "type": "esriFieldTypeString",
+   "alias": "Gewässer_Bereich",
+   "sqlType": "sqlTypeOther",
+   "length": 50,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "GlobalID",
+   "type": "esriFieldTypeGlobalID",
+   "alias": "GlobalID",
+   "sqlType": "sqlTypeOther",
+   "length": 38,
+   "nullable": false,
+   "editable": false,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Shape__Area",
+   "type": "esriFieldTypeDouble",
+   "alias": "Shape__Area",
+   "sqlType": "sqlTypeDouble",
+   "nullable": true,
+   "editable": false,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Shape__Length",
+   "type": "esriFieldTypeDouble",
+   "alias": "Shape__Length",
+   "sqlType": "sqlTypeDouble",
+   "nullable": true,
+   "editable": false,
+   "domain": null,
+   "defaultValue": null
+  }
+ ],
+ "indexes": [
+  {
+   "name": "PK__PACHT_EL__F4B70D85B3AE2AEB",
+   "fields": "OBJECTID",
+   "isAscending": true,
+   "isUnique": true,
+   "description": "",
+   "indexType": "Attribute"
+  },
+  {
+   "name": "PACHT_ELOST_SELWILHV_PACHTVEREIN_ELOSTOHNEVERB_SÜDELWILHVER_Shape_sidx",
+   "fields": "Shape",
+   "isAscending": true,
+   "isUnique": false,
+   "description": "",
+   "indexType": "Spatial"
+  },
+  {
+   "name": "Shape__Area_Index",
+   "fields": "Shape__Area",
+   "isAscending": true,
+   "isUnique": false,
+   "description": "",
+   "indexType": "Attribute"
+  },
+  {
+   "name": "Shape__Length_Index",
+   "fields": "Shape__Length",
+   "isAscending": true,
+   "isUnique": false,
+   "description": "",
+   "indexType": "Attribute"
+  },
+  {
+   "name": "GlobalID_idx",
+   "fields": "GlobalID",
+   "isAscending": true,
+   "isUnique": true,
+   "description": "",
+   "indexType": "Attribute"
+  },
+  {
+   "name": "Gewässer_Name_Index",
+   "fields": "Gewässer_Name",
+   "isAscending": true,
+   "isUnique": false,
+   "description": "Gewässer_Name_Index",
+   "indexType": "Attribute"
+  }
+ ],
+ "dateFieldsTimeReference": {
+  "timeZone": "UTC",
+  "timeZoneIANA": "Etc/UTC",
+  "respectsDaylightSaving": false
+ },
+ "preferredTimeReference": null,
+ "types": [],
+ "templates": [
+  {
+   "name": "PachtVerein_ElOstOhneVerb_SüdElWilhVer",
+   "description": "",
+   "drawingTool": "esriFeatureEditToolPolygon",
+   "prototype": {
+    "attributes": {
+     "Gewässer_Bereich": null,
+     "geom": null,
+     "Umfang_km": null,
+     "Gewässer_Name": null
+    }
+   }
+  }
+ ],
+ "supportedQueryFormats": "JSON, geoJSON, PBF",
+ "supportedAppendFormats": "sqlite,geoPackage,shapefile,filegdb,featureCollection,geojson,csv,excel,jsonl,featureService,pbf",
+ "supportedAppendSourceFilterFormats": "sqlite,geoPackage,shapefile,filegdb,featureService",
+ "supportedExportFormats": "csv,shapefile,sqlite,geoPackage,filegdb,featureCollection,geojson,kml,excel,parquet",
+ "supportedConvertFileFormats": "JSON,PBF,Parquet",
+ "supportedConvertContentFormats": "LayerEditCollection,FeatureCollection",
+ "supportedSpatialRelationships": [
+  "esriSpatialRelIntersects",
+  "esriSpatialRelContains",
+  "esriSpatialRelCrosses",
+  "esriSpatialRelEnvelopeIntersects",
+  "esriSpatialRelIndexIntersects",
+  "esriSpatialRelOverlaps",
+  "esriSpatialRelTouches",
+  "esriSpatialRelWithin",
+  "esriSpatialRelDisjoint",
+  "esriSpatialRelRelation"
+ ],
+ "guidFormat": "",
+ "supportsContingentValues": true,
+ "supportsEditingContingentValues": true,
+ "supportedContingentValuesFormats": "JSON, PBF",
+ "supportsFieldGroups": true,
+ "supportedSyncDataOptions": 260,
+ "hasStaticData": true,
+ "maxRecordCount": 1000,
+ "standardMaxRecordCount": 2000,
+ "maxIdsCount": 1000000,
+ "standardMaxRecordCountNoGeometry": 32000,
+ "tileMaxRecordCount": 4000,
+ "maxRecordCountFactor": 1,
+ "capabilities": "Query,Sync"
+}

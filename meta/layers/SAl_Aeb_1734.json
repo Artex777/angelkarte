@@ -1,0 +1,479 @@
+{
+ "currentVersion": 12,
+ "id": 0,
+ "name": "Al_Aeb",
+ "type": "Feature Layer",
+ "serviceItemId": "42b5aef2a73e45ecabe5fd6c816bcff3",
+ "cacheMaxAge": 3600,
+ "isView": true,
+ "isUpdatableView": true,
+ "sourceSchemaChangesAllowed": true,
+ "displayField": "AngErlBer",
+ "description": "",
+ "copyrightText": "",
+ "defaultVisibility": true,
+ "editingInfo": {
+  "lastEditDate": 1789401042865,
+  "schemaLastEditDate": 1789401042865,
+  "dataLastEditDate": 1789401028813
+ },
+ "multiScaleGeometryInfo": {
+  "levels": [
+   5,
+   7,
+   9,
+   11,
+   13,
+   15
+  ],
+  "maxAllowableVertices": 1000000,
+  "generalizationType": "Default"
+ },
+ "relationships": [],
+ "isDataVersioned": false,
+ "hasContingentValuesDefinition": false,
+ "supportsAppend": true,
+ "supportsCalculate": true,
+ "supportsASyncCalculate": true,
+ "supportsTruncate": false,
+ "supportsAttachmentsByUploadId": true,
+ "supportsAttachmentsResizing": true,
+ "supportsRollbackOnFailureParameter": true,
+ "supportsStatistics": true,
+ "supportsExceedsLimitStatistics": true,
+ "supportsAdvancedQueries": true,
+ "supportsValidateSql": true,
+ "supportsCoordinatesQuantization": true,
+ "supportsLayerOverrides": true,
+ "supportsTilesAndBasicQueriesMode": true,
+ "supportsFieldDescriptionProperty": true,
+ "supportsQuantizationEditMode": true,
+ "supportsColumnStoreIndex": true,
+ "supportsApplyEditsWithGlobalIds": true,
+ "supportsMultiScaleGeometry": true,
+ "supportsReturningQueryGeometry": true,
+ "enableNullGeometry": false,
+ "hasGeometryProperties": true,
+ "geometryProperties": {
+  "shapeLengthFieldName": "Shape__Length",
+  "units": "esriMeters"
+ },
+ "advancedQueryCapabilities": {
+  "supportsPagination": true,
+  "supportsPaginationOnAggregatedQueries": true,
+  "supportsQueryRelatedPagination": true,
+  "supportsQueryWithDistance": true,
+  "supportsOutDistance": true,
+  "supportsReturningQueryExtent": true,
+  "supportsStatistics": true,
+  "supportsOrderBy": true,
+  "supportsDistinct": true,
+  "supportsQueryWithResultType": true,
+  "supportsSqlExpression": true,
+  "supportsTimeRelation": true,
+  "supportsAdvancedQueryRelated": true,
+  "supportsCountDistinct": true,
+  "supportsPercentileStatistics": true,
+  "supportsApproxPercentileStatistics": true,
+  "supportsSpatialAggregationStatistics": true,
+  "supportsTrueCurve": true,
+  "supportedSpatialAggregationStatistics": [
+   "EnvelopeAggregate",
+   "CentroidAggregate",
+   "ConvexHullAggregate"
+  ],
+  "supportsLod": true,
+  "supportsQueryWithLodSR": false,
+  "supportedLodTypes": [
+   "geohash"
+  ],
+  "supportsReturningGeometryCentroid": false,
+  "supportsReturningGeometryEnvelope": true,
+  "supportsReturningGeometryProperties": true,
+  "supportsQueryWithDatumTransformation": true,
+  "supportsCurrentUserQueries": true,
+  "supportsHavingClause": true,
+  "supportsOutFieldSQLExpression": true,
+  "supportsMaxRecordCountFactor": true,
+  "supportsTopFeaturesQuery": true,
+  "supportsDisjointSpatialRel": true,
+  "supportsQueryWithCacheHint": true,
+  "supportedOperationsWithCacheHint": [
+   "query",
+   "queryTopFilter",
+   "queryAnalytics",
+   "queryAttachments",
+   "queryRelated",
+   "queryBins",
+   "queryPivot"
+  ],
+  "supportsQueryAnalytic": true,
+  "supportsQueryPivot": true,
+  "supportsQueryBins": true,
+  "supportsDefaultSR": true,
+  "supportsTranslations": false,
+  "supportsAggIds": true,
+  "supportsQueryWithCollation": true,
+  "supportsISODOW": true,
+  "supportsISOWeek": true,
+  "supportsFullTextSearch": true,
+  "fullTextSearchCapabilities": {
+   "supportsAccentSensitivity": true,
+   "supportsStopWords": true,
+   "supportsSearchOperator": true,
+   "supportsOperator": true
+  }
+ },
+ "advancedQueryAnalyticCapabilities": {
+  "supportsLinearRegression": true,
+  "supportsTrendlineRegression": true,
+  "supportsAsync": true,
+  "supportsPercentileAnalytic": true
+ },
+ "queryBinsCapabilities": {
+  "supportsAsync": true,
+  "supportsAutoIntervalBin": true,
+  "supportsFixedIntervalBin": true,
+  "supportsFixedBoundariesBin": true,
+  "supportsDateBin": true,
+  "supportsClassificationBin": true,
+  "supportsStackBy": true,
+  "supportsSplitBy": true,
+  "supportsFirstDayOfWeek": true,
+  "supportsSnapToData": true,
+  "supportsReturnFullIntervalBin": true,
+  "supportsReturnStackValueRange": true,
+  "supportsNormalization": true,
+  "supportedStatisticTypes": [
+   "COUNT",
+   "SUM",
+   "AVG",
+   "VAR",
+   "STDDEV",
+   "MIN",
+   "MAX",
+   "PERCENTILE_CONT",
+   "PERCENTILE_DISC",
+   "APPROX_PERCENTILE_CONT",
+   "APPROX_PERCENTILE_DISC",
+   "CentroidAggregate",
+   "EnvelopeAggregate",
+   "ConvexHullAggregate"
+  ],
+  "supportedNormalizationTypes": [
+   "boxCox",
+   "field",
+   "inverse",
+   "log",
+   "naturalLog",
+   "percentOfTotal",
+   "squareRoot"
+  ]
+ },
+ "supportedOperationsWithCollation": "query,addField,updateField",
+ "advancedEditingCapabilities": {
+  "supportedSqlFormatsInCalculate": [
+   "standard"
+  ],
+  "supportsAsyncApplyEdits": true,
+  "supportsReturnEditResults": true,
+  "supportsApplyEditsbyUploadID": true,
+  "supportedApplyEditsUploadIDFormats": "JSON,PBF",
+  "supportsTranslation": false,
+  "supportsMaxTranslations": 10
+ },
+ "infoInEstimates": [
+  "extent",
+  "count"
+ ],
+ "useStandardizedQueries": true,
+ "geometryType": "esriGeometryPolyline",
+ "minScale": 1807830,
+ "maxScale": 603,
+ "extent": {
+  "xmin": 565309.1351466058,
+  "ymin": 5936376.433306614,
+  "xmax": 568124.810070523,
+  "ymax": 5942411.365797904,
+  "spatialReference": {
+   "wkid": 25832,
+   "latestWkid": 25832
+  }
+ },
+ "spatialReference": {
+  "wkid": 102100,
+  "latestWkid": 3857
+ },
+ "drawingInfo": {
+  "renderer": {
+   "type": "uniqueValue",
+   "field1": "AngErlBer",
+   "field2": null,
+   "uniqueValueInfos": [
+    {
+     "value": "Angeln erlaubt",
+     "symbol": {
+      "color": [
+       85,
+       255,
+       0,
+       255
+      ],
+      "width": 1.5,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+     },
+     "label": "Angeln möglich"
+    },
+    {
+     "value": "Angeln verboten",
+     "symbol": {
+      "color": [
+       0,
+       112,
+       255,
+       255
+      ],
+      "width": 1.5,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+     },
+     "label": "Angeln nicht möglich"
+    },
+    {
+     "value": "Angeln nicht erlaubt",
+     "symbol": {
+      "color": [
+       255,
+       0,
+       0,
+       255
+      ],
+      "width": 1.5,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+     },
+     "label": "Angeln verboten"
+    }
+   ]
+  },
+  "transparency": 0
+ },
+ "allowGeometryUpdates": true,
+ "trueCurveSupportMode": "OGC",
+ "supportedCurveTypes": [
+  "esriGeometryCircularArc"
+ ],
+ "supportedTrueCurvePbfFeatureEncodings": [
+  "esriCompressedShapeBuffer",
+  "esriDefault"
+ ],
+ "allowTrueCurvesUpdates": true,
+ "onlyAllowTrueCurveUpdatesByTrueCurveClients": false,
+ "hasAttachments": false,
+ "viewSourceHasAttachments": false,
+ "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+ "hasM": false,
+ "hasZ": false,
+ "objectIdField": "OBJECTID",
+ "uniqueIdField": {
+  "name": "OBJECTID",
+  "isSystemMaintained": true
+ },
+ "globalIdField": "GlobalID",
+ "typeIdField": "AngErlBer",
+ "collation": {
+  "locale": "neutral",
+  "caseSensitive": false,
+  "accentSensitive": true
+ },
+ "fields": [
+  {
+   "name": "OBJECTID",
+   "type": "esriFieldTypeOID",
+   "alias": "OBJECTID",
+   "sqlType": "sqlTypeOther",
+   "nullable": false,
+   "editable": false,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "AngErlBer",
+   "type": "esriFieldTypeString",
+   "alias": "AngErlBer",
+   "sqlType": "sqlTypeOther",
+   "length": 50,
+   "nullable": true,
+   "editable": true,
+   "domain": {
+    "type": "codedValue",
+    "name": "AlKuF_AEBer_AngErlBer_2b0db149-666e-4869-80c9-5813c7bc7578",
+    "codedValues": [
+     {
+      "name": "Angeln nicht möglich",
+      "code": "Angeln verboten"
+     },
+     {
+      "name": "Angeln möglich",
+      "code": "Angeln erlaubt"
+     },
+     {
+      "name": "Angeln verboten",
+      "code": "Angeln nicht erlaubt"
+     }
+    ]
+   },
+   "defaultValue": null,
+   "description": "null"
+  },
+  {
+   "name": "GlobalID",
+   "type": "esriFieldTypeGlobalID",
+   "alias": "GlobalID",
+   "sqlType": "sqlTypeOther",
+   "length": 38,
+   "nullable": false,
+   "editable": false,
+   "isViewOverride": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Shape__Length",
+   "type": "esriFieldTypeDouble",
+   "alias": "Shape__Length",
+   "sqlType": "sqlTypeDouble",
+   "nullable": true,
+   "editable": false,
+   "domain": null,
+   "defaultValue": null
+  }
+ ],
+ "indexes": [
+  {
+   "name": "GlobalID_idx",
+   "fields": "GlobalID",
+   "isAscending": true,
+   "isUnique": true,
+   "description": "",
+   "indexType": "Attribute"
+  },
+  {
+   "name": "Shape__Length_Index",
+   "fields": "Shape__Length",
+   "isAscending": true,
+   "isUnique": false,
+   "description": "",
+   "indexType": "Attribute"
+  },
+  {
+   "name": "Al_Aeb_ALKUF_AEBER_Shape_sidx",
+   "fields": "Shape",
+   "isAscending": false,
+   "isUnique": false,
+   "description": "Shape Index",
+   "indexType": "Spatial"
+  },
+  {
+   "name": "PK__Al_Aeb_A__F4B70D85E7D64DBC",
+   "fields": "OBJECTID",
+   "isAscending": true,
+   "isUnique": true,
+   "description": "clustered, unique, primary key",
+   "indexType": "Attribute"
+  }
+ ],
+ "dateFieldsTimeReference": {
+  "timeZone": "UTC",
+  "timeZoneIANA": "Etc/UTC",
+  "respectsDaylightSaving": false
+ },
+ "preferredTimeReference": null,
+ "types": [
+  {
+   "id": "Angeln erlaubt",
+   "name": "Angeln möglich",
+   "domains": {},
+   "templates": [
+    {
+     "name": "Angeln möglich",
+     "description": "",
+     "drawingTool": "esriFeatureEditToolNone",
+     "prototype": {
+      "attributes": {
+       "AngErlBer": "Angeln erlaubt"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "Angeln verboten",
+   "name": "Angeln nicht möglich",
+   "domains": {},
+   "templates": [
+    {
+     "name": "Angeln nicht möglich",
+     "description": "",
+     "drawingTool": "esriFeatureEditToolNone",
+     "prototype": {
+      "attributes": {
+       "AngErlBer": "Angeln verboten"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "Angeln nicht erlaubt",
+   "name": "Angeln verboten",
+   "domains": {},
+   "templates": [
+    {
+     "name": "Angeln verboten",
+     "description": "",
+     "drawingTool": "esriFeatureEditToolNone",
+     "prototype": {
+      "attributes": {
+       "AngErlBer": "Angeln nicht erlaubt"
+      }
+     }
+    }
+   ]
+  }
+ ],
+ "templates": [],
+ "supportedQueryFormats": "JSON, geoJSON, PBF",
+ "supportedAppendFormats": "sqlite,geoPackage,shapefile,filegdb,featureCollection,geojson,csv,excel,jsonl,featureService,pbf",
+ "supportedAppendSourceFilterFormats": "sqlite,geoPackage,shapefile,filegdb,featureService",
+ "supportedExportFormats": "csv,shapefile,sqlite,geoPackage,filegdb,featureCollection,geojson,kml,excel,parquet",
+ "supportedConvertFileFormats": "JSON,PBF,Parquet",
+ "supportedConvertContentFormats": "LayerEditCollection,FeatureCollection",
+ "supportedSpatialRelationships": [
+  "esriSpatialRelIntersects",
+  "esriSpatialRelContains",
+  "esriSpatialRelCrosses",
+  "esriSpatialRelEnvelopeIntersects",
+  "esriSpatialRelIndexIntersects",
+  "esriSpatialRelOverlaps",
+  "esriSpatialRelTouches",
+  "esriSpatialRelWithin",
+  "esriSpatialRelDisjoint",
+  "esriSpatialRelRelation"
+ ],
+ "guidFormat": "",
+ "supportsContingentValues": true,
+ "supportsEditingContingentValues": true,
+ "supportedContingentValuesFormats": "JSON, PBF",
+ "supportsFieldGroups": true,
+ "supportedSyncDataOptions": 260,
+ "hasStaticData": true,
+ "maxRecordCount": 1000,
+ "standardMaxRecordCount": 2000,
+ "maxIdsCount": 1000000,
+ "standardMaxRecordCountNoGeometry": 32000,
+ "tileMaxRecordCount": 4000,
+ "maxRecordCountFactor": 1,
+ "capabilities": "Query"
+}

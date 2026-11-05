@@ -1,0 +1,1260 @@
+{
+ "currentVersion": 12,
+ "id": 0,
+ "name": "EN1_AZI",
+ "type": "Feature Layer",
+ "serviceItemId": "4c48a3a1658e4383acbdc5ef47a66090",
+ "cacheMaxAge": 3600,
+ "isView": true,
+ "isUpdatableView": true,
+ "sourceSchemaChangesAllowed": true,
+ "displayField": "Name",
+ "description": "",
+ "copyrightText": "",
+ "defaultVisibility": true,
+ "editingInfo": {
+  "lastEditDate": 1789303695011,
+  "schemaLastEditDate": 1789303695011,
+  "dataLastEditDate": 1789303664460
+ },
+ "relationships": [],
+ "isDataVersioned": false,
+ "hasContingentValuesDefinition": false,
+ "supportsAppend": true,
+ "supportsCalculate": true,
+ "supportsASyncCalculate": true,
+ "supportsTruncate": false,
+ "supportsAttachmentsByUploadId": true,
+ "supportsAttachmentsResizing": true,
+ "supportsRollbackOnFailureParameter": true,
+ "supportsStatistics": true,
+ "supportsExceedsLimitStatistics": true,
+ "supportsAdvancedQueries": true,
+ "supportsValidateSql": true,
+ "supportsCoordinatesQuantization": true,
+ "supportsLayerOverrides": true,
+ "supportsTilesAndBasicQueriesMode": true,
+ "supportsFieldDescriptionProperty": true,
+ "supportsQuantizationEditMode": true,
+ "supportsColumnStoreIndex": true,
+ "supportsApplyEditsWithGlobalIds": true,
+ "supportsReturningQueryGeometry": true,
+ "enableNullGeometry": false,
+ "advancedQueryCapabilities": {
+  "supportsPagination": true,
+  "supportsPaginationOnAggregatedQueries": true,
+  "supportsQueryRelatedPagination": true,
+  "supportsQueryWithDistance": true,
+  "supportsOutDistance": true,
+  "supportsReturningQueryExtent": true,
+  "supportsStatistics": true,
+  "supportsOrderBy": true,
+  "supportsDistinct": true,
+  "supportsQueryWithResultType": true,
+  "supportsSqlExpression": true,
+  "supportsTimeRelation": true,
+  "supportsAdvancedQueryRelated": true,
+  "supportsCountDistinct": true,
+  "supportsPercentileStatistics": true,
+  "supportsApproxPercentileStatistics": true,
+  "supportsSpatialAggregationStatistics": true,
+  "supportedSpatialAggregationStatistics": [
+   "EnvelopeAggregate",
+   "CentroidAggregate",
+   "ConvexHullAggregate"
+  ],
+  "supportsLod": true,
+  "supportsQueryWithLodSR": false,
+  "supportedLodTypes": [
+   "geohash"
+  ],
+  "supportsReturningGeometryCentroid": false,
+  "supportsReturningGeometryEnvelope": false,
+  "supportsQueryWithDatumTransformation": true,
+  "supportsCurrentUserQueries": true,
+  "supportsHavingClause": true,
+  "supportsOutFieldSQLExpression": true,
+  "supportsMaxRecordCountFactor": true,
+  "supportsTopFeaturesQuery": true,
+  "supportsDisjointSpatialRel": true,
+  "supportsQueryWithCacheHint": true,
+  "supportedOperationsWithCacheHint": [
+   "query",
+   "queryTopFilter",
+   "queryAnalytics",
+   "queryAttachments",
+   "queryRelated",
+   "queryBins",
+   "queryPivot"
+  ],
+  "supportsQueryAnalytic": true,
+  "supportsQueryPivot": true,
+  "supportsQueryBins": true,
+  "supportsDefaultSR": true,
+  "supportsTranslations": false,
+  "supportsAggIds": true,
+  "supportsQueryWithCollation": true,
+  "supportsISODOW": true,
+  "supportsISOWeek": true,
+  "supportsFullTextSearch": true,
+  "fullTextSearchCapabilities": {
+   "supportsAccentSensitivity": true,
+   "supportsStopWords": true,
+   "supportsSearchOperator": true,
+   "supportsOperator": true
+  }
+ },
+ "advancedQueryAnalyticCapabilities": {
+  "supportsLinearRegression": true,
+  "supportsTrendlineRegression": true,
+  "supportsAsync": true,
+  "supportsPercentileAnalytic": true
+ },
+ "queryBinsCapabilities": {
+  "supportsAsync": true,
+  "supportsAutoIntervalBin": true,
+  "supportsFixedIntervalBin": true,
+  "supportsFixedBoundariesBin": true,
+  "supportsDateBin": true,
+  "supportsClassificationBin": true,
+  "supportsStackBy": true,
+  "supportsSplitBy": true,
+  "supportsFirstDayOfWeek": true,
+  "supportsSnapToData": true,
+  "supportsReturnFullIntervalBin": true,
+  "supportsReturnStackValueRange": true,
+  "supportsNormalization": true,
+  "supportedStatisticTypes": [
+   "COUNT",
+   "SUM",
+   "AVG",
+   "VAR",
+   "STDDEV",
+   "MIN",
+   "MAX",
+   "PERCENTILE_CONT",
+   "PERCENTILE_DISC",
+   "APPROX_PERCENTILE_CONT",
+   "APPROX_PERCENTILE_DISC",
+   "CentroidAggregate",
+   "EnvelopeAggregate",
+   "ConvexHullAggregate"
+  ],
+  "supportedNormalizationTypes": [
+   "boxCox",
+   "field",
+   "inverse",
+   "log",
+   "naturalLog",
+   "percentOfTotal",
+   "squareRoot"
+  ]
+ },
+ "supportedOperationsWithCollation": "query,addField,updateField",
+ "advancedEditingCapabilities": {
+  "supportedSqlFormatsInCalculate": [
+   "standard"
+  ],
+  "supportsAsyncApplyEdits": true,
+  "supportsReturnEditResults": true,
+  "supportsApplyEditsbyUploadID": true,
+  "supportedApplyEditsUploadIDFormats": "JSON,PBF",
+  "supportsTranslation": false,
+  "supportsMaxTranslations": 10
+ },
+ "infoInEstimates": [
+  "extent",
+  "count"
+ ],
+ "useStandardizedQueries": true,
+ "geometryType": "esriGeometryPoint",
+ "minScale": 10641,
+ "maxScale": 0,
+ "extent": {
+  "xmin": 548813.6244996154,
+  "ymin": 5929918.43105691,
+  "xmax": 570454.2479991151,
+  "ymax": 5935409.064764476,
+  "spatialReference": {
+   "wkid": 25832,
+   "latestWkid": 25832
+  }
+ },
+ "spatialReference": {
+  "wkid": 102100,
+  "latestWkid": 3857
+ },
+ "drawingInfo": {
+  "renderer": {
+   "type": "uniqueValue",
+   "field1": "AZI",
+   "defaultSymbol": null,
+   "uniqueValueInfos": [
+    {
+     "value": "Sitzbank",
+     "symbol": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": "7890a8ca-b796-400b-a5d9-affd714a1572",
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsSAAALEgHS3X78AAACjUlEQVR4Ae2b7ZGCMBCGl5srADuwBEqgBDqQDmzBDhwrUCvQDrAD7cAStANu1jluyCZcMN8meWby42Kyye4tL0kAINQAcAKAPtJy+vVRyDZix2nZ0gCk5PxQ/oJQJ+j8UOovAFjTdGiaBrqug77voyjoC/ok4OU7E5WmafpYQd8EWcBWdF0XbQDQN+pvMURhAFMmVp7PJywWC8a7pAKAFEXB/P3lbSaBkAMQwBy8kgMQwBy8kgMQwBy88q07OL2vukZ33ZJ8BuQABDAHr2hrQF1PHrG9wA3I7XZj6sqyhKqqmDpsg23HYBtsaxtme2ia/X7PbUE3mw03CtbRdtjXNNLzANNUVcUNer/fuVGwjrbDvh8dgOv1yg3434mT6MQGbZiE2rcqgrvdjqtbrVaT7UW/iWyYxkoGPB6PvixLxvZyuZT2wzbjPmgDbZnCWQacz2dO1du2lfajbdAG2rKJlQyYK34U22LoRATfFT+KTTF0cgm8K35z2toUQ6MZoCp+FFtiaD0DVMWP4lIMhRkgeoryqWX8tMvpQugTyAEIYA5emTwPwH24bK8/5nK5cHXv9LdpW3amoH0bFAlm27bat6wBtEXtqz7GtyKCx+ORq3tn4SNDZEs0pipaGYCLE2pDZeEjgy6MsKgsjIxnwOFw4OrWa+61I21ENkVjq6CVAab+MzJMZZrR3aBt8aOYEEOjl4Bt8Ztj24QYKmWAK/Gj6F5yxjLAlfjNGUNXDJUywJX4UXQzz4gIuhY/io4Y0n75PUFvMwmEHIAA5uCVHIAA5uCVHIAA5uCVHABaQV9oignR4SrQpWGKH01xn8piw5g+nsJH6xPOo+9pfzg5XAZJfzqbYhA45wfS+nweAH4AvrG/2oKpzzwAAAAASUVORK5CYII=",
+      "contentType": "image/png",
+      "width": 15,
+      "height": 15
+     },
+     "label": "Sitzbank"
+    },
+    {
+     "value": "Mülleimer",
+     "symbol": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": "8fa8bddd-495f-4419-88e0-cde0b492ae82",
+      "imageData": "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",
+      "contentType": "image/png",
+      "width": 15,
+      "height": 15
+     },
+     "label": "Mülleimer"
+    },
+    {
+     "value": "Fähranleger",
+     "symbol": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": "ca6b14f9-11a9-44f6-bb11-47988516376b",
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsSAAALEgHS3X78AAADlklEQVR4nO1b4bGyMBA833z/xQ4sgQ7EDrACsQKxA63AEtQKKAGtQDtQK1Ar4JtljBNiEgIPn5K4MxkFLpBbLpvkABIQEFFCRJmlJbn7KMXSYsfFshQJcMl5Vh4kBA46z0rwQ0RTMRzCMKQ0TSnLMisKfIFPEuS+F1gJwzCzFfBNEgXFHWmaWksAfBP97TAWGBAytuJ6vVKv1yt45xQBQKfTKWz/vK0lHwLnCfinOnA4HGg2m/1taxTwPI8GgwHFcfyS8xdUUaeY7y6+72eXy+VXI4HoQ6u6wCuisnUasF6v6XQ6NXa+VorgYrFo7FzGBECI9vt9Pk/AL7ZlWK1Wuc3lciHf97U2KCobus9J+DKfz/P9TUdBqQh6npft9/uCmGAb+/m6q9WqYAPBgnBVtRHbwtuya0ZR1IgIGhGQJIn0ZCCB2cRxLLVBo01s+v1+KQHAfD5/HD8ej78mwKgLqMKdD1+VDb9fZ9Pv902aQtPp9HGeJrSgdSII59mEqAktaOUo0GQUtJKAJqOgtYuhpqKgtQQ0GQWtWQzpCobHlw2DNkOZD8C4zKaebQDyBXXgfE5QGQEQlc1m8xdtejnG47F2pmmFCKpKEATuiiDuepIkWhtrCcA8Ac6rFmAM1hKwXC61yRYe1mmAKu8g0wCyjQBR9JyaCZqInghrCDAVPRHWEFBF9ERINYAH9AB9q6z/IVPLJyqRAZYlO/mCLC9WcuyRF36xLWacZX29zsscxiJYhQjRcREyIrAtpsh5qIio67iKgFqLITyjw9sWdBce04zudrt9/A8C5fuKBeA6uB7d+3ndMGcQF0POrwaVIgjWh8NhXiaTiVHKCXd4NBo96iFVZQLYsTqoz0eKCogM5AKrtlEG44mQqq/rRFIUOR46kVT19TKRLNMjYw3AXQCzMkRR9Oj3sDO5Y+i/qMfGadNEJrSC6QXuOuox/dGBbyOfDxC7AFWJgLYWPpKsngrXgZIAhB17No/n+SZDHeqwd4zxfgCSqiZTU4Tr8XjM6+EX22XAeXF+1kZc13RoFWE8EVKJlm5yohMtnWBhP45XEdVMIci6LlBrHgAhOp/P+X+ko02YZwJ2u93y7bJEJQOfnO12uwUh1QHCvNvtnq71nQh9X5Ut4kvAB7ThrfgS8AFteCueCGBrbxuhWrMUJgYufjT19KksDG36eAovdCqcz3PoTn84ybqB05/OukjCk/MMbn0+T0T/AeiROWxwusHGAAAAAElFTkSuQmCC",
+      "contentType": "image/png",
+      "width": 15,
+      "height": 15
+     },
+     "label": "Fähranleger"
+    },
+    {
+     "value": "Gastronomie",
+     "symbol": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": "dd792b8d-15bf-4f2d-93b1-0112a1bb4806",
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsSAAALEgHS3X78AAACSUlEQVR4Ae2bga2CMBCG75k3ACMwgm5QN2ADcYK3ghvgBrqBboAb6Aa6gW5Qc40lWIpS6aMnvS+5aFCO/36LQC8FAwEAOwCQI43do0YrxYgLN6MwDYipeB2VCSLC4nWICQD8mcMhyzIoyxKklKMIrAVrsqBqf3IlyzI5VrA2s96fx5sKdEuI1j/KBofDQW1K01QFcrlcVKjzq5brdDrB7XaDJElgOp06H6OOi8Z6nvl83tj+5Igrer/ValXtie9t+YQQahu+diXPc+v5m6apLMvSSe31em3kmTjbOCDL5RK22631gDjCbL/mK3DkmZA1AIdrW/E+IT0ChoANIKAhKGwAAQ1BYQMIaAgKG0BAQ1C8GYB3bvv93voZ3rau12v1MESNX58G1J8MNbPZjGThmn85BfSjMDwegSnD/wF9E+R57rzPYrHoe1iv9JoQkS8mLWyx2Ww65cTJji75XLHk6G9AVxO6Fv+VBsg3JrgUL7/VANky81oUhXOeoQzwfhWwzfa6zAAPDV8GCWgIChtAQENQ2AACGoISvQHe5gN8g308swOsu8s+IWsA3jxhq74ONkNtrfI+RH8KsAEENASFDSCgIShsAAENQWEDCGgIChtAQENQ2AACGoLCBhDQEBQ2gICGj/HVcfLaGzwejzJJkiofNkx9odcbYOAxzudz796gdwPqJvgsXhoGuHabNW8NQPE++OTXeQdqw66x60oRTUvHOe5FU2BbKotf/NRliuDIaSkea4974aS+EkS9dDZGExrFa+JaPg8Ad6vzfD/A40qpAAAAAElFTkSuQmCC",
+      "contentType": "image/png",
+      "width": 15,
+      "height": 15
+     },
+     "label": "Gastronomie"
+    },
+    {
+     "value": "Infotafel",
+     "symbol": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": "4aaa5f4a-7692-4789-a8c2-9312e198fb15",
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsSAAALEgHS3X78AAACHElEQVR4nO2bwZHCMAxFld0twB0QbntMB4QbRzogJdABSQWUEKgAOoAjNygBOqCD7ChD9hCyWTBCUmK/Gc8wHrCl71gWdgw1YgDYAEDR07K5+djIsseO18uyLoBLzlflV4TYQeerEn/elPj+a170HBPclHCWD0nH4zguizTsc88YUxyPx6ICP2OdUBzg7zRJkqIO1knYIjIFwjB8qI4D0RigAetVYDqdwmw2A2PM07/F0a6P+Pl8LsuzXK9XWK/XsN1ureV8et6EYXg3h6VBm9hiQJIk1mq/C3wibehNDLCZiojzQZBMgCzLIAgCloJ9UeH8E/BF1RAuiaPRiKq5ViiTJjIBmtb2LkAmgG0iYwOl2GQCYDaWpilVc61gP4vFgqQtMgEGgwHbf3vsiwoyATA71Jgh/odfBqkaWq1WZRzgAJdcqqeNTIDL5QL7/Z6quVYoY41PhKga6moi5HwQtBLgdDrRW/Iir9hktZW02+3UbIehLZ06F0jT9M4JrHPmXEATXgAFNojiBVBggyheAAU2iOIFUGCDKF4ABTaI4gVQYIMoXgAFNojiBVBggyheAAU2iIL3BXjOtAFgPp/DZDIpD1CazhCGwyFEUQSHw4FVE5bNxzzPH97lxe8ybozqcp5bBJYbI0Vh1wW+EvdunA+CZIejbYzHY45urPCXpgDA/kX77lP67vTFyWoInb4666IId85XuHV9HgB+ANeAMLP6meFeAAAAAElFTkSuQmCC",
+      "contentType": "image/png",
+      "width": 15,
+      "height": 15
+     },
+     "label": "Infotafel"
+    },
+    {
+     "value": "Steganlage",
+     "symbol": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": "ddfd05d9-d5fe-44fd-800f-e121dd521c6d",
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsSAAALEgHS3X78AAACl0lEQVR4Ae2b7XHCMAyG1Y8BMgI/+zMb4A1ghDABbECYIDABMEFgAmAC2ACYADagJx/mXOejNnGQD/u50/Ww21p+ZUuum4ACA4AcAG5vavl9jqVkbzxx1TJVAJ8mL+whAvNw8sLY112Jn6p98eZEH3clvOXT58kjQQAHfCAlCOCAD6R8NxmcMQbj8fhP2263gzRNod/vw3A4fNncJpMJbLdbyLIM4jj+0zcYDOB0OlX+7NMHif1+f1PpdDq3KIpul8ul0NcWx+OR+8MYK4yw2Wxq5/D0CkiSpKD0dDrlSuMKiKKItx0OB7her88OUwmuPgFGGMHoq4i+OowjXxZh/IztuALUNttHWDnSIsJJkhSin2WZzu8zdyBN08Jgo9GI9+V5/mhDp9o4w+OSF1RtOQPxzQaXIyyo24NtIiJcFxDrAsgRFuDEoSIptkXZllMDomNGSRATD5Y3GSw9aHJSxMS3Xq+tJ75er/cYA8seJtf5fF74Pp3EJ6Otlm7Zi+PY+r6Xx2hS9lTTXgG6ZQ8/4ypRV0pTut3uY4ymZc94BeiWvVdgoeyZJ0HdsvcKLJQ9MwF0y57p3tM1FFqNcMOyZyaAbtlrO/HZKntGAtRl2bI92CZ1W04ExLoA7/DX3n9WWQbx0KOWvcViwcscts9mM6tlro7VasV7y+4Xnil7MkYnwfP5zL/iSQ/t1YhzgEzdRYcO3l+JBQEc8IGUIIADPpASBHDAB1KCAA74QEoQwAEfSAkCOOADKUEAB3wgJQjggA+kBAEc8IGUIIADPpBSeSuMt634P3gZfA6AkuVyyR/Ds0l4WtwBH0gJAjjgAylBAAd8ICUI4IAPpKAAK4/nz+fu9YuTQgmvX531UYTiI6Z3/Hp9HgB+AT/hTejb5WLlAAAAAElFTkSuQmCC",
+      "contentType": "image/png",
+      "width": 15,
+      "height": 15
+     },
+     "label": "Steganlage"
+    },
+    {
+     "value": "Polizei",
+     "symbol": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": "74750f25-48a7-47df-b5ef-97a06abd116d",
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsSAAALEgHS3X78AAADhUlEQVR4nO1b27GqMBSNZ+6/WIF2oFYgVqB2gBVcrUCsAK0AO8AO0Aq0A+0AO/DOYm7OyD5JCMgjB1wz+ZCRZO/FfibACGzGWMAYezZ0BP91FMJrsOJ0eJSANinPxzcJdguV58P+Yoz9peYwn89ZGIbs+Xw2YkAX6CRArHuClfl8/mwqoJvACpIXwjBsLAHQjerb4SxwwGSaisfjwXq9XkK7VhEAdDqdxO+v2iSRYLfbxUJmHdvtNtd6xhHgOA6zLKuy9YwjAMpvNpvK1jOOAGC1WrHBYFDJWn8qWSUHPM9j+/1e+8Z+v59rnU8WqE0SQ2AkAShYxuNxplTYmDQI5afTKbter5WsZxwBUBydG+qBLOh2u7nXTDQHpkDUuKiG67paktM5jA2CWavB4XCYax2j0yA6N8QEHURRpEXar0qDqAh1//dO/2BkDOBwHEfp+6PR6BlFkfZ8qTtCJgIBzrKshJz4jetZlBcR8KtKYaRIHhNsW3q+oQSNAa3vBZTdIBhHiUkj8Wg0iru1onE6ndj5fGb3+z0eOvB9P9E6r9frWN7JZKJdTAljAHyL+h0ftm0XGilEPq4zECBf4XneDzlpjNAOgqpKrCgCIByieJ5THRr9ZfKuVitzCcirPKzlcrkkiFRZ0CtRxpTC8FVRx6dT0CD+IA5xLBYLZcWY1llWbgFBEEjNGiarevrU7xE/0izm9bSrdhe43W5Cc+VmrVJI1++zEFCpC8BMZeZKzZoCroGUx10EaRJzvYtKCZD5PfJ1Ws7O6ve6qIyAw+EQDwoohSerAiVIRmQeVEIAhIXQFDDnIAiU99Kq83g8xueHRaF0AmCmy+VSaK60jKWgfg8iMVeRKJ0AmbliE0Py2so3Xv1eReS7KC0N+r4vTWcy8DRI833axohxaVBmrjBnvLSkAvV7WQAtAqURIDupQdBTlbvY36d+LwqgRaIUFxBVe7p79xzvdIu1uwDdssLvrC8+wIXKPiIr7f0AbsYoWZHqsu4gYXcIET/v3t8r0jpMoQugaSmjGaob2i6Ap+a67tvs/wYILUAFnR486+ABsoy5jWmHTcSHAANkqBUfAvLcNJvNChekjDl1kIsAvotTxDu9mAPpVrUfWCZafzj6iQH0QlXv59UB9BciJCqjNn409eNTWfyxSR9P4cRJony8Jd3qDye5R7T609k2kiDdnWnX5/OMsX+jNZOfFYqlqAAAAABJRU5ErkJggg==",
+      "contentType": "image/png",
+      "width": 15,
+      "height": 15
+     },
+     "label": "Polizei"
+    },
+    {
+     "value": "WC",
+     "symbol": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": "13f830ed-c8dd-4b0e-ae23-e75a101665f2",
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsSAAALEgHS3X78AAADJklEQVR4Ae2b4ZGqMBDH43tXACXw8X2kA7EC7UDsQDvACrADtYLTCtAKtAStQDvgZhn3JiIJmxBJnuE3k2EcuWz2f5tlF4RViBlj34yx4kPH98PHWrIPdrw6sqoAPjmP41eE2EPnccR/H0r8E+2LDycYPJTwlj8+Ow/0AjiwBqv0AjiwBqt8tTGeJAkbj8csCAK23+/ZZrNh9/tdaY48z58+n89ntlgsOrPPdIuILMuKKqfTqQiCQGmeKnmed2pfS4Aoil6MI/P5/O0CmLSvlQPiWNhQlSH5bkza1xJAts909qBN+1oC7HY7oSFIRu/GtH2tJJgkSXG73Z72HyQm1Xl0k6Ap+62aIbj8TCaT8ng4HMpLmLL6xbN5mGc0GnVmn+lGgKmhGwGmhnIhBGpDAQJHEVCQXC4Xrf+GDLAbhiH5/DRNSeeR1IQCI03Tl30nYr1eF2EYGs0B8J0KRN+aT1JxvAoIIavOKALEcVwOqPRUwL9rqA7VM7UqsIg2ArzTvvfdYKMAfNKB5AaXKDiKgEsRnDObzWrnaIOKfWpH2SgAX3dvt9vyenu9XoXnQ4UG5/Ct6XA4NCIA2KXap9YEjQLwi4eJm+Avj3i+rHmxDTkCeOdlHVcURb8hfzweyyN8NrUNTCMVgF847ww4KQPKU1YRzdUokArALxqdQedkTKfT8lvYh6bzgGmkAtTtf3ROBr8NXM8DpAhAJyjhj2CkuJ4HhALU7X9K+CMYKa7nAWk3uFwuyyMWHpTwR3AbQB7Aed7RIbZFKAAslm8nVcIfgYhZrVbkttQG5PsBKuGPQMSAAG3BbaQSQVgRMsKNUlLfrNqKIk33BCjdYF17LkL1jhKpG9QJf0QncrqEJEAbJ1QSpw6DwaAclD6lDpIAbZzgiyIXISXBam8NgsANSgBvYWdZVjpb93S3i6dFupAEqIZXXY+ATvLZ93+gvyXmwBqs0gvgwBqs0gvgwBqs0gvgwBqs4r0AWj+UhL68Wu3hkxjVX2mI5unKfv++gANrsEovgANrsEovgANrsAoIsPPY/9J3r1+cRCW8fnXWRxFenEf8en2eMfYDAiYLfhKxUMAAAAAASUVORK5CYII=",
+      "contentType": "image/png",
+      "width": 15,
+      "height": 15
+     },
+     "label": "WC"
+    },
+    {
+     "value": "Zufahrt",
+     "symbol": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": "c284770d-e147-48f1-906d-9cbf149801df",
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsSAAALEgHS3X78AAADQUlEQVR4nO2b/XWrIBjGH+/pAHYDsgEb1A1qJwjZwG5gJqAbkA3sBjYTmEyAnQA38P7Raw5+5aKRiKbPOZwTEuTjBy+8YAB+1RIBIAAoAOVKgvrXJvK/xrOVNbwLBLvW+LkreK/QgkCw7p7vGglEByAcqNS9g9ABONn7UsqSMWYrf6kDmL2xXaGSRRDLAFApTdMyCILHBWABxDIBTAhi2QAqJUlSEkLsAliChBBDQawLQCUhROn7vhGAP1iZiqLA9/f34OcWPwKUUmUcx6Y9v65JkHM+tOHrADBi0lsHgAkavkwAN6z3ywZgYQ+wDAAWG34B4GkAHlHe6hyhofoFMHcF5taTSSJKKTjntuvSUlEU2O/3OJ1O1su6OlsGQWDslk4tpdRYN9doFXDeBHzfhxDCWv5GJmBD+/0eX19fvb9vt1swxgAAYRiCMYbD4WCtPnc1gSRJjIZolmU1U5jYDZ7PBM7ns1G63W53+WzLFJyeA06nE97f3y/xIAgQRdGkZTgNAAA+Pj5qcwXnHJTSyfJ3HgDwYwpFUVziU5rCIgDkeV4zBUop4jietIy7rgKc81GzdpIkrdWEMXaLozQPAKVUSSkdXOE4jnvzTJJkDIh5ANhSlmXL8ANsiVI6eIVYFQDgx2EaotUBGConARwOB7y9veH5+Rme58HzPGw2G+x2u6sbqFvkxCSYpqnRhicIgtpGSdfAU2R3AMRxPHhZFEL05mcIwg0AzcYTQkrOeSmlvKTJsqyMoqi11jedo8UBSNO0VlYYhqVSqje9lLLmRPm+35l+MQD0ilJKjZ5pnhMyxq7m6ywAKWWtHH3IV8qyrPN7IURtFDRl6GrPC0A/Gmv2vlKq1otRFLWe1+uorwoDNltmAO4Rmg3sWhXSNK2lmeDFqTuOUNOF7XoZcjweJy/XGQB5ntfir6+vrTTb7bYW10+JbtXsJkAIadl49a8vQkhrvW9OoCODOwDQYePXNMZzdB5An1PT1IiDj2UAAH5MoW+jU5ajj756AVR/kVEAhp0kWFYYhnh5ebmc8ByPR3x+fk75qjwHsKkiAg70/p2D0GkQOHpxylJoXZsDHvzipA5hzSPh6tXZSgQPfHn64fQXZaDFnZGxe6UAAAAASUVORK5CYII=",
+      "contentType": "image/png",
+      "width": 15,
+      "height": 15
+     },
+     "label": "Zufahrt"
+    },
+    {
+     "value": "Fahrradverleihstation",
+     "symbol": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": "eb61ce77-c129-4d1a-8544-3369695ffe3d",
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsSAAALEgHS3X78AAAEtklEQVR4nOVbi1HjMBBVmCsgJaSEdICpgHRAqOBCB3TgoYJABYEKQgeBCqCD0IFvXg4x8mZX3rWkmInfjIaEyLb2aX9ayY6gcs5tnHPNmbbNt4ws6jMWnLaaEjAm4X37IaEaofC+VRfOub9UHRaLhdtut65pmrNokAUyMTjI3mJlsVg05wrIRuWdfH/4AdiqKtFRus/Pz0PzmE6nbj6fi/1Pha+vr8NYYnh9fXVXV1dHPVqMxLBcLllbmk6nzf39fbPf7wfTHczubreL9sH4mPHrCehyKiCiaxClUFWV6vlJBOABGhKG0AQQoJkEOt4Li4mu1+uDfwgbBWzx7u5uUF8AO397e1P1P3KC/0lKeyCc0X6/N93H4/Hx0T09PZmvw/MxlnAMcOjUQU8mk6Nr1SYggXMufX0BnGmuRIczhyQTkAC2l8tl69c+s5gbXjvDsE2RhQDg5uam9f35+XkImY+ADHA2m0X7JJuAx2w2SzaDnCaAvIWC9vkjsSJlTRa8vLyYs0Ro0uXlpflZiDyhI4ZJImppwGrAdrtNnoH5fJ6kURb4PECaeY8iTlACZiTmgDRAWNTGdGeceaAoAS7RGUL429vbVnyPwSo8IPoAhLbYqlACBhvOGMLharUy38cLrwV8Bw3FWmSLAkBd10d2Zl0brNfr1vXwR7mgjgJ9gFnj1gEwA+3scDNv8QEhtBqcRQPorIVNW2WK3aNP48DcJ50AzcC7zCC38FoCkqOA5KxoeaorGry/v6cOpTd6a4A0a/g/LZ/FkhMPqeRWUgN6O0Fp5hGH4fCgAejjAQ3oitH+9/A69x3fuxY0KTBrQGzmY2xvNhvV/akmlAyDzkqAVviGqcMjX8dqD3/9Z+QN3KoxJOHXEGARvhGSIqlhKU1L656EX0GARXgIsVqtejkulLFAXEjC4ARYhIc6Yxmc6sFhIl4bcpbZzQRYhe/aO8DvmFE0OEVoCq0k+QYic+8xmAiwqj0nPKcNnNPDPTkichdV1ARgkBaHF1ZkfPPJDyUBzo4DSOR2cKX+RQngSmKS8FBlSfiGiQZds8plhB8fH8MSIAnfMNVguvrjtCkmEDSBao0mlS5GQEx4SpS0OUpJCkOd5r6uR2GFg5mAmPAAjff4rumncW7Ur3SNJTsBmgfSQUqbIZwZWGsEErkWqAnQwnI9DZNdBFPSQHZuArKWxbtqcPSkFnaOYjjF2aPi+wIhrq+vW9+19f6SyEpAl0DQgHBW++w75EZyWRyVHy+4pnyNUxuoDuE64fDiD7BBewokOUEaBbRVHw1o6MyREmd3gtSuHx4ess0ZrST32TbXIEkDkNLSe+QoYNCDEsgkcyB7HtAwixcMNiVt5eoKuVaERQjgtKBvMYMTPpXQEEUIaISzPSDBck4IDpQrqvyqsngM0s4O/h8jAgJyBRWnWDVaQe+ffFKUArtFdGfHA7s7SIR8MoQ4T094hsDBiro+er0nCUVOilKkHnWDGeRY+nIoagIhYmodazCXXOUvDicjwANEQCip9O2dJbK+koJ7dPqA3W5XbBlKD1C5Ey+IVK/MjO2lKce9KouOOWPv0EAIFoTfuLG/OOnNYNSvzo6RBDG7Gtfr8865f1zWbrh7G2vSAAAAAElFTkSuQmCC",
+      "contentType": "image/png",
+      "width": 15,
+      "height": 15
+     },
+     "label": "Fahrradverleihstation"
+    },
+    {
+     "value": "DLRG",
+     "symbol": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": "8fcd62ed-be4e-4d0a-9cbc-45a56c02c849",
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsSAAALEgHS3X78AAABOklEQVR4nO2byw2DMBAFN58CXEaOlOCWqMSlkFIohQ6IQJADgUQitt6DfSP5ao1H8oEVtgXRzBoz60+6mumMq6QTH3y50jKAp8PP6x0hOjz8vOJtKvHYuhcnJ1ymEm65lzp4CMGqqsqyV9u21nVdlr3WKHK/Yox9Loa9Snlei2U9CApA4ABFAQgcoCgAgQMUBSBwgKIABA5QFIDAAYr7AJvzgH+/53PNAnLs9WueUPx7Hs23eYL7K6AABA5QFIDAAYoCEDhAUQACBygKQOAARQEIHKAoAIEDFAUgcICy+Y9QjpFYSh+/4+2irutxrLWXXSMx/SLjBAUgcICiAAQOUBSAwAGKAhA4QFEAAgcoCkDgAMV9gGJvho7yZMb9o6nhCjwJPFCMZ3f9cHIO7/rprMcIm9NaX8/nzewFO3vF+qEKnwcAAAAASUVORK5CYII=",
+      "contentType": "image/png",
+      "width": 15,
+      "height": 15
+     },
+     "label": "DLRG"
+    },
+    {
+     "value": "Badestelle",
+     "symbol": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": "f35ec959-42ac-46bd-b7b8-1ca85fb4d64b",
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsSAAALEgHS3X78AAAD6klEQVR4nO1b/3HyMAwVve//0g3YoGzQMEHpBMAEwASFCRiBdgJGgE4AGwAT0E6Q714Oc47xDzk0sZvw7nQhEAfrWZYlOSEFCRGtiCitqazOOmqxqLHiqixUApqkvJALCUkDlReSPBDRWDWHfr9P6/Wa0jSthUAX6KRBpnuOlX6/n9YV0E1jBfkv1ut1bQmAbqq+LcGCAEymrvj+/qanp6ecdo0iAGi1Wrnzh2A9iQR3AiLoQ1A0noB/EfTBG4fD4SKdToeSxJjfOBElAbKCx+Mxdw5RAQLe398LERFkGfRVkAsOEeoySGpkVDa2223abrdLS3CSJLFqoF5fqRPc7XbU6/WyiCwWVErAdDotVfl2u02vr69ebf7kKqACik8mExqPx9lnH1RKgG/nXOh2u1meX0RxgUpXgc1mk/mAIoCykOfn5+xYdO1XV4HKl0EQACJs+C1ldQi+DOqKEqpgqSwLzopQFcBabSOg2+3WmwCOFSwWC/a9UOsTwRWOw+Ew3e/32uujICBlWAEUMSkhMJlMrPdYLpdXbaIhgGMFtgo1LIQTGqtF3mgISBlWAFmtVtq23HxC9SdREQATdSnQ6XTS0+mUa8exHlnkqaT+FqQihHwAecFoNHJei/R4Pp/nvvv6+vL6P1eKXakFwKQxqj4jSEpswJ3/Oj8QbArADA1bU95zGWT4tJWnUBACMGK/UQSRYwOuFSEmkFEpARgpjNytiguRYwOOFehiiUoIgMm5gpSiIscGmNsmy4KF6HKK0gko6uR8RI4NQDaWU5g64gocdRFg6QTc6uR8RBcbcFEKAb/l5HwEUyw4AaqTU7MwmKJrOoC42Wx2GVEcce4i1FX+LpUA1cnZ0k8TETi3zVUTEVD8lqdYVH0LlcTkHRzszUE4kEth3DIXwmbsJ9C5qIoS2S0IXhMMDfYTImIXB4KkhbNnhxF+e3u7tPv4+GCpi+tEG7R3FU3pbBlIknz7qIPWB+hSTtNcx7Wm3F51ci7f4JrrLifp8kdsH2Cr4Q+Hw8u8x3WcEcP8RTuxgYFR54wYfIXwFxh1tONsr8l9HAwGl8/ssrhv0SFmsaXDjX9ExkgAzE48J7xcLllLHdqIZ4xPpxPNZjPWnh3Mdb/fZ+1wxLkLuC/uL/qI/y26g8QOhExOyxac2JyWzWHhe/zu41RTg0O2TYFCcQAcER5tAV5eXljMCwf28/OTncuOyQY4ys/Pz+yKx8fHnCO1AY5Z1A5tTvAeCAXrSSS4ExBBH4LiTkAEfQiKKwJE7l1HmHKWXGDQxJemrl6VxYV1enkKtUuD8tC92S9OimnQ6Fdnm0jClfICzXp9noj+Ay4jXf4la/4PAAAAAElFTkSuQmCC",
+      "contentType": "image/png",
+      "width": 15,
+      "height": 15
+     },
+     "label": "Badestelle"
+    },
+    {
+     "value": "Behindertengerecht",
+     "symbol": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": "0ab38129-a8e0-4aaa-9261-00f612fb2fd3",
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsSAAALEgHS3X78AAADzUlEQVR4AeVb4dHpQBS9vnn/KYEK0EF0oIOPCh4VoILoABUYFdABHaACVJA3x7NG1u4mdu9ukDOzMyaJZO/J3rN3792QhIiIlkSUfGlb3mxUIv5iw+UWywSUyXjR7iREJTRetOiHiP7Kw6Hb7dJ6vaYkSb6iwRbYpMDV9hQr3W43+VbANsUoSB9Yr9es5uN+aPv9vnBa0Y9MArgwHo+TWq32NLpOp1NhBODZQQgYDAZa4Wm1WoWS4J2A7Xabqb5xHLMYYwO5Lz+6qMgWq9Uq8595rgkFdgI+DewEVKvVj6KAnQBNwJHC7+8v92OdwD4LzGYzrQBGURRa91IIFgcsl8ukXq/f74uYALFB0ZDtrQgWBP5f872oVCop20o/C/zxdePhcEi73e76u9VqURw/5SDeBuwa0Ov1nnwNx94B3kUQYe47hsAC3kPhy+Vida4oeNMAFQ6HA202G+W5er1+bUWA1QUw19vk5xAnYCXpG95dwBbn85k6nc595ggFZwLQ8X6/T5PJhIWEjyIA/txoNGg+n7N0ZjabUa/XY7lXXliLIIzGm38FURRdmwrNZjPXSpIbVgTYGE83AkajUWATzXjZBWyNf1e8RADmccT4KmAIfz0BePNQahkQryL8lwu5AiFNVeUpyWEbCJkaZ7nOejGEVFae9JYPAtCQYSqMANT1VJ1S1RHRUR8EIFTmqChZEaBa4pqSm6akaNGuYEWAqqwMI03wRYKrK1gRoPL/POVuHyS4uoIVAaqO5IUPElxcgYUAlLh9A28Zz+F2hY8hILnNPvImC1dXCO4CrtAFYLauEFQEuWDKNL/qClYEqPL8WdMgN1R9sHEFKwJUSh66ymsSxVdcQf5vruIolsFIfcnABkRdhscFyDkcj8f7HbCfAClz9KPdbitXpIPBgGq1WuqYKvkiF0fZF0OuUG2yelxzmETRUtDzEaB7MGe5SzfM5UWXSRS9EZBoRgGnIOqETlUw0V0rmq4Y60SAaQ+gCwl485p9vFo3M4miqRJtJYKPmE6n2rwg0mLYB/BKjQ+1BaTaIHAyIGr7/f5J3ATwn8VikTqGXWoQRB2sRfARpuGHeRnns+p8CGB0LkUea4XOI0AAby2rIiQqvmKqxBszVYgF8MYxxWJnCTdYRoCAj/yf7yqxkwiqgCnqcTucSwuxnZ6dAAHMArZEQAu4P9TQwRsBAhA3iGAWGTAaLhT6S5JMEdxut6ziIwseBM6HuOXtCzZhyEgxUsaPpp4+lcWFoXwyBDCraIyH7eX+cFJ4Q6k/nS0jCdqNy+X6fJ6I/gGdvhD30A5T2wAAAABJRU5ErkJggg==",
+      "contentType": "image/png",
+      "width": 15,
+      "height": 15
+     },
+     "label": "Behindertengerecht"
+    },
+    {
+     "value": "Grillplatz",
+     "symbol": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": "28c9e3a1-b912-4a7b-8ab5-f4517c474106",
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsSAAALEgHS3X78AAAEJklEQVR4Ae1bPVbjQAxW2C2gIiUdoUtHboC5QUrK3GA5gjlBjpAjJJwgoaQKnAA4QUJH533yIj/FGY3nR7ZDvN97eoQ8eTL6PJIlzRhKSABgDgDZkcr820YjpkdseFmmZQK6ZDxJQULSQeNJkhMA+FNeDuPxGJbLJWRZdhSCtqBNBuS277AyHo+zYwXaVra39/2hALKVJGKg3MN2u4WXl5f869FoBP1+36i3Wq3yv4PBIBcTcBwcD8fAsUx4f3/PJfddj3nSHG5vb/e+32HEF8vlsrh2Op2KV5POZDIRdZIkyXVGo5Gok6ZpMdZms/GaLeqX7T3xorACn5+flTp092ygFaWlRzCtzmgC+HK2GUd6Nh0+QUnv/Pzc6fdcoUIATZz8XNKjSaOfm8D9Xrq7XOf19TV2+vEEAJsUD1Bl8IAlEXVzc1N8fnp6Ch7HByoE8ElJd07TONLzjQEmqBDAjZOWpQtJ4Gic5ipQfQr8RKgQ4BKNXSM26UkJVXksm54rohIhxGAwKK5fr9dGHUyAqhKm2WxWmZK/vb0VOvi7vjAURHEEzOfz4lrM5EzgGVi/3xczOMwASQ8zzCoiMStsnQA+ISTDBLzjVZPGlVNFJAIJrCLSBnUCaEK25cirMFzCJnCS0BVM4HWHrabwISA6CFJWJ1VvXMdWCfI6wqXK44/eGKg9Bl2isWvEdtGTiPSFGgFNV3lSNumLaAJo6WNG5lLkLBYLo8719XXx+fHxMXgcX/wCgJRfk6ap1xCnp6e5/+KSvLi4gOFwaNT5+PjIdc7Ozow+jtc+Pz/nOl9fX3B3dyeOgy6Cn3Ec30To4eFh5/+9lti/QHm86PV6O7b9rwUOYA6t4nfIj2PA04rCWsC8wLdLTPDOBHln9lDEtS5QyQS1srBDwNHEgMvLy+Brg4qhQ3MBqQ/hMO8wAnjt3rZgRRp644JdQNhtbQWxcwlaAbw11bZIjRiXFRBMQMY2M9sU376gKgG8Q9OWSN2jRghA3N/ft2a8rXfYGAHYmORt8aYEI7/UX2yUgOy7o0vN0abEJ/DVTkBW2h+oW3z9vhECmiLBdgwnhADVWkDqCWrC5RiOD1QJaKJHoHEogkO1J3h1daVybqcKMXOsrSdoOx4zm81ymUwm1g0N7PBiXo+6eF5RglZLnKASBPnWdllMm5j46MRMksQE6dGKyZdWEFQjgO8Sc7EdeqyC6Whr7Ji1PQWk4BTaqARL642O1GpA7YiM5P8x/UMbeVpPAxUCXI60hcB2+PpgNkfBMhmbAa6QCPwRKyDm7hPqjgPRBNTl/4S640A0AXX5P6HuOBBNQJ3+T6gzDuzVAuv12nrgqQzJF22vvfjC9RR6FZxemenaS1NgelUWFaX8/CcC6w7B+Dl0/cVJcoNOvzrbRRL2jC+CaqdenweAvwCbczPmEUUkAAAAAElFTkSuQmCC",
+      "contentType": "image/png",
+      "width": 15,
+      "height": 15
+     },
+     "label": "Grillplatz"
+    },
+    {
+     "value": "Slipanlage",
+     "symbol": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": "b9d7f2c5-970b-405e-a8a6-72bf7b00fe74",
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsSAAALEgHS3X78AAADlklEQVR4nO2bzdGqMBSGz/1Z6I4SWN4lHUgJLt1JCZRAB5bgWAF2gFaAHejSHS7dcedlPE5uLpEQAkTxncmM830h5Dw5PyEoSQqJKCWi8kNb+rCxVpsPNlxuGxnAlIzn9oQQTtB4buGvB4k/qrj4cHk/HiQmq59TNh76AnBgDqNqFAB5nlNZllQUhRMQBi092+22ZC2XSxdK4XA3i+P4aXyapq7sBcwuDMOwjKKo9DxPuz+rKArt65wFILpynuflZrOpjKzr6/t+ZbRjrm8PgCy4N9w9CIJqpQHIQdfvBiBJEiUAlRxz/arhWSAxLR9RFLXqP5vNaLVake/7NJ/P6Xq90v1+N729NRnTO5/Prb1AVpZlz3B5qxBAQzKzKYQIcguqCxKn8wCoIRl2VVN1cQJA3xBEcXWx7B12BsLExFrft5B/AB5h2LGy1P8Dg7Yljf5DeYMsJFOUZoNkWv8P3roiDtu6Hfoidof0CFG4L8JFM5m+BiDKBAbGwcpghcZSg1eoQwCrqKr1JjAYCMYVt8d9e4ORB4gNBPuAAchIYn0CQU7qDGAIGJw7ELeYtI1dJoTxrAIYCgYDwfVIaKYJVaNEmgNoC6NuR8erjkTZtOPDPRiIjpB4NeZuB4AODBgp9kMfWbhGt5Y3VRjAGgWACoYIoM54FtzdJGzkhKoJsl8AdQ3GiaGBifMZI3uNRva21YYHAENZ8vkgnzRp1G8rTfliJAgCStOU4jiuTnBsShzvdrvVjux53vNzlmWUJEk1p8FOhOStsMWnr3/Glj2AcwPux3+T8wMfmlg6X9QDUFfWdEqXqnGsc3JEEx+gxIT5apfI8+hwpGYGQF6VtocVmLBqcwOj5P68X3i1KTL0ju4AZOmGC58fsEFyqWwKo6ZnCPaOBhj2Aagm0tfZXpN3NNy3fwCiTMKlbZO9wykAsmxWF5V3jB4CbdR3uDgPQNQQ4eI0AFk9hcv7AJBlKVzeF4CoDuHyGQBktQiXzwQg6lWITP6Lkr/bXnC5XGi/31fP62EYGp8VnE4nOhwO1WeMY/qsj/lgHJwrLJdLo/k0hgDiCVvLukdO3bN8ftevikndlyQc26r3fnUHsq9CQPl1eazIer2m3W5XrZausAJY0cViUa3K8Xh8rlAbsYdhHHzmcbDiutKx4ft7AQfmMKq+AByYw6j6AnBgDqMKAPYTtr+yfdI/nGQSk/7p7BQh/Gc8a1o/nyeiv1z+pHBwN6JCAAAAAElFTkSuQmCC",
+      "contentType": "image/png",
+      "width": 15,
+      "height": 15
+     },
+     "label": "Slipanlage"
+    },
+    {
+     "value": "Feuerwehr",
+     "symbol": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": "cd294fd9-bf01-4d28-baf2-7b44e24fd18b",
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsSAAALEgHS3X78AAADk0lEQVR4Ae1b/7HxQBS93rz/eRWgAlQgOogOqOCjAlQQKkAFTwd0gApQQagg35wdN7PW5hePrCRnZkckx7p7cvfuvZsJKbCI6JeIvIy23+sYtXAyPHC1OaoAeRo8N18EK4eD52Z9EdE/1R1s26b1ek2e52WiYSwYkwZi7Deq2LbtZRUYm8YLbk+s1+vMCoCxqeMtsQoMuExWcT6f6efn52Z0uRIAKJVKN9+/UrPEEBQCGGBDqigEMMCGVFEIYIANqaIQwAAbUkUhgAE2pIrvV/75arWi/X5P5XKZer0eVSoVI0W4KQ//CvP53O+z1+uJXl3X9ZrNpjhXqVQE5914Szm8WCyo3++LY9z5+XwujofDIU2nU58Hj3BdN3H/KGtns5k4rlarVKvV/GuWFbjpK6BWg/TXHqC78wzLsu7uALwiKQaDQeheX9imTuSOEAOGbbfbRKaBz/3A1cPECeLEgU5IuTmOE1uAwCC42+2o0+n43+Fm7GrsZrL7wZ2Z32w2xUakCkwHYLlcit+NRqP4fp8Al8slNjkwBhyPR6rX6w8ZAAEgCBqOGe12+47zCCD0ZrMJ/CVukO4GkCYGhAZBCAAhXg3Zu0gJZI1GwxdK5dHVUxEU6XrTTqeT8Ez2tqcEUKO2SVC9K0g0lZdoFZCD2ic3eaWJvQowoiLuJzR5WVTtjawFXhWp3wmOETpECoC5FZVdmQ7UIw8LADjO3eP0TCFWKhyVfprcEMeCYkDsYgjzqNVq+XkBlhZMDSwzWIuRmITNNZkPblgiQ8rUS8KHDeDCJvkaJ0ZPFUNYFvGIWVcjYKlBDg61Uepyrg/PORwOoXz+bxyPx2MtH+dwjfn4DxyjD11BBT7+m8vvpz0gKygejipILAA2O1CMQEluiA04r8YAfMd5XJf5+D3OqwB/Mpnc8bvdrtheU4F4BD5qFubi+T/4UTGDEWsKwFiUsHE6lXOGKL6apyfhQyw50OnAxROWcf7dQ0EQwSe3qXDW8dC2ONwKLoWGeQjXDds3AB9TA59wW7QwPvfN/KQ5hrxHEAexpkCtVhM5QNBWNtwM18FDP8wP2qBEPzIf6zU2UaP4co4BflSOAX7YFCjygNQsMQSFAAbYkCoKAQywIVUUAhhgQ6ooBDDAhlRRCGCADaniToCoTYZPRtCGy011lMeXpu5elQ0rYz8RvJ2vGTzGnu8XJ3ka5PrV2TyKEPi0N1+vzxPRf40gCEu3A5qoAAAAAElFTkSuQmCC",
+      "contentType": "image/png",
+      "width": 15,
+      "height": 15
+     },
+     "label": "Feuerwehr"
+    },
+    {
+     "value": "Baustelle",
+     "symbol": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": "ef1a46df-ddef-48be-9651-05b8ea307773",
+      "imageData": "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",
+      "contentType": "image/png",
+      "width": 15,
+      "height": 15
+     },
+     "label": "Baustelle"
+    }
+   ]
+  },
+  "transparency": 0
+ },
+ "allowGeometryUpdates": true,
+ "hasAttachments": false,
+ "viewSourceHasAttachments": false,
+ "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+ "hasM": true,
+ "allowUpdateWithoutMValues": false,
+ "hasZ": true,
+ "enableZDefaults": true,
+ "zDefault": 0,
+ "objectIdField": "OBJECTID",
+ "uniqueIdField": {
+  "name": "OBJECTID",
+  "isSystemMaintained": true
+ },
+ "globalIdField": "GlobalID",
+ "typeIdField": "AZI",
+ "collation": {
+  "locale": "neutral",
+  "caseSensitive": false,
+  "accentSensitive": true
+ },
+ "fields": [
+  {
+   "name": "OBJECTID",
+   "type": "esriFieldTypeOID",
+   "alias": "OBJECTID",
+   "sqlType": "sqlTypeOther",
+   "nullable": false,
+   "editable": false,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Id",
+   "type": "esriFieldTypeInteger",
+   "alias": "Id",
+   "sqlType": "sqlTypeOther",
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Name",
+   "type": "esriFieldTypeString",
+   "alias": "Name",
+   "sqlType": "sqlTypeOther",
+   "length": 254,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Descript",
+   "type": "esriFieldTypeString",
+   "alias": "Descript",
+   "sqlType": "sqlTypeOther",
+   "length": 254,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Type",
+   "type": "esriFieldTypeString",
+   "alias": "Type",
+   "sqlType": "sqlTypeOther",
+   "length": 254,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Comment",
+   "type": "esriFieldTypeString",
+   "alias": "Comment",
+   "sqlType": "sqlTypeOther",
+   "length": 254,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Symbol",
+   "type": "esriFieldTypeString",
+   "alias": "Symbol",
+   "sqlType": "sqlTypeOther",
+   "length": 254,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "DateTimeS",
+   "type": "esriFieldTypeString",
+   "alias": "DateTimeS",
+   "sqlType": "sqlTypeOther",
+   "length": 254,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Elevation",
+   "type": "esriFieldTypeDouble",
+   "alias": "Elevation",
+   "sqlType": "sqlTypeOther",
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "AZI",
+   "type": "esriFieldTypeString",
+   "alias": "AZI",
+   "sqlType": "sqlTypeOther",
+   "length": 50,
+   "nullable": true,
+   "editable": true,
+   "domain": {
+    "type": "codedValue",
+    "name": "AAl_AZI_AZI_9de5ff0a-d957-48e7-8a53-849dcfbecc39",
+    "codedValues": [
+     {
+      "name": "Behindertengerecht",
+      "code": "Behindertengerecht"
+     },
+     {
+      "name": "Sitzbank",
+      "code": "Sitzbank"
+     },
+     {
+      "name": "Mülleimer",
+      "code": "Mülleimer"
+     },
+     {
+      "name": "Gastronomie",
+      "code": "Gastronomie"
+     },
+     {
+      "name": "Fähranleger",
+      "code": "Fähranleger"
+     },
+     {
+      "name": "Infotafel",
+      "code": "Infotafel"
+     },
+     {
+      "name": "Steganlage",
+      "code": "Steganlage"
+     },
+     {
+      "name": "Badestelle",
+      "code": "Badestelle"
+     },
+     {
+      "name": "DLRG",
+      "code": "DLRG"
+     },
+     {
+      "name": "Fahrradverleihstation",
+      "code": "Fahrradverleihstation"
+     },
+     {
+      "name": "Polizei",
+      "code": "Polizei"
+     },
+     {
+      "name": "WC",
+      "code": "WC"
+     },
+     {
+      "name": "Slipanlage",
+      "code": "Slipanlage"
+     },
+     {
+      "name": "Grillplatz",
+      "code": "Grillplatz"
+     },
+     {
+      "name": "Feuerwehr",
+      "code": "Feuerwehr"
+     },
+     {
+      "name": "Baustelle",
+      "code": "Baustelle"
+     }
+    ]
+   },
+   "defaultValue": null
+  },
+  {
+   "name": "GlobalID",
+   "type": "esriFieldTypeGlobalID",
+   "alias": "GlobalID",
+   "sqlType": "sqlTypeOther",
+   "length": 38,
+   "nullable": false,
+   "editable": false,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "CreationDate",
+   "type": "esriFieldTypeDate",
+   "alias": "CreationDate",
+   "sqlType": "sqlTypeOther",
+   "length": 8,
+   "nullable": true,
+   "editable": false,
+   "domain": null,
+   "defaultValue": null,
+   "precision": 1
+  },
+  {
+   "name": "Creator",
+   "type": "esriFieldTypeString",
+   "alias": "Creator",
+   "sqlType": "sqlTypeOther",
+   "length": 128,
+   "nullable": true,
+   "editable": false,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "EditDate",
+   "type": "esriFieldTypeDate",
+   "alias": "EditDate",
+   "sqlType": "sqlTypeOther",
+   "length": 8,
+   "nullable": true,
+   "editable": false,
+   "domain": null,
+   "defaultValue": null,
+   "precision": 1
+  },
+  {
+   "name": "Editor",
+   "type": "esriFieldTypeString",
+   "alias": "Editor",
+   "sqlType": "sqlTypeOther",
+   "length": 128,
+   "nullable": true,
+   "editable": false,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Gewässername",
+   "type": "esriFieldTypeString",
+   "alias": "Gewässerbezeichnung",
+   "sqlType": "sqlTypeOther",
+   "length": 256,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  }
+ ],
+ "indexes": [
+  {
+   "name": "GlobalID_idx",
+   "fields": "GlobalID",
+   "isAscending": true,
+   "isUnique": true,
+   "description": "",
+   "indexType": "Attribute"
+  },
+  {
+   "name": "CreationDateIndex",
+   "fields": "CreationDate",
+   "isAscending": true,
+   "isUnique": false,
+   "description": "CreationDate Field index",
+   "indexType": "Attribute"
+  },
+  {
+   "name": "CreatorIndex",
+   "fields": "Creator",
+   "isAscending": false,
+   "isUnique": false,
+   "description": "Creator Field index",
+   "indexType": "Attribute"
+  },
+  {
+   "name": "EditDateIndex",
+   "fields": "EditDate",
+   "isAscending": true,
+   "isUnique": false,
+   "description": "EditDate Field index",
+   "indexType": "Attribute"
+  },
+  {
+   "name": "EditorIndex",
+   "fields": "Editor",
+   "isAscending": false,
+   "isUnique": false,
+   "description": "Editor Field index",
+   "indexType": "Attribute"
+  },
+  {
+   "name": "EN1_AZI_AAL_AZI_Shape_sidx",
+   "fields": "Shape",
+   "isAscending": false,
+   "isUnique": false,
+   "description": "Shape Index",
+   "indexType": "Spatial"
+  },
+  {
+   "name": "PK__EN1_AZI___F4B70D859658CC58",
+   "fields": "OBJECTID",
+   "isAscending": true,
+   "isUnique": true,
+   "description": "clustered, unique, primary key",
+   "indexType": "Attribute"
+  }
+ ],
+ "dateFieldsTimeReference": {
+  "timeZone": "UTC",
+  "timeZoneIANA": "Etc/UTC",
+  "respectsDaylightSaving": false
+ },
+ "preferredTimeReference": null,
+ "types": [
+  {
+   "id": "Sitzbank",
+   "name": "Sitzbank",
+   "domains": {},
+   "templates": [
+    {
+     "name": "Sitzbank",
+     "description": "",
+     "drawingTool": "esriFeatureEditToolNone",
+     "prototype": {
+      "attributes": {
+       "AZI": "Sitzbank",
+       "Id": null,
+       "Name": null,
+       "Descript": null,
+       "Type": null,
+       "Comment": null,
+       "Symbol": null,
+       "DateTimeS": null,
+       "Elevation": null,
+       "Gewässername": null
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "Mülleimer",
+   "name": "Mülleimer",
+   "domains": {},
+   "templates": [
+    {
+     "name": "Mülleimer",
+     "description": "",
+     "drawingTool": "esriFeatureEditToolNone",
+     "prototype": {
+      "attributes": {
+       "AZI": "Mülleimer",
+       "Id": null,
+       "Name": null,
+       "Descript": null,
+       "Type": null,
+       "Comment": null,
+       "Symbol": null,
+       "DateTimeS": null,
+       "Elevation": null,
+       "Gewässername": null
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "Fähranleger",
+   "name": "Fähranleger",
+   "domains": {},
+   "templates": [
+    {
+     "name": "Fähranleger",
+     "description": "",
+     "drawingTool": "esriFeatureEditToolNone",
+     "prototype": {
+      "attributes": {
+       "AZI": "Fähranleger",
+       "Id": null,
+       "Name": null,
+       "Descript": null,
+       "Type": null,
+       "Comment": null,
+       "Symbol": null,
+       "DateTimeS": null,
+       "Elevation": null,
+       "Gewässername": null
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "Gastronomie",
+   "name": "Gastronomie",
+   "domains": {},
+   "templates": [
+    {
+     "name": "Gastronomie",
+     "description": "",
+     "drawingTool": "esriFeatureEditToolNone",
+     "prototype": {
+      "attributes": {
+       "AZI": "Gastronomie",
+       "Id": null,
+       "Name": null,
+       "Descript": null,
+       "Type": null,
+       "Comment": null,
+       "Symbol": null,
+       "DateTimeS": null,
+       "Elevation": null,
+       "Gewässername": null
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "Infotafel",
+   "name": "Infotafel",
+   "domains": {},
+   "templates": [
+    {
+     "name": "Infotafel",
+     "description": "",
+     "drawingTool": "esriFeatureEditToolNone",
+     "prototype": {
+      "attributes": {
+       "AZI": "Infotafel",
+       "Id": null,
+       "Name": null,
+       "Descript": null,
+       "Type": null,
+       "Comment": null,
+       "Symbol": null,
+       "DateTimeS": null,
+       "Elevation": null,
+       "Gewässername": null
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "Steganlage",
+   "name": "Steganlage",
+   "domains": {},
+   "templates": [
+    {
+     "name": "Steganlage",
+     "description": "",
+     "drawingTool": "esriFeatureEditToolNone",
+     "prototype": {
+      "attributes": {
+       "AZI": "Steganlage",
+       "Id": null,
+       "Name": null,
+       "Descript": null,
+       "Type": null,
+       "Comment": null,
+       "Symbol": null,
+       "DateTimeS": null,
+       "Elevation": null,
+       "Gewässername": null
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "Polizei",
+   "name": "Polizei",
+   "domains": {},
+   "templates": [
+    {
+     "name": "Polizei",
+     "description": "",
+     "drawingTool": "esriFeatureEditToolNone",
+     "prototype": {
+      "attributes": {
+       "AZI": "Polizei",
+       "Id": null,
+       "Name": null,
+       "Descript": null,
+       "Type": null,
+       "Comment": null,
+       "Symbol": null,
+       "DateTimeS": null,
+       "Elevation": null,
+       "Gewässername": null
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "WC",
+   "name": "WC",
+   "domains": {},
+   "templates": [
+    {
+     "name": "WC",
+     "description": "",
+     "drawingTool": "esriFeatureEditToolNone",
+     "prototype": {
+      "attributes": {
+       "AZI": "WC",
+       "Id": null,
+       "Name": null,
+       "Descript": null,
+       "Type": null,
+       "Comment": null,
+       "Symbol": null,
+       "DateTimeS": null,
+       "Elevation": null,
+       "Gewässername": null
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "Zufahrt",
+   "name": "Zufahrt",
+   "domains": {},
+   "templates": [
+    {
+     "name": "Zufahrt",
+     "description": "",
+     "drawingTool": "esriFeatureEditToolNone",
+     "prototype": {
+      "attributes": {
+       "AZI": "Zufahrt",
+       "Id": null,
+       "Name": null,
+       "Descript": null,
+       "Type": null,
+       "Comment": null,
+       "Symbol": null,
+       "DateTimeS": null,
+       "Elevation": null,
+       "Gewässername": null
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "Fahrradverleihstation",
+   "name": "Fahrradverleihstation",
+   "domains": {},
+   "templates": [
+    {
+     "name": "Fahrradverleihstation",
+     "description": "",
+     "drawingTool": "esriFeatureEditToolNone",
+     "prototype": {
+      "attributes": {
+       "AZI": "Fahrradverleihstation",
+       "Id": null,
+       "Name": null,
+       "Descript": null,
+       "Type": null,
+       "Comment": null,
+       "Symbol": null,
+       "DateTimeS": null,
+       "Elevation": null,
+       "Gewässername": null
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "DLRG",
+   "name": "DLRG",
+   "domains": {},
+   "templates": [
+    {
+     "name": "DLRG",
+     "description": "",
+     "drawingTool": "esriFeatureEditToolNone",
+     "prototype": {
+      "attributes": {
+       "AZI": "DLRG",
+       "Id": null,
+       "Name": null,
+       "Descript": null,
+       "Type": null,
+       "Comment": null,
+       "Symbol": null,
+       "DateTimeS": null,
+       "Elevation": null,
+       "Gewässername": null
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "Badestelle",
+   "name": "Badestelle",
+   "domains": {},
+   "templates": [
+    {
+     "name": "Badestelle",
+     "description": "",
+     "drawingTool": "esriFeatureEditToolNone",
+     "prototype": {
+      "attributes": {
+       "AZI": "Badestelle",
+       "Id": null,
+       "Name": null,
+       "Descript": null,
+       "Type": null,
+       "Comment": null,
+       "Symbol": null,
+       "DateTimeS": null,
+       "Elevation": null,
+       "Gewässername": null
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "Behindertengerecht",
+   "name": "Behindertengerecht",
+   "domains": {},
+   "templates": [
+    {
+     "name": "Behindertengerecht",
+     "description": "",
+     "drawingTool": "esriFeatureEditToolNone",
+     "prototype": {
+      "attributes": {
+       "AZI": "Behindertengerecht",
+       "Id": null,
+       "Name": null,
+       "Descript": null,
+       "Type": null,
+       "Comment": null,
+       "Symbol": null,
+       "DateTimeS": null,
+       "Elevation": null,
+       "Gewässername": null
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "Grillplatz",
+   "name": "Grillplatz",
+   "domains": {},
+   "templates": [
+    {
+     "name": "Grillplatz",
+     "description": "",
+     "drawingTool": "esriFeatureEditToolNone",
+     "prototype": {
+      "attributes": {
+       "AZI": "Grillplatz",
+       "Id": null,
+       "Name": null,
+       "Descript": null,
+       "Type": null,
+       "Comment": null,
+       "Symbol": null,
+       "DateTimeS": null,
+       "Elevation": null,
+       "Gewässername": null
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "Slipanlage",
+   "name": "Slipanlage",
+   "domains": {},
+   "templates": [
+    {
+     "name": "Slipanlage",
+     "description": "",
+     "drawingTool": "esriFeatureEditToolNone",
+     "prototype": {
+      "attributes": {
+       "AZI": "Slipanlage",
+       "Id": null,
+       "Name": null,
+       "Descript": null,
+       "Type": null,
+       "Comment": null,
+       "Symbol": null,
+       "DateTimeS": null,
+       "Elevation": null,
+       "Gewässername": null
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "Feuerwehr",
+   "name": "Feuerwehr",
+   "domains": {},
+   "templates": [
+    {
+     "name": "Feuerwehr",
+     "description": "",
+     "drawingTool": "esriFeatureEditToolNone",
+     "prototype": {
+      "attributes": {
+       "AZI": "Feuerwehr",
+       "Id": null,
+       "Name": null,
+       "Descript": null,
+       "Type": null,
+       "Comment": null,
+       "Symbol": null,
+       "DateTimeS": null,
+       "Elevation": null,
+       "Gewässername": null
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "Baustelle",
+   "name": "Baustelle",
+   "domains": {},
+   "templates": [
+    {
+     "name": "Baustelle",
+     "description": "",
+     "drawingTool": "esriFeatureEditToolNone",
+     "prototype": {
+      "attributes": {
+       "AZI": "Baustelle",
+       "Id": null,
+       "Name": null,
+       "Descript": null,
+       "Type": null,
+       "Comment": null,
+       "Symbol": null,
+       "DateTimeS": null,
+       "Elevation": null,
+       "Gewässername": null
+      }
+     }
+    }
+   ]
+  }
+ ],
+ "templates": [],
+ "supportedQueryFormats": "JSON, geoJSON, PBF",
+ "supportedAppendFormats": "sqlite,geoPackage,shapefile,filegdb,featureCollection,geojson,csv,excel,jsonl,featureService,pbf",
+ "supportedAppendSourceFilterFormats": "sqlite,geoPackage,shapefile,filegdb,featureService",
+ "supportedExportFormats": "csv,shapefile,sqlite,geoPackage,filegdb,featureCollection,geojson,kml,excel,parquet",
+ "supportedConvertFileFormats": "JSON,PBF,Parquet",
+ "supportedConvertContentFormats": "LayerEditCollection,FeatureCollection",
+ "supportedSpatialRelationships": [
+  "esriSpatialRelIntersects",
+  "esriSpatialRelContains",
+  "esriSpatialRelCrosses",
+  "esriSpatialRelEnvelopeIntersects",
+  "esriSpatialRelIndexIntersects",
+  "esriSpatialRelOverlaps",
+  "esriSpatialRelTouches",
+  "esriSpatialRelWithin",
+  "esriSpatialRelDisjoint",
+  "esriSpatialRelRelation"
+ ],
+ "guidFormat": "",
+ "supportsContingentValues": true,
+ "supportsEditingContingentValues": true,
+ "supportedContingentValuesFormats": "JSON, PBF",
+ "supportsFieldGroups": true,
+ "supportedSyncDataOptions": 260,
+ "hasStaticData": true,
+ "maxRecordCount": 1000,
+ "standardMaxRecordCount": 16000,
+ "maxIdsCount": 1000000,
+ "standardMaxRecordCountNoGeometry": 32000,
+ "tileMaxRecordCount": 8000,
+ "maxRecordCountFactor": 1,
+ "capabilities": "Query"
+}

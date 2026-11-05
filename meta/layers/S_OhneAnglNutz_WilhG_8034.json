@@ -1,0 +1,735 @@
+{
+ "currentVersion": 12,
+ "id": 0,
+ "name": "GFHH_WilhG_ohneAnglerischeNutzung",
+ "type": "Feature Layer",
+ "serviceItemId": "932bae05e1c5441d99d0ae684495e87b",
+ "cacheMaxAge": 3600,
+ "isView": true,
+ "isUpdatableView": true,
+ "sourceSchemaChangesAllowed": true,
+ "displayField": "gml_parent",
+ "description": "",
+ "copyrightText": "",
+ "defaultVisibility": true,
+ "editingInfo": {
+  "lastEditDate": 1788283257564,
+  "schemaLastEditDate": 1788283257564,
+  "dataLastEditDate": 1788283241620
+ },
+ "multiScaleGeometryInfo": {
+  "levels": [
+   10,
+   12,
+   14
+  ],
+  "maxAllowableVertices": 1000000,
+  "generalizationType": "Quantization"
+ },
+ "relationships": [],
+ "isDataVersioned": false,
+ "hasContingentValuesDefinition": false,
+ "supportsAppend": true,
+ "supportsCalculate": true,
+ "supportsASyncCalculate": true,
+ "supportsTruncate": false,
+ "supportsAttachmentsByUploadId": true,
+ "supportsAttachmentsResizing": true,
+ "supportsRollbackOnFailureParameter": true,
+ "supportsStatistics": true,
+ "supportsExceedsLimitStatistics": true,
+ "supportsAdvancedQueries": true,
+ "supportsValidateSql": true,
+ "supportsCoordinatesQuantization": true,
+ "supportsLayerOverrides": true,
+ "supportsTilesAndBasicQueriesMode": true,
+ "supportsFieldDescriptionProperty": true,
+ "supportsQuantizationEditMode": true,
+ "supportsColumnStoreIndex": true,
+ "supportsApplyEditsWithGlobalIds": true,
+ "supportsMultiScaleGeometry": true,
+ "supportsReturningQueryGeometry": true,
+ "enableNullGeometry": false,
+ "hasGeometryProperties": true,
+ "geometryProperties": {
+  "shapeAreaFieldName": "Shape__Area",
+  "shapeLengthFieldName": "Shape__Length",
+  "units": "esriMeters"
+ },
+ "advancedQueryCapabilities": {
+  "supportsPagination": true,
+  "supportsPaginationOnAggregatedQueries": true,
+  "supportsQueryRelatedPagination": true,
+  "supportsQueryWithDistance": true,
+  "supportsOutDistance": true,
+  "supportsReturningQueryExtent": true,
+  "supportsStatistics": true,
+  "supportsOrderBy": true,
+  "supportsDistinct": true,
+  "supportsQueryWithResultType": true,
+  "supportsSqlExpression": true,
+  "supportsTimeRelation": true,
+  "supportsAdvancedQueryRelated": true,
+  "supportsCountDistinct": true,
+  "supportsPercentileStatistics": true,
+  "supportsApproxPercentileStatistics": true,
+  "supportsSpatialAggregationStatistics": true,
+  "supportsTrueCurve": true,
+  "supportedSpatialAggregationStatistics": [
+   "EnvelopeAggregate",
+   "CentroidAggregate",
+   "ConvexHullAggregate"
+  ],
+  "supportsLod": true,
+  "supportsQueryWithLodSR": false,
+  "supportedLodTypes": [
+   "geohash"
+  ],
+  "supportsReturningGeometryCentroid": true,
+  "supportsReturningGeometryEnvelope": true,
+  "supportsReturningGeometryProperties": true,
+  "supportsQueryWithDatumTransformation": true,
+  "supportsCurrentUserQueries": true,
+  "supportsHavingClause": true,
+  "supportsOutFieldSQLExpression": true,
+  "supportsMaxRecordCountFactor": true,
+  "supportsTopFeaturesQuery": true,
+  "supportsDisjointSpatialRel": true,
+  "supportsQueryWithCacheHint": true,
+  "supportedOperationsWithCacheHint": [
+   "query",
+   "queryTopFilter",
+   "queryAnalytics",
+   "queryAttachments",
+   "queryRelated",
+   "queryBins",
+   "queryPivot"
+  ],
+  "supportsQueryAnalytic": true,
+  "supportsQueryPivot": true,
+  "supportsQueryBins": true,
+  "supportsDefaultSR": true,
+  "supportsTranslations": false,
+  "supportsAggIds": true,
+  "supportsQueryWithCollation": true,
+  "supportsISODOW": true,
+  "supportsISOWeek": true,
+  "supportsFullTextSearch": true,
+  "fullTextSearchCapabilities": {
+   "supportsAccentSensitivity": true,
+   "supportsStopWords": true,
+   "supportsSearchOperator": true,
+   "supportsOperator": true
+  }
+ },
+ "advancedQueryAnalyticCapabilities": {
+  "supportsLinearRegression": true,
+  "supportsTrendlineRegression": true,
+  "supportsAsync": true,
+  "supportsPercentileAnalytic": true
+ },
+ "queryBinsCapabilities": {
+  "supportsAsync": true,
+  "supportsAutoIntervalBin": true,
+  "supportsFixedIntervalBin": true,
+  "supportsFixedBoundariesBin": true,
+  "supportsDateBin": true,
+  "supportsClassificationBin": true,
+  "supportsStackBy": true,
+  "supportsSplitBy": true,
+  "supportsFirstDayOfWeek": true,
+  "supportsSnapToData": true,
+  "supportsReturnFullIntervalBin": true,
+  "supportsReturnStackValueRange": true,
+  "supportsNormalization": true,
+  "supportedStatisticTypes": [
+   "COUNT",
+   "SUM",
+   "AVG",
+   "VAR",
+   "STDDEV",
+   "MIN",
+   "MAX",
+   "PERCENTILE_CONT",
+   "PERCENTILE_DISC",
+   "APPROX_PERCENTILE_CONT",
+   "APPROX_PERCENTILE_DISC",
+   "CentroidAggregate",
+   "EnvelopeAggregate",
+   "ConvexHullAggregate"
+  ],
+  "supportedNormalizationTypes": [
+   "boxCox",
+   "field",
+   "inverse",
+   "log",
+   "naturalLog",
+   "percentOfTotal",
+   "squareRoot"
+  ]
+ },
+ "supportedOperationsWithCollation": "query,addField,updateField",
+ "advancedEditingCapabilities": {
+  "supportedSqlFormatsInCalculate": [
+   "standard"
+  ],
+  "supportsAsyncApplyEdits": true,
+  "supportsReturnEditResults": true,
+  "supportsApplyEditsbyUploadID": true,
+  "supportedApplyEditsUploadIDFormats": "JSON,PBF",
+  "supportsTranslation": false,
+  "supportsMaxTranslations": 10
+ },
+ "infoInEstimates": [
+  "extent",
+  "count"
+ ],
+ "useStandardizedQueries": true,
+ "geometryType": "esriGeometryPolygon",
+ "minScale": 364768,
+ "maxScale": 739,
+ "extent": {
+  "xmin": 564748.9560000002,
+  "ymin": 5925550.825999999,
+  "xmax": 570144.2319999998,
+  "ymax": 5930760.403000001,
+  "spatialReference": {
+   "wkid": 25832,
+   "latestWkid": 25832
+  }
+ },
+ "spatialReference": {
+  "wkid": 102100,
+  "latestWkid": 3857
+ },
+ "drawingInfo": {
+  "renderer": {
+   "type": "simple",
+   "label": "",
+   "description": "",
+   "symbol": {
+    "color": [
+     255,
+     255,
+     0,
+     255
+    ],
+    "outline": {
+     "color": [
+      255,
+      255,
+      0,
+      255
+     ],
+     "width": 0.4,
+     "type": "esriSLS",
+     "style": "esriSLSSolid"
+    },
+    "type": "esriSFS",
+    "style": "esriSFSSolid"
+   }
+  },
+  "transparency": 0
+ },
+ "allowGeometryUpdates": true,
+ "trueCurveSupportMode": "OGC",
+ "supportedCurveTypes": [
+  "esriGeometryCircularArc"
+ ],
+ "supportedTrueCurvePbfFeatureEncodings": [
+  "esriCompressedShapeBuffer",
+  "esriDefault"
+ ],
+ "allowTrueCurvesUpdates": true,
+ "onlyAllowTrueCurveUpdatesByTrueCurveClients": false,
+ "hasAttachments": false,
+ "viewSourceHasAttachments": false,
+ "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+ "hasM": false,
+ "hasZ": false,
+ "objectIdField": "OBJECTID",
+ "uniqueIdField": {
+  "name": "OBJECTID",
+  "isSystemMaintained": true
+ },
+ "globalIdField": "GlobalID_2",
+ "typeIdField": "",
+ "collation": {
+  "locale": "neutral",
+  "caseSensitive": false,
+  "accentSensitive": true
+ },
+ "fields": [
+  {
+   "name": "OBJECTID",
+   "type": "esriFieldTypeOID",
+   "alias": "OBJECTID",
+   "sqlType": "sqlTypeOther",
+   "nullable": false,
+   "editable": false,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "FID_FlVerein_EWilhGew_Stempel",
+   "type": "esriFieldTypeInteger",
+   "alias": "FID_FlVerein_EWilhGew_Stempel",
+   "sqlType": "sqlTypeOther",
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "gml_parent",
+   "type": "esriFieldTypeString",
+   "alias": "gml_parent",
+   "sqlType": "sqlTypeOther",
+   "length": 254,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "gml_pare_1",
+   "type": "esriFieldTypeString",
+   "alias": "gml_pare_1",
+   "sqlType": "sqlTypeOther",
+   "length": 254,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "gml_id",
+   "type": "esriFieldTypeString",
+   "alias": "gml_id",
+   "sqlType": "sqlTypeOther",
+   "length": 254,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "bez",
+   "type": "esriFieldTypeString",
+   "alias": "bez",
+   "sqlType": "sqlTypeOther",
+   "length": 254,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "gewaesser_",
+   "type": "esriFieldTypeString",
+   "alias": "gewaesser_",
+   "sqlType": "sqlTypeOther",
+   "length": 254,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "geom",
+   "type": "esriFieldTypeString",
+   "alias": "geom",
+   "sqlType": "sqlTypeOther",
+   "length": 254,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Bearb_Kate",
+   "type": "esriFieldTypeInteger",
+   "alias": "Bearb_Kate",
+   "sqlType": "sqlTypeOther",
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Bearb_Zeit",
+   "type": "esriFieldTypeInteger",
+   "alias": "Bearb_Zeit",
+   "sqlType": "sqlTypeOther",
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Umfang_km",
+   "type": "esriFieldTypeInteger",
+   "alias": "Umfang_km",
+   "sqlType": "sqlTypeOther",
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Gewässer_",
+   "type": "esriFieldTypeString",
+   "alias": "Gewässer_",
+   "sqlType": "sqlTypeOther",
+   "length": 50,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Gewässer1",
+   "type": "esriFieldTypeString",
+   "alias": "Gewässer1",
+   "sqlType": "sqlTypeOther",
+   "length": 50,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Bearb_Ende",
+   "type": "esriFieldTypeDate",
+   "alias": "Bearb_Ende",
+   "sqlType": "sqlTypeOther",
+   "length": 8,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null,
+   "precision": 1
+  },
+  {
+   "name": "Bearb_Std",
+   "type": "esriFieldTypeDouble",
+   "alias": "Bearb_Std",
+   "sqlType": "sqlTypeOther",
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Bearb_GesS",
+   "type": "esriFieldTypeDouble",
+   "alias": "Bearb_GesS",
+   "sqlType": "sqlTypeOther",
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Bearb_GesT",
+   "type": "esriFieldTypeDouble",
+   "alias": "Bearb_GesT",
+   "sqlType": "sqlTypeOther",
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Bearb_GesW",
+   "type": "esriFieldTypeDouble",
+   "alias": "Bearb_GesW",
+   "sqlType": "sqlTypeOther",
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "GlobalID",
+   "type": "esriFieldTypeString",
+   "alias": "GlobalID",
+   "sqlType": "sqlTypeOther",
+   "length": 38,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Angelpacht",
+   "type": "esriFieldTypeString",
+   "alias": "Angelpacht",
+   "sqlType": "sqlTypeOther",
+   "length": 254,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "FID_GFHH_WilhG_Matrize",
+   "type": "esriFieldTypeInteger",
+   "alias": "FID_GFHH_WilhG_Matrize",
+   "sqlType": "sqlTypeOther",
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "gml_parent_id",
+   "type": "esriFieldTypeString",
+   "alias": "gml_parent_id",
+   "sqlType": "sqlTypeOther",
+   "length": 254,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "gml_parent_property",
+   "type": "esriFieldTypeString",
+   "alias": "gml_parent_property",
+   "sqlType": "sqlTypeOther",
+   "length": 254,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "gml_id_1",
+   "type": "esriFieldTypeString",
+   "alias": "gml_id",
+   "sqlType": "sqlTypeOther",
+   "length": 254,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "bez_1",
+   "type": "esriFieldTypeString",
+   "alias": "bez",
+   "sqlType": "sqlTypeOther",
+   "length": 254,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "gewaesser_typ",
+   "type": "esriFieldTypeString",
+   "alias": "gewaesser_typ",
+   "sqlType": "sqlTypeOther",
+   "length": 254,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "geom_1",
+   "type": "esriFieldTypeString",
+   "alias": "geom",
+   "sqlType": "sqlTypeOther",
+   "length": 254,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Bearb_Kategorie",
+   "type": "esriFieldTypeSmallInteger",
+   "alias": "Bearb_Kategorie",
+   "sqlType": "sqlTypeOther",
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Bearb_Zeit_1",
+   "type": "esriFieldTypeSmallInteger",
+   "alias": "Bearb_Zeit",
+   "sqlType": "sqlTypeOther",
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Umfang_km_1",
+   "type": "esriFieldTypeSmallInteger",
+   "alias": "Umfang_km",
+   "sqlType": "sqlTypeOther",
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "GlobalID_2",
+   "type": "esriFieldTypeGlobalID",
+   "alias": "GlobalID_2",
+   "sqlType": "sqlTypeOther",
+   "length": 38,
+   "nullable": false,
+   "editable": false,
+   "isViewOverride": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Shape__Area",
+   "type": "esriFieldTypeDouble",
+   "alias": "Shape__Area",
+   "sqlType": "sqlTypeDouble",
+   "nullable": true,
+   "editable": false,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Shape__Length",
+   "type": "esriFieldTypeDouble",
+   "alias": "Shape__Length",
+   "sqlType": "sqlTypeDouble",
+   "nullable": true,
+   "editable": false,
+   "domain": null,
+   "defaultValue": null
+  }
+ ],
+ "indexes": [
+  {
+   "name": "PK__OHNEANGL__F4B70D850DE83826",
+   "fields": "OBJECTID",
+   "isAscending": true,
+   "isUnique": true,
+   "description": "",
+   "indexType": "Attribute"
+  },
+  {
+   "name": "OHNEANGLNUTZ_WILHG_GFHH_WILHG_OHNEANGLERISCHENUTZUNG_Shape_sidx",
+   "fields": "Shape",
+   "isAscending": true,
+   "isUnique": false,
+   "description": "",
+   "indexType": "Spatial"
+  },
+  {
+   "name": "Shape__Area_Index",
+   "fields": "Shape__Area",
+   "isAscending": true,
+   "isUnique": false,
+   "description": "",
+   "indexType": "Attribute"
+  },
+  {
+   "name": "Shape__Length_Index",
+   "fields": "Shape__Length",
+   "isAscending": true,
+   "isUnique": false,
+   "description": "",
+   "indexType": "Attribute"
+  },
+  {
+   "name": "GlobalID_2_idx",
+   "fields": "GlobalID_2",
+   "isAscending": true,
+   "isUnique": true,
+   "description": "",
+   "indexType": "Attribute"
+  }
+ ],
+ "dateFieldsTimeReference": {
+  "timeZone": "UTC",
+  "timeZoneIANA": "Etc/UTC",
+  "respectsDaylightSaving": false
+ },
+ "preferredTimeReference": null,
+ "types": [],
+ "templates": [
+  {
+   "name": "GFHH_WilhG_ohneAnglerischeNutzung",
+   "description": "",
+   "drawingTool": "esriFeatureEditToolPolygon",
+   "prototype": {
+    "attributes": {
+     "Bearb_Zeit_1": null,
+     "Umfang_km_1": null,
+     "FID_FlVerein_EWilhGew_Stempel": null,
+     "gml_parent": null,
+     "gml_pare_1": null,
+     "gml_id": null,
+     "bez": null,
+     "gewaesser_": null,
+     "geom": null,
+     "Bearb_Kate": null,
+     "Bearb_Zeit": null,
+     "Umfang_km": null,
+     "Gewässer_": null,
+     "Gewässer1": null,
+     "Bearb_Ende": null,
+     "Bearb_Std": null,
+     "Bearb_GesS": null,
+     "Bearb_GesT": null,
+     "Bearb_GesW": null,
+     "GlobalID": null,
+     "Angelpacht": null,
+     "FID_GFHH_WilhG_Matrize": null,
+     "gml_parent_id": null,
+     "gml_parent_property": null,
+     "gml_id_1": null,
+     "bez_1": null,
+     "gewaesser_typ": null,
+     "geom_1": null,
+     "Bearb_Kategorie": null
+    }
+   }
+  }
+ ],
+ "supportedQueryFormats": "JSON, geoJSON, PBF",
+ "supportedAppendFormats": "sqlite,geoPackage,shapefile,filegdb,featureCollection,geojson,csv,excel,jsonl,featureService,pbf",
+ "supportedAppendSourceFilterFormats": "sqlite,geoPackage,shapefile,filegdb,featureService",
+ "supportedExportFormats": "csv,shapefile,sqlite,geoPackage,filegdb,featureCollection,geojson,kml,excel,parquet",
+ "supportedConvertFileFormats": "JSON,PBF,Parquet",
+ "supportedConvertContentFormats": "LayerEditCollection,FeatureCollection",
+ "supportedSpatialRelationships": [
+  "esriSpatialRelIntersects",
+  "esriSpatialRelContains",
+  "esriSpatialRelCrosses",
+  "esriSpatialRelEnvelopeIntersects",
+  "esriSpatialRelIndexIntersects",
+  "esriSpatialRelOverlaps",
+  "esriSpatialRelTouches",
+  "esriSpatialRelWithin",
+  "esriSpatialRelDisjoint",
+  "esriSpatialRelRelation"
+ ],
+ "guidFormat": "",
+ "supportsContingentValues": true,
+ "supportsEditingContingentValues": true,
+ "supportedContingentValuesFormats": "JSON, PBF",
+ "supportsFieldGroups": true,
+ "supportedSyncDataOptions": 260,
+ "hasStaticData": true,
+ "maxRecordCount": 1000,
+ "standardMaxRecordCount": 2000,
+ "maxIdsCount": 1000000,
+ "standardMaxRecordCountNoGeometry": 32000,
+ "tileMaxRecordCount": 4000,
+ "maxRecordCountFactor": 1,
+ "capabilities": "Query,Sync"
+}

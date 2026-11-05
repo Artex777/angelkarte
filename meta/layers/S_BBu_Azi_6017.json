@@ -1,0 +1,1368 @@
+{
+ "currentVersion": 12,
+ "id": 0,
+ "name": "BBu_Azi",
+ "type": "Feature Layer",
+ "serviceItemId": "217238d2b4684545920d335e23ce5559",
+ "cacheMaxAge": 3600,
+ "isView": true,
+ "isUpdatableView": true,
+ "sourceSchemaChangesAllowed": true,
+ "displayField": "Name",
+ "description": "",
+ "copyrightText": "",
+ "defaultVisibility": true,
+ "editingInfo": {
+  "lastEditDate": 1789403349166,
+  "schemaLastEditDate": 1789403349166,
+  "dataLastEditDate": 1789403349166
+ },
+ "relationships": [],
+ "isDataVersioned": false,
+ "hasContingentValuesDefinition": false,
+ "supportsAppend": true,
+ "supportsCalculate": true,
+ "supportsASyncCalculate": true,
+ "supportsTruncate": false,
+ "supportsAttachmentsByUploadId": true,
+ "supportsAttachmentsResizing": true,
+ "supportsRollbackOnFailureParameter": true,
+ "supportsStatistics": true,
+ "supportsExceedsLimitStatistics": true,
+ "supportsAdvancedQueries": true,
+ "supportsValidateSql": true,
+ "supportsCoordinatesQuantization": true,
+ "supportsLayerOverrides": true,
+ "supportsTilesAndBasicQueriesMode": true,
+ "supportsFieldDescriptionProperty": true,
+ "supportsQuantizationEditMode": true,
+ "supportsColumnStoreIndex": true,
+ "supportsApplyEditsWithGlobalIds": true,
+ "supportsReturningQueryGeometry": true,
+ "enableNullGeometry": false,
+ "advancedQueryCapabilities": {
+  "supportsPagination": true,
+  "supportsPaginationOnAggregatedQueries": true,
+  "supportsQueryRelatedPagination": true,
+  "supportsQueryWithDistance": true,
+  "supportsOutDistance": true,
+  "supportsReturningQueryExtent": true,
+  "supportsStatistics": true,
+  "supportsOrderBy": true,
+  "supportsDistinct": true,
+  "supportsQueryWithResultType": true,
+  "supportsSqlExpression": true,
+  "supportsTimeRelation": true,
+  "supportsAdvancedQueryRelated": true,
+  "supportsCountDistinct": true,
+  "supportsPercentileStatistics": true,
+  "supportsApproxPercentileStatistics": true,
+  "supportsSpatialAggregationStatistics": true,
+  "supportedSpatialAggregationStatistics": [
+   "EnvelopeAggregate",
+   "CentroidAggregate",
+   "ConvexHullAggregate"
+  ],
+  "supportsLod": true,
+  "supportsQueryWithLodSR": false,
+  "supportedLodTypes": [
+   "geohash"
+  ],
+  "supportsReturningGeometryCentroid": false,
+  "supportsReturningGeometryEnvelope": false,
+  "supportsQueryWithDatumTransformation": true,
+  "supportsCurrentUserQueries": true,
+  "supportsHavingClause": true,
+  "supportsOutFieldSQLExpression": true,
+  "supportsMaxRecordCountFactor": true,
+  "supportsTopFeaturesQuery": true,
+  "supportsDisjointSpatialRel": true,
+  "supportsQueryWithCacheHint": true,
+  "supportedOperationsWithCacheHint": [
+   "query",
+   "queryTopFilter",
+   "queryAnalytics",
+   "queryAttachments",
+   "queryRelated",
+   "queryBins",
+   "queryPivot"
+  ],
+  "supportsQueryAnalytic": true,
+  "supportsQueryPivot": true,
+  "supportsQueryBins": true,
+  "supportsDefaultSR": true,
+  "supportsTranslations": false,
+  "supportsAggIds": true,
+  "supportsQueryWithCollation": true,
+  "supportsISODOW": true,
+  "supportsISOWeek": true,
+  "supportsFullTextSearch": true,
+  "fullTextSearchCapabilities": {
+   "supportsAccentSensitivity": true,
+   "supportsStopWords": true,
+   "supportsSearchOperator": true,
+   "supportsOperator": true
+  }
+ },
+ "advancedQueryAnalyticCapabilities": {
+  "supportsLinearRegression": true,
+  "supportsTrendlineRegression": true,
+  "supportsAsync": true,
+  "supportsPercentileAnalytic": true
+ },
+ "queryBinsCapabilities": {
+  "supportsAsync": true,
+  "supportsAutoIntervalBin": true,
+  "supportsFixedIntervalBin": true,
+  "supportsFixedBoundariesBin": true,
+  "supportsDateBin": true,
+  "supportsClassificationBin": true,
+  "supportsStackBy": true,
+  "supportsSplitBy": true,
+  "supportsFirstDayOfWeek": true,
+  "supportsSnapToData": true,
+  "supportsReturnFullIntervalBin": true,
+  "supportsReturnStackValueRange": true,
+  "supportsNormalization": true,
+  "supportedStatisticTypes": [
+   "COUNT",
+   "SUM",
+   "AVG",
+   "VAR",
+   "STDDEV",
+   "MIN",
+   "MAX",
+   "PERCENTILE_CONT",
+   "PERCENTILE_DISC",
+   "APPROX_PERCENTILE_CONT",
+   "APPROX_PERCENTILE_DISC",
+   "CentroidAggregate",
+   "EnvelopeAggregate",
+   "ConvexHullAggregate"
+  ],
+  "supportedNormalizationTypes": [
+   "boxCox",
+   "field",
+   "inverse",
+   "log",
+   "naturalLog",
+   "percentOfTotal",
+   "squareRoot"
+  ]
+ },
+ "supportedOperationsWithCollation": "query,addField,updateField",
+ "advancedEditingCapabilities": {
+  "supportedSqlFormatsInCalculate": [
+   "standard"
+  ],
+  "supportsAsyncApplyEdits": true,
+  "supportsReturnEditResults": true,
+  "supportsApplyEditsbyUploadID": true,
+  "supportedApplyEditsUploadIDFormats": "JSON,PBF",
+  "supportsTranslation": false,
+  "supportsMaxTranslations": 10
+ },
+ "infoInEstimates": [
+  "extent",
+  "count"
+ ],
+ "useStandardizedQueries": true,
+ "geometryType": "esriGeometryPoint",
+ "minScale": 11076,
+ "maxScale": 0,
+ "extent": {
+  "xmin": 569311.0075829659,
+  "ymin": 5929613.671997278,
+  "xmax": 570941.867293644,
+  "ymax": 5931791.218453279,
+  "spatialReference": {
+   "wkid": 25832,
+   "latestWkid": 25832
+  }
+ },
+ "spatialReference": {
+  "wkid": 102100,
+  "latestWkid": 3857
+ },
+ "drawingInfo": {
+  "renderer": {
+   "type": "uniqueValue",
+   "field1": "Name",
+   "defaultSymbol": {
+    "color": [
+     170,
+     170,
+     170,
+     255
+    ],
+    "size": 6,
+    "angle": 0,
+    "xoffset": 0,
+    "yoffset": 0,
+    "type": "esriSMS",
+    "style": "esriSMSCircle",
+    "outline": {
+     "color": [
+      153,
+      153,
+      153,
+      64
+     ],
+     "width": 0.75,
+     "type": "esriSLS",
+     "style": "esriSLSSolid"
+    }
+   },
+   "defaultLabel": "Andere",
+   "uniqueValueInfos": [
+    {
+     "value": "Mülleimer",
+     "symbol": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": "11b1fc9d-a959-4afd-b484-d34f7eb3276c",
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAAHkAAAB5CAYAAAAd+o5JAAAACXBIWXMAAAsSAAALEgHS3X78AAAOpElEQVR4nO2dy28b1xXGPw5nNKRIUZQT2btGi6AIbC3c1miTIE0UIIYKJKEthwxYIAVk5A8wusgqAWwD8SqrrLoKJKBZCKHih5IAMZI2tGN0FSAqoBpIm4VloC5MAXxKGo6Gc9nFDGWJc+9wSM7MnbH520ia5/F8vvece+4LGPHYE+FtgBtkc/kZADMA5gA8Y/4O82+nFM2f6wBq5t/3Vgsr94a1jzehFDmby8/BEPAVACcBpD18XRWG8LcAFFcLK0UP3+UJoRA5m8unAZwFcKbdbr8WiUSSvGxpt9vbkUjkWwA3AFxfLaxUednilECLnM3lFwGcgSFwULkO4MZqYWWZtyEsAiey6V8vAFiEt9Ww21QBLAP4OGh+PDAiZ3P5OULIu4IgvDPoM0RRRDQahSSNQRAEiGIU0ajY8z5CCDRNM3/uQdd1tFqtQc0AIeRTQRA+CYr/5i5yJrNwakyWP0J/kTAAQJZlyHIMsixDkiQIguCaXR3hVVWFqjahquogjynuqep7a2vXfnDNsAHgJrJZLV+EUS07QhRFxGJxxONxyLLslWlMVFWFoihoNpV+S/oygMu8qnEuImdz+Usw/G5PnysIAuLxOJLJCUiS5LltTtE0DdvbDSiKAkKIk1uqMPz1JW8ts+KryJnMwilRkpYEQZjtda0kSZiYmEAsFne1GnYbQgiaTQWNRgOapjm5fqOlaef9rMJ9E3nhXO7DaDT6fq/rZFlGKjXJpToeFlVVUa/XHPlvXdevXLta+MAHs7wX+fU3Ms/G4+MFGJkpJmEWt5s+xF5XlN3cV1+u/eylPZ6KnM3lzwJYgo3vFQQB6XQa4+MJL03hwu7uDqrVai+fXQVwfrWwct0rO6JePdgMrv4CIMa6JpmcwFNPPY2xsfCXXhqSNIZEIol2G9jb22NdFgOQP35iNnL37kbRCzs8KcnZXH4JNk0jURQxNXXksaianaKqKiqVcq+m1/JqYeW82+92VeRsLp8mhHwhCMJLrGsSiQQmJ9OBjpi9ghCCWq2KnZ0du2vuCILwppsdH66JbPYUfQdGgPU4+95+ceCr1wG86pbQrojsRODp6aOBSmbwRtM0bG2VfBF6aJF7CSxJEqanj/paPR87dhQvv/wSfnXyJOJxZtx3CEVp4sf1ddy+fQcPH5Y8ttCAEIKtrZJdEsUVoYf+8oSQLxAwgefnT+PFF553LDAAxOMxvPjC85ifP41jx456aOEjHNRwJ83vOxRDNaGyufxSJBLJ0M4lEgk8/fQ0IhF/0+OnfvNrPP+730KSencx0khPplGr1rC5ed9ly+hEIhEkk0nouk4t0ZFI5BfHT8zO3L27cWPQdwxcxMx28CLtXCKRwNTUkUEfPRTxeKyvEuz2/YMyNXUEiQQzKF00v/dADCSymcm6SDsnSRI3gcPO1NQRu6r7ovnd+6ZvkV9/I/MsjFSlhY4PHjE4PXz0kvn9+6Jvkc3OBksuuhNEPIlJDjfp8R3T5vfv75n9XLxwLvchKJH0SGB36fE9T5o6OH+e0wszmYVTrP7gdDo9SnS4jCRJSKfpnXfRaPT9TGbhlNNnORZZlCSqH04kEqNUpUeMjyeYETdLDxqORM7m8pdoQ3ZEUcTkZJiGRoePyck0RNHa5hcEYdZps6qnyAcGu1uYmjoy8sMeIwiCXZP0gqmPLU7SQhdBiaaTyYmh+oP/MH8a8/OnB77fS+Y9tO3mzW/w9c1v+rpHlmUkkxPY3m50n0rD0Me2D9q2GJrOfdFykyAglUr1ZeiI4UilUqxac7FXEGYrsjmzwUI6/WR2+vOk0x9Pg6XT/r2sEwfmAB9CluVRNM2J8fEEy0XOmXpRYYpMCHmXdjyVmuzbuBHuwfr+LL0AhsjZXH6GNrvQmGD25Ay+CyIsDQRBeIcVabOia2qTyc1S/PUAUeYIg1RqEltb1NErFwD8ufsgq7pe7D4giuKoFAcEWZapCRIw+vctIptLOFjCuFGTKVgw9Eib+h2CVpLPWC4ShFFEHTBsZnta9Ds0AMsceVnpvojncJ4RbCqVMmug/tTBEZ7dFTt1eEkyOeGiaWxSqYn9kZZhplTawtc3v8GPP657+p5kcoIl8lkYqxsAsFbXlqIuiqJvfcX1egONuiU/GzoajQYaDe//HZIksQKwQzoeErndbr/WfXUsFnfXshGuQtOnW8d9kbO5/Bxtpbt43F+Ry+UKymVLWBAq/Pw30PSJRCLJg2nOgyV5znI1MGobBxwbfeY6vxwU+ZU+HuAZdZ/8mZcoigJFUXx7H0OnfT0PimwZhSnL/s8kaLVaQ62GFwT8F5mq076eArA/xMeS5eJRkv3+QG7TarWg+fyflKFTutNh0SnJM7SreAyzVZQmFKXp+3vdgkcz0EanGeBRMmSu+6woilxGf7RaGrRW70XPWGOlWGPH+rm+32fzxlgsVqS5uTkAxY6Klj7EaNSzhYFsCXtCpFKpoFzxvwnI0GsSeFRdW4IuSRrz0KQRbsPQ6yRgM/yH50C9MDejeNlup1fnzFz3CZ5zm1paC5oWzmYUL9tFkVpdzwEBLclKU4HSDGczilcT0G6F/kAOnlaUJpohbUYFsZ0fSJHDWl3zSIQ4IZAihzXwCmrzjykyw5GPCCFMkVst3U87DlEul1Eul7m9f1B4JUJ6EcjqeoS7BFbkMPrloNocWJHDGGEH1WamyLrO19gwJkR4tpHt9OqIXOw+wTPwAsKZEOEpMkOvImA/P9kjc5wR1KqPBe9EiJ1eHZHvdZ/QNObuJ74Q1CCGBe9ECEOvdeCRyJvdZ3Wdb3U9oj8YetUAW5/c4lplhy0hwjMRQghhjXAtAjbVNQBHG0yO4I+NTvcAU2RzX1/LZhYDbgztGmHyyzxtZehU7ezXfDC6tsyzVFW+TZgwRdg8bWXotK/nQZFvWW/mW5LDlBDh2UZm6LSv50GRi308wBfClBDhJbKNPsXOL/sirxZWiu12e7v7Sp5DWcJSXfNMhND0abfb26uFlWLn70MZr0gk8m33DU2O1WVYAi+eiRCaPt06dqc1LRtMtVqtUVMqoGiaxmofH9KxW2TqbtyUdZZ9ISwJEV6JEBtdDul4SGRzWSCL0IqicO+wGHEYQggrXrrevYEnrRfKUmUTQrj55jD4ZR42NpvMgmfRzyLyamFlGZTsF68PHYYIm4eN9Xqddrhq6ncIVn+y5UJN07i0mcOQEPG7jayqKivgWqYdZIn8Me1gvV4bzKohCENCxG+RbXSg6sbc3PjcW2//lbaw+fT0UV/XEpl55hnMz5/Gc8/90rd39ssgO8QMiqqq1LWuCSGfXv38sz/R7rGb1fgJ7bjfpTnogZffi8uxvj9LL8BGZDMtVuw+rqoqdnepi3aO8Jjd3R1WXFQ8mMbsxnbc9Z6qvkc7Xq1WfWs3Bz0h0mg0UPehpiGEoFq1NHoAsHXqYCvy2tq1H0CJ2AghrBD+icOvxeXq9TqrYC2bOjFxMoPiMijt5u3thm9NqiD7ZT8ia1VVWSnMKgx9bOkpsjmEhBqaVyplX6rtICdEvF5cjhCCSoXprj7uDPGxw9FcqNXCyiVCyEb38VarhVqN7ifcJMgJEa2loeVgcblBqdWqVHdACNlYLaxccvIMxxPeWppG3dlzZ2fH82g7yAmRRr2Bukd9ybu7O6ztB5h60HAs8tratR90Xb9CO1etVj3tcy6VSnhYom52xZVSaQsPS1uePFvTNGY0rev6lV7B1kH6mrp67WrhA1BGdRJCsLVV8sw/1+sNbN67H7gV7Tc372Nz877rz+3xPddNHRzT9/xkRdnNgRJtey30j+v/xO3bdwITZW9s/Au3bn/vehu+x3esmt+/L/pe/eU///6pfPzE7E8A8jQDm80mkknLVhZDQwjBgwf/w4P/PkAikeC2h3O5XMHt23fwt78XUfLAhZRKD+1c3x9vXP/8H/0+k9lB0YtsLn8JxlbrFkabhQ2GzWZeAHDZaTTdzcDrON29u1E8fmJ2BpQVdjVNg67rvu9EE2Z6CLy8Wlix7KbqlIFLcodzb739vSAIL9HOSZKE6emjXNfpDDodH8yqogkhd65+/tnvh3nH0F9fEIQ3QYm4AaNEexmMhZ1eAgNYN7/vUAxdkoH9jTy/A6XqBowVd6enj3JdXjloOCgA6wBe7R55OQiuiAw4EzqdTo+26IWRyerRXeuawICLIgOG0ISQL1g+GjAi78lJPs0f3hBCUKtV7QIsEELuCILwplsCAy6L3CGbyy+BsfU6YOxUMzV15InaIlBVVVQq5V59z8urhRXHOWmneLIU7t27GzeOn5iNgLH/IyEEu7s7IKSNsbExRCKe/F8LBEbpraFarfQKQC8P00yyw9Ovm83lzwJYAmX3uA6Ps6924HsBI0V8frWwQp2H5gaeF6HX38g8G4+PF8AIyDrIsoxUavKxqMJVVUW1WnHSM7euKLu5r75c+9lLe3yrJxfO5T6MRqPv97ouzGKrqop6veZoWJSu61f67U0aFF+dYSazcEqUpCVBEGZ7XSuKIlKpFGKxeKAj8c5kwHq97mhAHyFko6Vp5/vpDx4WLhGP2blxATa+uoMgCIjH40gmJwKVTNE0DdvbjX6m9VZhjMm65K1lVriFtea2rxdh09TqRhRFxGJxxONxLtW5qqpQFAXNptLvMNxlGNHzPU8M6wH3tksms3BqTJY/AqO5ZYcsy5DlGGRZhiRJrlbrhJD9mZyq2hx0+HFxT1Xf87NqpsFd5A7ZXH6OEPIubZKdU0RRRDQahSSNmdvNRm13Puug6y20Wrop7B50XR9qwDwh5FNBED6xm7riJ4ERuYNZjV+AUY339NkBogqjWnY0FtpPAifyQbK5/CKAMwDOcjbFjusAbtBm+AeFQIvcwezhOgvgTLvdfi0Sibg/iMwh7XZ721wn6wYoi7AEkVCI3E02l5+DEai9AiOT5mW1XoXR9XcLPaaIBpVQityN6cdnYAg/iUcp1Lk+HlM0f67DWPG9COBe0PzriBFU/g/Ylxjlik9/2wAAAABJRU5ErkJggg==",
+      "contentType": "image/png",
+      "width": 15,
+      "height": 15
+     },
+     "label": "Mülleimer"
+    },
+    {
+     "value": "Sitzbank",
+     "symbol": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": "f78a6592-1de6-486e-85ef-24ba48d47a4e",
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsSAAALEgHS3X78AAACjUlEQVR4Ae2b7ZGCMBCGl5srADuwBEqgBDqQDmzBDhwrUCvQDrAD7cAStANu1jluyCZcMN8meWby42Kyye4tL0kAINQAcAKAPtJy+vVRyDZix2nZ0gCk5PxQ/oJQJ+j8UOovAFjTdGiaBrqug77voyjoC/ok4OU7E5WmafpYQd8EWcBWdF0XbQDQN+pvMURhAFMmVp7PJywWC8a7pAKAFEXB/P3lbSaBkAMQwBy8kgMQwBy8kgMQwBy88q07OL2vukZ33ZJ8BuQABDAHr2hrQF1PHrG9wA3I7XZj6sqyhKqqmDpsg23HYBtsaxtme2ia/X7PbUE3mw03CtbRdtjXNNLzANNUVcUNer/fuVGwjrbDvh8dgOv1yg3434mT6MQGbZiE2rcqgrvdjqtbrVaT7UW/iWyYxkoGPB6PvixLxvZyuZT2wzbjPmgDbZnCWQacz2dO1du2lfajbdAG2rKJlQyYK34U22LoRATfFT+KTTF0cgm8K35z2toUQ6MZoCp+FFtiaD0DVMWP4lIMhRkgeoryqWX8tMvpQugTyAEIYA5emTwPwH24bK8/5nK5cHXv9LdpW3amoH0bFAlm27bat6wBtEXtqz7GtyKCx+ORq3tn4SNDZEs0pipaGYCLE2pDZeEjgy6MsKgsjIxnwOFw4OrWa+61I21ENkVjq6CVAab+MzJMZZrR3aBt8aOYEEOjl4Bt8Ztj24QYKmWAK/Gj6F5yxjLAlfjNGUNXDJUywJX4UXQzz4gIuhY/io4Y0n75PUFvMwmEHIAA5uCVHIAA5uCVHIAA5uCVHABaQV9oignR4SrQpWGKH01xn8piw5g+nsJH6xPOo+9pfzg5XAZJfzqbYhA45wfS+nweAH4AvrG/2oKpzzwAAAAASUVORK5CYII=",
+      "contentType": "image/png",
+      "width": 15,
+      "height": 15
+     },
+     "label": "Sitzbank"
+    },
+    {
+     "value": "Gastronomie",
+     "symbol": {
+      "color": [
+       167,
+       198,
+       54,
+       255
+      ],
+      "size": 6,
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriSMS",
+      "style": "esriSMSCircle",
+      "outline": {
+       "color": [
+        153,
+        153,
+        153,
+        64
+       ],
+       "width": 0.75,
+       "type": "esriSLS",
+       "style": "esriSLSSolid"
+      }
+     },
+     "label": "Gastronomie"
+    },
+    {
+     "value": "Slipanlage",
+     "symbol": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": "9f7207cd-a11f-4871-ac3b-f0e692df4337",
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsSAAALEgHS3X78AAADlklEQVR4nO2bzdGqMBSGz/1Z6I4SWN4lHUgJLt1JCZRAB5bgWAF2gFaAHejSHS7dcedlPE5uLpEQAkTxncmM830h5Dw5PyEoSQqJKCWi8kNb+rCxVpsPNlxuGxnAlIzn9oQQTtB4buGvB4k/qrj4cHk/HiQmq59TNh76AnBgDqNqFAB5nlNZllQUhRMQBi092+22ZC2XSxdK4XA3i+P4aXyapq7sBcwuDMOwjKKo9DxPuz+rKArt65wFILpynuflZrOpjKzr6/t+ZbRjrm8PgCy4N9w9CIJqpQHIQdfvBiBJEiUAlRxz/arhWSAxLR9RFLXqP5vNaLVake/7NJ/P6Xq90v1+N729NRnTO5/Prb1AVpZlz3B5qxBAQzKzKYQIcguqCxKn8wCoIRl2VVN1cQJA3xBEcXWx7B12BsLExFrft5B/AB5h2LGy1P8Dg7Yljf5DeYMsJFOUZoNkWv8P3roiDtu6Hfoidof0CFG4L8JFM5m+BiDKBAbGwcpghcZSg1eoQwCrqKr1JjAYCMYVt8d9e4ORB4gNBPuAAchIYn0CQU7qDGAIGJw7ELeYtI1dJoTxrAIYCgYDwfVIaKYJVaNEmgNoC6NuR8erjkTZtOPDPRiIjpB4NeZuB4AODBgp9kMfWbhGt5Y3VRjAGgWACoYIoM54FtzdJGzkhKoJsl8AdQ3GiaGBifMZI3uNRva21YYHAENZ8vkgnzRp1G8rTfliJAgCStOU4jiuTnBsShzvdrvVjux53vNzlmWUJEk1p8FOhOStsMWnr3/Glj2AcwPux3+T8wMfmlg6X9QDUFfWdEqXqnGsc3JEEx+gxIT5apfI8+hwpGYGQF6VtocVmLBqcwOj5P68X3i1KTL0ju4AZOmGC58fsEFyqWwKo6ZnCPaOBhj2Aagm0tfZXpN3NNy3fwCiTMKlbZO9wykAsmxWF5V3jB4CbdR3uDgPQNQQ4eI0AFk9hcv7AJBlKVzeF4CoDuHyGQBktQiXzwQg6lWITP6Lkr/bXnC5XGi/31fP62EYGp8VnE4nOhwO1WeMY/qsj/lgHJwrLJdLo/k0hgDiCVvLukdO3bN8ftevikndlyQc26r3fnUHsq9CQPl1eazIer2m3W5XrZausAJY0cViUa3K8Xh8rlAbsYdhHHzmcbDiutKx4ft7AQfmMKq+AByYw6j6AnBgDqMKAPYTtr+yfdI/nGQSk/7p7BQh/Gc8a1o/nyeiv1z+pHBwN6JCAAAAAElFTkSuQmCC",
+      "contentType": "image/png",
+      "width": 15,
+      "height": 15
+     },
+     "label": "Slipanlage"
+    },
+    {
+     "value": "Angelverbotsbereich",
+     "symbol": {
+      "color": [
+       252,
+       146,
+       31,
+       255
+      ],
+      "size": 6,
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriSMS",
+      "style": "esriSMSCircle",
+      "outline": {
+       "color": [
+        153,
+        153,
+        153,
+        64
+       ],
+       "width": 0.75,
+       "type": "esriSLS",
+       "style": "esriSLSSolid"
+      }
+     },
+     "label": "Angelverbotsbereich"
+    },
+    {
+     "value": "Baustelle",
+     "symbol": {
+      "color": [
+       255,
+       222,
+       62,
+       255
+      ],
+      "size": 6,
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriSMS",
+      "style": "esriSMSCircle",
+      "outline": {
+       "color": [
+        153,
+        153,
+        153,
+        64
+       ],
+       "width": 0.75,
+       "type": "esriSLS",
+       "style": "esriSLSSolid"
+      }
+     },
+     "label": "Baustelle"
+    },
+    {
+     "value": "Fahrradverleih",
+     "symbol": {
+      "color": [
+       247,
+       137,
+       216,
+       255
+      ],
+      "size": 6,
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriSMS",
+      "style": "esriSMSCircle",
+      "outline": {
+       "color": [
+        153,
+        153,
+        153,
+        64
+       ],
+       "width": 0.75,
+       "type": "esriSLS",
+       "style": "esriSLSSolid"
+      }
+     },
+     "label": "Fahrradverleih"
+    },
+    {
+     "value": "Fähranleger",
+     "symbol": {
+      "color": [
+       183,
+       129,
+       74,
+       255
+      ],
+      "size": 6,
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriSMS",
+      "style": "esriSMSCircle",
+      "outline": {
+       "color": [
+        153,
+        153,
+        153,
+        64
+       ],
+       "width": 0.75,
+       "type": "esriSLS",
+       "style": "esriSLSSolid"
+      }
+     },
+     "label": "Fähranleger"
+    },
+    {
+     "value": "Grillplatz",
+     "symbol": {
+      "color": [
+       60,
+       175,
+       153,
+       255
+      ],
+      "size": 6,
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriSMS",
+      "style": "esriSMSCircle",
+      "outline": {
+       "color": [
+        153,
+        153,
+        153,
+        64
+       ],
+       "width": 0.75,
+       "type": "esriSLS",
+       "style": "esriSLSSolid"
+      }
+     },
+     "label": "Grillplatz"
+    },
+    {
+     "value": "Infotafel",
+     "symbol": {
+      "color": [
+       107,
+       107,
+       214,
+       255
+      ],
+      "size": 6,
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriSMS",
+      "style": "esriSMSCircle",
+      "outline": {
+       "color": [
+        153,
+        153,
+        153,
+        64
+       ],
+       "width": 0.75,
+       "type": "esriSLS",
+       "style": "esriSLSSolid"
+      }
+     },
+     "label": "Infotafel"
+    }
+   ]
+  },
+  "transparency": 0
+ },
+ "allowGeometryUpdates": true,
+ "hasAttachments": false,
+ "viewSourceHasAttachments": false,
+ "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+ "hasM": false,
+ "hasZ": true,
+ "enableZDefaults": true,
+ "zDefault": 0,
+ "objectIdField": "OBJECTID",
+ "uniqueIdField": {
+  "name": "OBJECTID",
+  "isSystemMaintained": true
+ },
+ "globalIdField": "GlobalID",
+ "typeIdField": "Name",
+ "collation": {
+  "locale": "neutral",
+  "caseSensitive": false,
+  "accentSensitive": true
+ },
+ "fields": [
+  {
+   "name": "OBJECTID",
+   "type": "esriFieldTypeOID",
+   "alias": "OBJECTID",
+   "sqlType": "sqlTypeOther",
+   "nullable": false,
+   "editable": false,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Name",
+   "type": "esriFieldTypeString",
+   "alias": "Name",
+   "sqlType": "sqlTypeOther",
+   "length": 255,
+   "nullable": true,
+   "editable": true,
+   "domain": {
+    "type": "codedValue",
+    "name": "AlKuF_gps_14319_ETRS_Name_89873da4-8425-4d65-8f2c-24c816d1544f",
+    "codedValues": [
+     {
+      "name": "Sitzbank",
+      "code": "Sitzbank"
+     },
+     {
+      "name": "Mülleimer",
+      "code": "Mülleimer"
+     },
+     {
+      "name": "Fahrradverleih",
+      "code": "Fahrradverleih"
+     },
+     {
+      "name": "Gastronomie",
+      "code": "Gastronomie"
+     },
+     {
+      "name": "Slipanlage",
+      "code": "Slipanlage"
+     },
+     {
+      "name": "Steganlage",
+      "code": "Steganlage"
+     },
+     {
+      "name": "WC",
+      "code": "WC"
+     },
+     {
+      "name": "Infotafel",
+      "code": "Infotafel"
+     },
+     {
+      "name": "Polizei",
+      "code": "Polizei"
+     },
+     {
+      "name": "Fähranleger",
+      "code": "Fähranleger"
+     },
+     {
+      "name": "Baustelle",
+      "code": "Baustelle"
+     },
+     {
+      "name": "Grillplatz",
+      "code": "Grillplatz"
+     },
+     {
+      "name": "Angelverbotsbereich",
+      "code": "Angelverbotsbereich"
+     }
+    ]
+   },
+   "defaultValue": null,
+   "description": "null"
+  },
+  {
+   "name": "Descript",
+   "type": "esriFieldTypeString",
+   "alias": "Descript",
+   "sqlType": "sqlTypeOther",
+   "length": 255,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Type",
+   "type": "esriFieldTypeString",
+   "alias": "Type",
+   "sqlType": "sqlTypeOther",
+   "length": 255,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Comment",
+   "type": "esriFieldTypeString",
+   "alias": "Comment",
+   "sqlType": "sqlTypeOther",
+   "length": 255,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Symbol",
+   "type": "esriFieldTypeString",
+   "alias": "Symbol",
+   "sqlType": "sqlTypeOther",
+   "length": 255,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "DateTimeS",
+   "type": "esriFieldTypeString",
+   "alias": "DateTimeS",
+   "sqlType": "sqlTypeOther",
+   "length": 255,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "Elevation",
+   "type": "esriFieldTypeDouble",
+   "alias": "Elevation",
+   "sqlType": "sqlTypeOther",
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "DateTime",
+   "type": "esriFieldTypeDate",
+   "alias": "DateTime",
+   "sqlType": "sqlTypeOther",
+   "length": 8,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null,
+   "precision": 1
+  },
+  {
+   "name": "GlobalID",
+   "type": "esriFieldTypeGlobalID",
+   "alias": "GlobalID",
+   "sqlType": "sqlTypeOther",
+   "length": 38,
+   "nullable": false,
+   "editable": false,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "esrignss_receiver",
+   "type": "esriFieldTypeString",
+   "alias": "Receiver Name",
+   "sqlType": "sqlTypeOther",
+   "length": 50,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "esrignss_h_rms",
+   "type": "esriFieldTypeDouble",
+   "alias": "Horizontal Accuracy (m)",
+   "sqlType": "sqlTypeOther",
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "esrignss_v_rms",
+   "type": "esriFieldTypeDouble",
+   "alias": "Vertical Accuracy (m)",
+   "sqlType": "sqlTypeOther",
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "esrignss_latitude",
+   "type": "esriFieldTypeDouble",
+   "alias": "Latitude",
+   "sqlType": "sqlTypeOther",
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "esrignss_longitude",
+   "type": "esriFieldTypeDouble",
+   "alias": "Longitude",
+   "sqlType": "sqlTypeOther",
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "esrignss_altitude",
+   "type": "esriFieldTypeDouble",
+   "alias": "Altitude",
+   "sqlType": "sqlTypeOther",
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "esrignss_pdop",
+   "type": "esriFieldTypeDouble",
+   "alias": "PDOP",
+   "sqlType": "sqlTypeOther",
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "esrignss_hdop",
+   "type": "esriFieldTypeDouble",
+   "alias": "HDOP",
+   "sqlType": "sqlTypeOther",
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "esrignss_vdop",
+   "type": "esriFieldTypeDouble",
+   "alias": "VDOP",
+   "sqlType": "sqlTypeOther",
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "esrignss_fixtype",
+   "type": "esriFieldTypeSmallInteger",
+   "alias": "Fix Type",
+   "sqlType": "sqlTypeOther",
+   "nullable": true,
+   "editable": true,
+   "domain": {
+    "type": "codedValue",
+    "name": "ESRI_FIX_TYPE_DOMAIN",
+    "codedValues": [
+     {
+      "name": "Fix not valid",
+      "code": 0
+     },
+     {
+      "name": "GPS",
+      "code": 1
+     },
+     {
+      "name": "Differential GPS",
+      "code": 2
+     },
+     {
+      "name": "RTK Fixed",
+      "code": 4
+     },
+     {
+      "name": "RTK Float",
+      "code": 5
+     }
+    ]
+   },
+   "defaultValue": null
+  },
+  {
+   "name": "esrignss_correctionage",
+   "type": "esriFieldTypeDouble",
+   "alias": "Correction Age",
+   "sqlType": "sqlTypeOther",
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "esrignss_stationid",
+   "type": "esriFieldTypeSmallInteger",
+   "alias": "Station ID",
+   "sqlType": "sqlTypeOther",
+   "nullable": true,
+   "editable": true,
+   "domain": {
+    "type": "range",
+    "name": "ESRI_STATION_ID_DOMAIN",
+    "range": [
+     0,
+     1023
+    ]
+   },
+   "defaultValue": null
+  },
+  {
+   "name": "esrignss_numsats",
+   "type": "esriFieldTypeSmallInteger",
+   "alias": "Number of Satellites",
+   "sqlType": "sqlTypeOther",
+   "nullable": true,
+   "editable": true,
+   "domain": {
+    "type": "range",
+    "name": "ESRI_NUM_SATS_DOMAIN",
+    "range": [
+     0,
+     99
+    ]
+   },
+   "defaultValue": null
+  },
+  {
+   "name": "esrignss_fixdatetime",
+   "type": "esriFieldTypeDate",
+   "alias": "Fix Time",
+   "sqlType": "sqlTypeOther",
+   "length": 8,
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null,
+   "precision": 1
+  },
+  {
+   "name": "esrignss_avg_h_rms",
+   "type": "esriFieldTypeDouble",
+   "alias": "Average Horizontal Accuracy (m)",
+   "sqlType": "sqlTypeOther",
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "esrignss_avg_v_rms",
+   "type": "esriFieldTypeDouble",
+   "alias": "Average Vertical Accuracy (m)",
+   "sqlType": "sqlTypeOther",
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "esrignss_avg_positions",
+   "type": "esriFieldTypeInteger",
+   "alias": "Averaged Positions",
+   "sqlType": "sqlTypeOther",
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  },
+  {
+   "name": "esrignss_h_stddev",
+   "type": "esriFieldTypeDouble",
+   "alias": "Standard Deviation (m)",
+   "sqlType": "sqlTypeOther",
+   "nullable": true,
+   "editable": true,
+   "domain": null,
+   "defaultValue": null
+  }
+ ],
+ "indexes": [
+  {
+   "name": "GlobalID_idx",
+   "fields": "GlobalID",
+   "isAscending": true,
+   "isUnique": true,
+   "description": "",
+   "indexType": "Attribute"
+  },
+  {
+   "name": "BBu_Azi_AL_AZI_Shape_sidx",
+   "fields": "Shape",
+   "isAscending": false,
+   "isUnique": false,
+   "description": "Shape Index",
+   "indexType": "Spatial"
+  },
+  {
+   "name": "PK__BBu_Azi___F4B70D852A6D26FD",
+   "fields": "OBJECTID",
+   "isAscending": true,
+   "isUnique": true,
+   "description": "clustered, unique, primary key",
+   "indexType": "Attribute"
+  }
+ ],
+ "dateFieldsTimeReference": {
+  "timeZone": "UTC",
+  "timeZoneIANA": "Etc/UTC",
+  "respectsDaylightSaving": false
+ },
+ "preferredTimeReference": null,
+ "types": [
+  {
+   "id": "Mülleimer",
+   "name": "Mülleimer",
+   "domains": {},
+   "templates": [
+    {
+     "name": "Mülleimer",
+     "description": "",
+     "drawingTool": "esriFeatureEditToolNone",
+     "prototype": {
+      "attributes": {
+       "Name": "Mülleimer",
+       "Descript": null,
+       "Type": null,
+       "Comment": null,
+       "Symbol": null,
+       "DateTimeS": null,
+       "Elevation": null,
+       "DateTime": null,
+       "esrignss_receiver": null,
+       "esrignss_h_rms": null,
+       "esrignss_v_rms": null,
+       "esrignss_latitude": null,
+       "esrignss_longitude": null,
+       "esrignss_altitude": null,
+       "esrignss_pdop": null,
+       "esrignss_hdop": null,
+       "esrignss_vdop": null,
+       "esrignss_fixtype": null,
+       "esrignss_correctionage": null,
+       "esrignss_stationid": null,
+       "esrignss_numsats": null,
+       "esrignss_fixdatetime": null,
+       "esrignss_avg_h_rms": null,
+       "esrignss_avg_v_rms": null,
+       "esrignss_avg_positions": null,
+       "esrignss_h_stddev": null
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "Sitzbank",
+   "name": "Sitzbank",
+   "domains": {},
+   "templates": [
+    {
+     "name": "Sitzbank",
+     "description": "",
+     "drawingTool": "esriFeatureEditToolNone",
+     "prototype": {
+      "attributes": {
+       "Name": "Sitzbank",
+       "Descript": null,
+       "Type": null,
+       "Comment": null,
+       "Symbol": null,
+       "DateTimeS": null,
+       "Elevation": null,
+       "DateTime": null,
+       "esrignss_receiver": null,
+       "esrignss_h_rms": null,
+       "esrignss_v_rms": null,
+       "esrignss_latitude": null,
+       "esrignss_longitude": null,
+       "esrignss_altitude": null,
+       "esrignss_pdop": null,
+       "esrignss_hdop": null,
+       "esrignss_vdop": null,
+       "esrignss_fixtype": null,
+       "esrignss_correctionage": null,
+       "esrignss_stationid": null,
+       "esrignss_numsats": null,
+       "esrignss_fixdatetime": null,
+       "esrignss_avg_h_rms": null,
+       "esrignss_avg_v_rms": null,
+       "esrignss_avg_positions": null,
+       "esrignss_h_stddev": null
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "Gastronomie",
+   "name": "Gastronomie",
+   "domains": {},
+   "templates": [
+    {
+     "name": "Gastronomie",
+     "description": "",
+     "drawingTool": "esriFeatureEditToolNone",
+     "prototype": {
+      "attributes": {
+       "Name": "Gastronomie",
+       "Descript": null,
+       "Type": null,
+       "Comment": null,
+       "Symbol": null,
+       "DateTimeS": null,
+       "Elevation": null,
+       "DateTime": null,
+       "esrignss_receiver": null,
+       "esrignss_h_rms": null,
+       "esrignss_v_rms": null,
+       "esrignss_latitude": null,
+       "esrignss_longitude": null,
+       "esrignss_altitude": null,
+       "esrignss_pdop": null,
+       "esrignss_hdop": null,
+       "esrignss_vdop": null,
+       "esrignss_fixtype": null,
+       "esrignss_correctionage": null,
+       "esrignss_stationid": null,
+       "esrignss_numsats": null,
+       "esrignss_fixdatetime": null,
+       "esrignss_avg_h_rms": null,
+       "esrignss_avg_v_rms": null,
+       "esrignss_avg_positions": null,
+       "esrignss_h_stddev": null
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "Slipanlage",
+   "name": "Slipanlage",
+   "domains": {},
+   "templates": [
+    {
+     "name": "Slipanlage",
+     "description": "",
+     "drawingTool": "esriFeatureEditToolNone",
+     "prototype": {
+      "attributes": {
+       "Name": "Slipanlage",
+       "Descript": null,
+       "Type": null,
+       "Comment": null,
+       "Symbol": null,
+       "DateTimeS": null,
+       "Elevation": null,
+       "DateTime": null,
+       "esrignss_receiver": null,
+       "esrignss_h_rms": null,
+       "esrignss_v_rms": null,
+       "esrignss_latitude": null,
+       "esrignss_longitude": null,
+       "esrignss_altitude": null,
+       "esrignss_pdop": null,
+       "esrignss_hdop": null,
+       "esrignss_vdop": null,
+       "esrignss_fixtype": null,
+       "esrignss_correctionage": null,
+       "esrignss_stationid": null,
+       "esrignss_numsats": null,
+       "esrignss_fixdatetime": null,
+       "esrignss_avg_h_rms": null,
+       "esrignss_avg_v_rms": null,
+       "esrignss_avg_positions": null,
+       "esrignss_h_stddev": null
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "Angelverbotsbereich",
+   "name": "Angelverbotsbereich",
+   "domains": {},
+   "templates": [
+    {
+     "name": "Angelverbotsbereich",
+     "description": "",
+     "drawingTool": "esriFeatureEditToolNone",
+     "prototype": {
+      "attributes": {
+       "Name": "Angelverbotsbereich",
+       "Descript": null,
+       "Type": null,
+       "Comment": null,
+       "Symbol": null,
+       "DateTimeS": null,
+       "Elevation": null,
+       "DateTime": null,
+       "esrignss_receiver": null,
+       "esrignss_h_rms": null,
+       "esrignss_v_rms": null,
+       "esrignss_latitude": null,
+       "esrignss_longitude": null,
+       "esrignss_altitude": null,
+       "esrignss_pdop": null,
+       "esrignss_hdop": null,
+       "esrignss_vdop": null,
+       "esrignss_fixtype": null,
+       "esrignss_correctionage": null,
+       "esrignss_stationid": null,
+       "esrignss_numsats": null,
+       "esrignss_fixdatetime": null,
+       "esrignss_avg_h_rms": null,
+       "esrignss_avg_v_rms": null,
+       "esrignss_avg_positions": null,
+       "esrignss_h_stddev": null
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "Baustelle",
+   "name": "Baustelle",
+   "domains": {},
+   "templates": [
+    {
+     "name": "Baustelle",
+     "description": "",
+     "drawingTool": "esriFeatureEditToolNone",
+     "prototype": {
+      "attributes": {
+       "Name": "Baustelle",
+       "Descript": null,
+       "Type": null,
+       "Comment": null,
+       "Symbol": null,
+       "DateTimeS": null,
+       "Elevation": null,
+       "DateTime": null,
+       "esrignss_receiver": null,
+       "esrignss_h_rms": null,
+       "esrignss_v_rms": null,
+       "esrignss_latitude": null,
+       "esrignss_longitude": null,
+       "esrignss_altitude": null,
+       "esrignss_pdop": null,
+       "esrignss_hdop": null,
+       "esrignss_vdop": null,
+       "esrignss_fixtype": null,
+       "esrignss_correctionage": null,
+       "esrignss_stationid": null,
+       "esrignss_numsats": null,
+       "esrignss_fixdatetime": null,
+       "esrignss_avg_h_rms": null,
+       "esrignss_avg_v_rms": null,
+       "esrignss_avg_positions": null,
+       "esrignss_h_stddev": null
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "Fahrradverleih",
+   "name": "Fahrradverleih",
+   "domains": {},
+   "templates": [
+    {
+     "name": "Fahrradverleih",
+     "description": "",
+     "drawingTool": "esriFeatureEditToolNone",
+     "prototype": {
+      "attributes": {
+       "Name": "Fahrradverleih",
+       "Descript": null,
+       "Type": null,
+       "Comment": null,
+       "Symbol": null,
+       "DateTimeS": null,
+       "Elevation": null,
+       "DateTime": null,
+       "esrignss_receiver": null,
+       "esrignss_h_rms": null,
+       "esrignss_v_rms": null,
+       "esrignss_latitude": null,
+       "esrignss_longitude": null,
+       "esrignss_altitude": null,
+       "esrignss_pdop": null,
+       "esrignss_hdop": null,
+       "esrignss_vdop": null,
+       "esrignss_fixtype": null,
+       "esrignss_correctionage": null,
+       "esrignss_stationid": null,
+       "esrignss_numsats": null,
+       "esrignss_fixdatetime": null,
+       "esrignss_avg_h_rms": null,
+       "esrignss_avg_v_rms": null,
+       "esrignss_avg_positions": null,
+       "esrignss_h_stddev": null
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "Fähranleger",
+   "name": "Fähranleger",
+   "domains": {},
+   "templates": [
+    {
+     "name": "Fähranleger",
+     "description": "",
+     "drawingTool": "esriFeatureEditToolNone",
+     "prototype": {
+      "attributes": {
+       "Name": "Fähranleger",
+       "Descript": null,
+       "Type": null,
+       "Comment": null,
+       "Symbol": null,
+       "DateTimeS": null,
+       "Elevation": null,
+       "DateTime": null,
+       "esrignss_receiver": null,
+       "esrignss_h_rms": null,
+       "esrignss_v_rms": null,
+       "esrignss_latitude": null,
+       "esrignss_longitude": null,
+       "esrignss_altitude": null,
+       "esrignss_pdop": null,
+       "esrignss_hdop": null,
+       "esrignss_vdop": null,
+       "esrignss_fixtype": null,
+       "esrignss_correctionage": null,
+       "esrignss_stationid": null,
+       "esrignss_numsats": null,
+       "esrignss_fixdatetime": null,
+       "esrignss_avg_h_rms": null,
+       "esrignss_avg_v_rms": null,
+       "esrignss_avg_positions": null,
+       "esrignss_h_stddev": null
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "Grillplatz",
+   "name": "Grillplatz",
+   "domains": {},
+   "templates": [
+    {
+     "name": "Grillplatz",
+     "description": "",
+     "drawingTool": "esriFeatureEditToolNone",
+     "prototype": {
+      "attributes": {
+       "Name": "Grillplatz",
+       "Descript": null,
+       "Type": null,
+       "Comment": null,
+       "Symbol": null,
+       "DateTimeS": null,
+       "Elevation": null,
+       "DateTime": null,
+       "esrignss_receiver": null,
+       "esrignss_h_rms": null,
+       "esrignss_v_rms": null,
+       "esrignss_latitude": null,
+       "esrignss_longitude": null,
+       "esrignss_altitude": null,
+       "esrignss_pdop": null,
+       "esrignss_hdop": null,
+       "esrignss_vdop": null,
+       "esrignss_fixtype": null,
+       "esrignss_correctionage": null,
+       "esrignss_stationid": null,
+       "esrignss_numsats": null,
+       "esrignss_fixdatetime": null,
+       "esrignss_avg_h_rms": null,
+       "esrignss_avg_v_rms": null,
+       "esrignss_avg_positions": null,
+       "esrignss_h_stddev": null
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "Infotafel",
+   "name": "Infotafel",
+   "domains": {},
+   "templates": [
+    {
+     "name": "Infotafel",
+     "description": "",
+     "drawingTool": "esriFeatureEditToolNone",
+     "prototype": {
+      "attributes": {
+       "Name": "Infotafel",
+       "Descript": null,
+       "Type": null,
+       "Comment": null,
+       "Symbol": null,
+       "DateTimeS": null,
+       "Elevation": null,
+       "DateTime": null,
+       "esrignss_receiver": null,
+       "esrignss_h_rms": null,
+       "esrignss_v_rms": null,
+       "esrignss_latitude": null,
+       "esrignss_longitude": null,
+       "esrignss_altitude": null,
+       "esrignss_pdop": null,
+       "esrignss_hdop": null,
+       "esrignss_vdop": null,
+       "esrignss_fixtype": null,
+       "esrignss_correctionage": null,
+       "esrignss_stationid": null,
+       "esrignss_numsats": null,
+       "esrignss_fixdatetime": null,
+       "esrignss_avg_h_rms": null,
+       "esrignss_avg_v_rms": null,
+       "esrignss_avg_positions": null,
+       "esrignss_h_stddev": null
+      }
+     }
+    }
+   ]
+  }
+ ],
+ "templates": [],
+ "supportedQueryFormats": "JSON, geoJSON, PBF",
+ "supportedAppendFormats": "sqlite,geoPackage,shapefile,filegdb,featureCollection,geojson,csv,excel,jsonl,featureService,pbf",
+ "supportedAppendSourceFilterFormats": "sqlite,geoPackage,shapefile,filegdb,featureService",
+ "supportedExportFormats": "csv,shapefile,sqlite,geoPackage,filegdb,featureCollection,geojson,kml,excel,parquet",
+ "supportedConvertFileFormats": "JSON,PBF,Parquet",
+ "supportedConvertContentFormats": "LayerEditCollection,FeatureCollection",
+ "supportedSpatialRelationships": [
+  "esriSpatialRelIntersects",
+  "esriSpatialRelContains",
+  "esriSpatialRelCrosses",
+  "esriSpatialRelEnvelopeIntersects",
+  "esriSpatialRelIndexIntersects",
+  "esriSpatialRelOverlaps",
+  "esriSpatialRelTouches",
+  "esriSpatialRelWithin",
+  "esriSpatialRelDisjoint",
+  "esriSpatialRelRelation"
+ ],
+ "guidFormat": "",
+ "supportsContingentValues": true,
+ "supportsEditingContingentValues": true,
+ "supportedContingentValuesFormats": "JSON, PBF",
+ "supportsFieldGroups": true,
+ "supportedSyncDataOptions": 260,
+ "hasStaticData": true,
+ "maxRecordCount": 1000,
+ "standardMaxRecordCount": 16000,
+ "maxIdsCount": 1000000,
+ "standardMaxRecordCountNoGeometry": 32000,
+ "tileMaxRecordCount": 8000,
+ "maxRecordCountFactor": 1,
+ "capabilities": "Query,Sync"
+}
