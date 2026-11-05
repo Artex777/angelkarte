@@ -106,6 +106,9 @@ def flat(ls, vis=True, op=1.0):
 wlayers = list(flat(wm["operationalLayers"]))
 # ausgeblendete Ebenen weglassen (außer Bootsangeln, das bleibt als abschaltbare Gruppe)
 wlayers = [l for l in wlayers if l["visibility"] or "boang" in l["url"].lower()]
+# Ebenen, die die offizielle App trotz "sichtbar" nicht darstellt (per Screenshot-Vergleich geprüft)
+NOT_DRAWN = ["S_OhneAnglNutz_WilhG"]
+wlayers = [l for l in wlayers if not any(n in l["url"] for n in NOT_DRAWN)]
 
 def group(title, url, geom, fields, poly_has_fill):
     n = (title + " " + url.split("/services/")[1]).lower()
